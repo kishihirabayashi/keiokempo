@@ -30,17 +30,17 @@ export default function HomePage() {
       <HeroSection />
 
       {/* ── STATS ── */}
-      <AnimatedSection className="bg-white py-16 lg:py-20">
+      <AnimatedSection className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-2">
             {STATS.map((s, i) => (
-              <AnimatedSection key={s.label} delay={i * 0.1} className="text-center">
-                <p className="number-glow font-black leading-none mb-2"
+              <AnimatedSection key={s.label} delay={i * 0.1} className="text-center py-4">
+                <p className="number-glow font-black leading-none mb-3"
                   style={{
                     fontFamily: "var(--font-cormorant)",
-                    fontSize: "clamp(2.4rem, 5.5vw, 4rem)",
+                    fontSize: "clamp(4.5rem, 8vw, 8rem)",
                   }}>
-                  <span className="text-[#6B7A99] text-xl">{s.prefix}</span>
+                  {s.prefix && <span className="text-[#6B7A99]" style={{ fontSize: "clamp(1.4rem, 2.5vw, 2.2rem)" }}>{s.prefix}</span>}
                   <CountUp end={s.end} suffix={s.suffix} />
                 </p>
                 <p className="text-[#6B7A99] text-xs tracking-[0.2em]"
@@ -52,6 +52,38 @@ export default function HomePage() {
           </div>
         </div>
       </AnimatedSection>
+
+      {/* ── 写真帯 #1（全幅アクセント） ── */}
+      <div className="relative h-[200px] overflow-hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/images/hero/hero.jpg'), linear-gradient(160deg, #001830 0%, #002B5C 55%, #001830 100%)",
+            backgroundSize: "cover",
+            backgroundPosition: "center 45%",
+          }}
+        />
+        <div className="absolute inset-0" style={{ background: 'rgba(0,15,40,0.80)' }} />
+        <div className="absolute inset-0 flex items-center justify-center select-none pointer-events-none overflow-hidden">
+          <p
+            className="text-white/[0.06] font-black leading-none tracking-tight"
+            style={{
+              fontFamily: "var(--font-cormorant)",
+              fontSize: "clamp(6rem, 20vw, 18rem)",
+            }}
+          >
+            KEMPO
+          </p>
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <p
+            className="text-white/50 text-xs tracking-[0.7em] uppercase"
+            style={{ fontFamily: "var(--font-cormorant)" }}
+          >
+            Keio University Athletic Association · Nippon Kempo
+          </p>
+        </div>
+      </div>
 
       {/* ── NEWS ── */}
       <section className="bg-[#F2F0EB] py-16 lg:py-24">
@@ -69,7 +101,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {news.map((post, i) => (
-              <AnimatedSection key={post.slug} delay={i * 0.1}>
+              <AnimatedSection key={post.slug} delay={i * 0.12}>
                 <NewsCard post={post} />
               </AnimatedSection>
             ))}
@@ -83,7 +115,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
 
             {/* 左: 縦書き大文字 */}
-            <AnimatedSection distance={80} className="lg:col-span-4 flex items-center justify-center lg:justify-start mb-8 lg:mb-0">
+            <AnimatedSection distance={100} className="lg:col-span-4 flex items-center justify-center lg:justify-start mb-8 lg:mb-0">
               <div className="relative select-none flex items-center lg:items-start">
                 <p
                   aria-hidden="true"
@@ -160,6 +192,52 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── 写真帯 #2（全幅アクセント） ── */}
+      <div className="relative h-[240px] overflow-hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/images/hero/hero.jpg'), linear-gradient(200deg, #002B5C 0%, #001830 40%, #002B5C 100%)",
+            backgroundSize: "cover",
+            backgroundPosition: "center 65%",
+          }}
+        />
+        <div className="absolute inset-0" style={{ background: 'rgba(0,10,30,0.78)' }} />
+        {/* 縦書き装飾テキスト */}
+        <div className="absolute inset-0 flex items-center justify-end pr-[8vw] select-none pointer-events-none">
+          <p
+            className="text-white/[0.07] font-black leading-none"
+            style={{
+              fontFamily: "var(--font-noto-serif-jp)",
+              writingMode: "vertical-rl",
+              fontSize: "clamp(5rem, 14vw, 12rem)",
+            }}
+          >
+            文武両道
+          </p>
+        </div>
+        <div className="relative h-full flex items-center justify-center px-4">
+          <div className="text-center">
+            <p
+              className="text-white/40 text-[0.65rem] tracking-[0.7em] uppercase mb-3"
+              style={{ fontFamily: "var(--font-cormorant)" }}
+            >
+              Est. 1932
+            </p>
+            <p
+              className="text-white font-black"
+              style={{
+                fontFamily: "var(--font-cormorant)",
+                fontSize: "clamp(1.8rem, 5vw, 4rem)",
+                letterSpacing: "0.15em",
+              }}
+            >
+              NIPPON KEMPO
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* ── NEXT MATCH ── */}
       <AnimatedSection className="bg-[#FAFAF7] py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -217,7 +295,7 @@ export default function HomePage() {
           </AnimatedSection>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[1, 2, 3, 4].map((i) => (
-              <AnimatedSection key={i} delay={i * 0.07}>
+              <AnimatedSection key={i} delay={i * 0.08}>
                 <div className="aspect-square bg-[#D8E4EE] rounded-xl flex items-center justify-center overflow-hidden group card-lift">
                   <div className="text-center p-4">
                     <div className="w-12 h-12 border-2 border-[#C0CEDC] rounded-lg flex items-center justify-center mx-auto mb-2 group-hover:border-[#002B5C]/40 transition-colors duration-300">
@@ -286,41 +364,56 @@ export default function HomePage() {
         </section>
       </AnimatedSection>
 
-      {/* ── 入部案内CTA ── */}
-      <section className="bg-[#C41E3A] py-16 lg:py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#A01530] via-[#C41E3A] to-[#A01530]" />
-        <div className="absolute right-[-2%] top-0 bottom-0 w-1/2 opacity-[0.04] select-none pointer-events-none" aria-hidden="true">
+      {/* ── 入部案内CTA（慶應紺） ── */}
+      <section className="bg-[#002B5C] py-24 lg:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#001830] via-[#002B5C] to-[#003570]" />
+        {/* 装飾：大きな漢字ウォーターマーク */}
+        <div className="absolute right-[-4%] top-0 bottom-0 w-1/2 opacity-[0.035] select-none pointer-events-none" aria-hidden="true">
           <svg viewBox="0 0 400 400" className="w-full h-full">
             <text x="50%" y="50%" textAnchor="middle" dominantBaseline="middle"
               fontSize="260" fontFamily="serif" fill="white">拳</text>
           </svg>
         </div>
+        {/* 上辺のグラデーションライン */}
+        <div className="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-transparent via-[#C41E3A] to-transparent" />
         <AnimatedSection className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-white/60 text-xs tracking-[0.45em] mb-4"
+          <p className="text-white/50 text-xs tracking-[0.55em] mb-6"
             style={{ fontFamily: "var(--font-cormorant)" }}>
-            JOIN US
+            JOIN US · KEIO KEMPO
           </p>
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6"
-            style={{ fontFamily: "var(--font-noto-serif-jp)" }}
+            className="font-black text-white mb-8 leading-tight"
+            style={{
+              fontFamily: "var(--font-noto-serif-jp)",
+              fontSize: "clamp(2.5rem, 6vw, 6rem)",
+            }}
           >
             一緒に道場へ来ませんか。
           </h2>
-          <p className="text-white/80 text-base mb-10 max-w-lg mx-auto leading-relaxed"
+          <p className="text-white/70 text-base mb-12 max-w-xl mx-auto leading-relaxed"
             style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
             未経験者歓迎。部員の8割が大学から日本拳法を始めました。
             まずは見学だけでも大丈夫です。
           </p>
-          <Link
-            href="/join"
-            className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-[#C41E3A] font-black text-sm tracking-[0.2em] hover:bg-[#F5F0E8] transition-colors duration-200 rounded-md"
-            style={{ fontFamily: "var(--font-noto-sans-jp)" }}
-          >
-            入部案内を見る
-            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+            <Link
+              href="/join"
+              className="group inline-flex items-center gap-3 px-12 py-6 bg-[#C41E3A] text-white font-black text-sm tracking-[0.22em] hover:bg-[#A01530] transition-colors duration-200 rounded-md"
+              style={{ fontFamily: "var(--font-noto-sans-jp)" }}
+            >
+              入部案内を見る
+              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-2 px-10 py-6 bg-white/10 text-white font-bold text-sm tracking-[0.18em] hover:bg-white/20 transition-all duration-300 rounded-md border border-white/20"
+              style={{ fontFamily: "var(--font-noto-sans-jp)" }}
+            >
+              部の紹介を見る
+            </Link>
+          </div>
         </AnimatedSection>
       </section>
     </>

@@ -15,19 +15,19 @@ export default function AnimatedSection({
   children,
   className,
   delay = 0,
-  distance = 50,
+  distance = 80,
   once = true,
 }: AnimatedSectionProps) {
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: distance }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: distance, scale: 0.95 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once, amount: 0.08, margin: "-80px 0px" }}
       transition={{
-        duration: 0.75,
+        duration: 0.85,
         delay,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: [0.22, 0.61, 0.36, 1],
       }}
     >
       {children}

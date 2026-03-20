@@ -32,9 +32,9 @@ export default function HeroSection() {
             backgroundPosition: "center 35%",
           }}
         />
-        {/* 紺オーバーレイ：暗すぎず品格ある */}
-        <div className="absolute inset-0" style={{ background: 'rgba(0,43,92,0.72)' }} />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#001830]/60 via-transparent to-[#001830]/20" />
+        {/* 紺オーバーレイ：少し濃くしてコントラスト強化 */}
+        <div className="absolute inset-0" style={{ background: 'rgba(0,15,40,0.82)' }} />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#001830]/70 via-transparent to-[#001830]/25" />
       </motion.div>
 
       {/* ── トップ3色バー（紺・赤・紺） ── */}
@@ -63,22 +63,22 @@ export default function HeroSection() {
           KEIO UNIVERSITY ATHLETIC ASSOCIATION
         </motion.p>
 
-        {/* キャッチコピー */}
+        {/* キャッチコピー（巨大に） */}
         <motion.div
-          initial={{ opacity: 0, y: 70, scale: 0.86 }}
+          initial={{ opacity: 0, y: 80, scale: 0.82 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1.05, delay: 0.45, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{ duration: 1.1, delay: 0.45, ease: [0.22, 0.61, 0.36, 1] }}
           className="relative overflow-hidden inline-block"
         >
           <h1
             className="font-black leading-[1.0] tracking-tight text-white"
             style={{
               fontFamily: "var(--font-noto-serif-jp)",
-              fontSize: "clamp(3.8rem, 11.5vw, 10rem)",
+              fontSize: "clamp(4.5rem, 16vw, 15rem)",
               fontWeight: 900,
             }}
           >
-            共に戦う、4年間。
+            腕は強し、心は優し。
           </h1>
           {/* シマー光線 */}
           <div className="shimmer-sweep" aria-hidden="true" />
