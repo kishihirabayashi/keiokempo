@@ -66,9 +66,9 @@ const faqs: FAQItem[] = [
 
 export default function JoinPage() {
   return (
-    <div className="min-h-screen bg-[#FAFAF7]">
+    <div className="min-h-screen bg-[#F5F0E6]">
       {/* ヒーロービジュアル */}
-      <div className="relative bg-[#F2F0EB] pt-32 pb-20 overflow-hidden">
+      <div className="relative bg-[#EDE7D9] pt-32 pb-20 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
@@ -118,7 +118,7 @@ export default function JoinPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {steps.map((step, i) => (
-              <div key={step.step} className="bg-white rounded-xl border border-[#E8DFD0] p-8 relative"
+              <div key={step.step} className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-8 relative"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
                 {i < steps.length - 1 && (
                   <div className="hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 bg-[#C41E3A] rotate-45 rounded-sm" />
@@ -145,7 +145,7 @@ export default function JoinPage() {
         </section>
 
         {/* 練習日程 */}
-        <section className="mb-20 bg-[#F2F0EB] rounded-xl border border-[#E8DFD0] p-8 lg:p-10">
+        <section className="mb-20 bg-[#EDE7D9] rounded-xl border border-[#D4C9B8] p-8 lg:p-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             <div>
               <p className="section-title-en mb-4">Practice Schedule</p>
@@ -185,7 +185,7 @@ export default function JoinPage() {
                   { item: "防具購入（任意）", cost: "10〜15万円程度" },
                   { item: "道着・練習着", cost: "5,000〜10,000円程度" },
                 ].map(({ item, cost }) => (
-                  <div key={item} className="flex justify-between items-center pb-3 border-b border-[#E8DFD0]">
+                  <div key={item} className="flex justify-between items-center pb-3 border-b border-[#D4C9B8]">
                     <span className="text-[#6B7A99] text-sm">{item}</span>
                     <span className="text-[#1B2A4A] text-sm font-bold">{cost}</span>
                   </div>

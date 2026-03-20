@@ -35,9 +35,9 @@ export default function ResultsPage() {
       : results.filter((r) => r.year === selectedYear);
 
   return (
-    <div className="min-h-screen bg-[#FAFAF7]">
+    <div className="min-h-screen bg-[#F5F0E6]">
       {/* ヘッダービジュアル */}
-      <div className="relative bg-[#F2F0EB] pt-32 pb-20 overflow-hidden">
+      <div className="relative bg-[#EDE7D9] pt-32 pb-20 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
@@ -66,7 +66,7 @@ export default function ResultsPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {highlights.map((h, i) => (
-              <div key={i} className="bg-white rounded-xl border border-[#E8DFD0] p-6 relative overflow-hidden"
+              <div key={i} className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-6 relative overflow-hidden"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
                 <div className="absolute right-4 top-4 text-[#002B5C]/[0.06] text-6xl font-black"
                   style={{ fontFamily: "var(--font-cormorant)" }}>
@@ -97,7 +97,7 @@ export default function ResultsPage() {
               className={`px-4 py-1.5 text-sm border rounded-md transition-colors duration-150 ${
                 selectedYear === "all"
                   ? "bg-[#C41E3A] border-[#C41E3A] text-white font-bold"
-                  : "bg-white border-[#E8DFD0] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#1B2A4A]"
+                  : "bg-[#FAF7F0] border-[#D4C9B8] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#1B2A4A]"
               }`}
             >
               全年度
@@ -109,7 +109,7 @@ export default function ResultsPage() {
                 className={`px-4 py-1.5 text-sm border rounded-md transition-colors duration-150 ${
                   selectedYear === y
                     ? "bg-[#C41E3A] border-[#C41E3A] text-white font-bold"
-                    : "bg-white border-[#E8DFD0] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#1B2A4A]"
+                    : "bg-[#FAF7F0] border-[#D4C9B8] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#1B2A4A]"
                 }`}
                 style={{ fontFamily: "var(--font-cormorant)" }}
               >
@@ -118,7 +118,7 @@ export default function ResultsPage() {
             ))}
           </div>
 
-          <div className="bg-white rounded-xl border border-[#E8DFD0] overflow-hidden"
+          <div className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] overflow-hidden"
             style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
             <ResultTable results={filtered} />
           </div>

@@ -32,9 +32,9 @@ const comparisons = [
 
 export default function AboutKempoPage() {
   return (
-    <div className="min-h-screen bg-[#FAFAF7]">
+    <div className="min-h-screen bg-[#F5F0E6]">
       {/* ヘッダービジュアル */}
-      <div className="relative bg-[#F2F0EB] pt-32 pb-20 overflow-hidden">
+      <div className="relative bg-[#EDE7D9] pt-32 pb-20 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
@@ -96,7 +96,7 @@ export default function AboutKempoPage() {
                 </p>
               </div>
             </div>
-            <div className="bg-white rounded-xl border border-[#E8DFD0] p-6"
+            <div className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-6"
               style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
               <h3 className="text-[#C41E3A] text-sm tracking-widest mb-6"
                 style={{ fontFamily: "var(--font-cormorant)" }}>TIMELINE</h3>
@@ -169,7 +169,7 @@ export default function AboutKempoPage() {
                 content: "試合前後の礼を重んじる武道精神が基本。技術だけでなく、人格の陶冶も日本拳法の重要な柱。",
               },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl border border-[#E8DFD0] p-6 hover:border-[#C41E3A]/30 transition-colors duration-200"
+              <div key={item.title} className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-6 hover:border-[#C41E3A]/30 transition-colors duration-200"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
                 <div className="text-2xl mb-3">{item.icon}</div>
                 <h3
@@ -217,9 +217,9 @@ export default function AboutKempoPage() {
                   "拳サポーター・脛サポーター・マウスピースなど。初心者は部の備品を借用できるため、入部直後の費用負担は少ない。",
               },
             ].map((item) => (
-              <div key={item.name} className="bg-white rounded-xl border border-[#E8DFD0] p-6"
+              <div key={item.name} className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-6"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
-                <div className="w-full aspect-video bg-[#F2F0EB] rounded-lg border border-[#E8DFD0] mb-4 flex items-center justify-center">
+                <div className="w-full aspect-video bg-[#EDE7D9] rounded-lg border border-[#D4C9B8] mb-4 flex items-center justify-center">
                   <span className="text-[#C8D0DC] text-4xl">🥋</span>
                 </div>
                 <h3
@@ -249,7 +249,7 @@ export default function AboutKempoPage() {
           >
             他格闘技との違い
           </h2>
-          <div className="overflow-x-auto bg-white rounded-xl border border-[#E8DFD0]"
+          <div className="overflow-x-auto bg-[#FAF7F0] rounded-xl border border-[#D4C9B8]"
             style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
             <table className="w-full text-sm border-collapse">
               <thead>
@@ -264,7 +264,7 @@ export default function AboutKempoPage() {
               </thead>
               <tbody>
                 {comparisons.map((c, i) => (
-                  <tr key={i} className="border-b border-[#E8DFD0] hover:bg-[#F2F0EB] transition-colors duration-150">
+                  <tr key={i} className="border-b border-[#D4C9B8] hover:bg-[#DDD4C2] transition-colors duration-150">
                     <td className="py-4 px-5 font-bold text-[#002B5C]"
                       style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
                       {c.sport}
@@ -285,7 +285,7 @@ export default function AboutKempoPage() {
         </section>
 
         {/* 実用性 */}
-        <section className="bg-white rounded-xl border border-[#E8DFD0] p-8 lg:p-12 mb-12"
+        <section className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12"
           style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>

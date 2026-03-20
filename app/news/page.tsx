@@ -41,7 +41,7 @@ const categoryColors: Record<string, string> = {
   "試合結果": "bg-[#C41E3A]/10 text-[#C41E3A] border-[#C41E3A]/30",
   "お知らせ": "bg-[#002B5C]/10 text-[#002B5C] border-[#002B5C]/25",
   "イベント": "bg-[#C41E3A]/10 text-[#C41E3A] border-[#C41E3A]/30",
-  "ブログ": "bg-[#F2F0EB] text-[#6B7A99] border-[#DDD8CF]",
+  "ブログ": "bg-[#EDE7D9] text-[#6B7A99] border-[#DDD8CF]",
 };
 
 export default function NewsPage() {
@@ -53,9 +53,9 @@ export default function NewsPage() {
       : allNews.filter((n) => n.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-[#FAFAF7]">
+    <div className="min-h-screen bg-[#F5F0E6]">
       {/* ヘッダービジュアル */}
-      <div className="relative bg-[#F2F0EB] pt-32 pb-20 overflow-hidden">
+      <div className="relative bg-[#EDE7D9] pt-32 pb-20 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
@@ -84,7 +84,7 @@ export default function NewsPage() {
               className={`px-4 py-1.5 text-sm border rounded-md transition-colors duration-150 ${
                 activeCategory === cat
                   ? "bg-[#C41E3A] border-[#C41E3A] text-white font-bold"
-                  : "bg-white border-[#E8DFD0] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#1B2A4A]"
+                  : "bg-[#FAF7F0] border-[#D4C9B8] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#1B2A4A]"
               }`}
               style={{ fontFamily: "var(--font-noto-sans-jp)" }}
             >
@@ -101,7 +101,7 @@ export default function NewsPage() {
               <Link
                 key={post.slug}
                 href={`/news/${post.slug}`}
-                className="flex flex-col sm:flex-row gap-4 bg-white rounded-xl border border-[#E8DFD0] p-5 hover:border-[#C41E3A]/30 transition-all duration-300 group"
+                className="flex flex-col sm:flex-row gap-4 bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-5 hover:border-[#C41E3A]/30 transition-all duration-300 group"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.05)' }}
               >
                 <div className="shrink-0 flex sm:flex-col items-center sm:items-start gap-3 sm:gap-1 w-auto sm:w-28">

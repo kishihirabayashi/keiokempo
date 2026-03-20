@@ -1,25 +1,30 @@
 import type { Metadata } from "next";
-import { Noto_Serif_JP, Noto_Sans_JP, Cormorant_Garamond } from "next/font/google";
+import { Zen_Maru_Gothic, Noto_Sans_JP, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 
-const notoSerifJP = Noto_Serif_JP({
+// 見出し：丸みのあるゴシック
+const zenMaruGothic = Zen_Maru_Gothic({
   variable: "--font-noto-serif-jp",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "900"],
+  weight: ["400", "500", "700", "900"],
   display: "swap",
+  preload: false,
 });
 
+// 本文：Noto Sans JP
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   display: "swap",
+  preload: false,
 });
 
-const cormorant = Cormorant_Garamond({
+// 英字ラベル：DM Sans（柔らかいサンセリフ）
+const dmSans = DM_Sans({
   variable: "--font-cormorant",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -70,9 +75,9 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
-      className={`${notoSerifJP.variable} ${notoSansJP.variable} ${cormorant.variable}`}
+      className={`${zenMaruGothic.variable} ${notoSansJP.variable} ${dmSans.variable}`}
     >
-      <body className="min-h-screen flex flex-col bg-[#111111] text-[#F5F0E8] antialiased">
+      <body className="min-h-screen flex flex-col bg-[#F5F0E6] text-[#1B2A4A] antialiased">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

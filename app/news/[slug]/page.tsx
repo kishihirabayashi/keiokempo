@@ -26,7 +26,7 @@ const categoryColors: Record<string, string> = {
   "試合結果": "bg-[#C41E3A]/10 text-[#C41E3A] border-[#C41E3A]/30",
   "お知らせ": "bg-[#002B5C]/10 text-[#002B5C] border-[#002B5C]/25",
   "イベント": "bg-[#C41E3A]/10 text-[#C41E3A] border-[#C41E3A]/30",
-  "ブログ": "bg-[#F2F0EB] text-[#6B7A99] border-[#DDD8CF]",
+  "ブログ": "bg-[#EDE7D9] text-[#6B7A99] border-[#DDD8CF]",
 };
 
 // Markdownのシンプルなレンダリング（実際のプロジェクトではreact-markdownを推奨）
@@ -38,7 +38,7 @@ function renderMarkdown(text: string): string {
     .replace(/\*\*(.+?)\*\*/g, '<strong class="text-[#1B2A4A] font-bold">$1</strong>')
     .replace(/^\| (.+) \|$/gm, (line) => {
       const cells = line.split(" | ").map((c) => c.trim().replace(/^\|/, "").replace(/\|$/, ""));
-      return `<div class="flex gap-4 border-b border-[#E8DFD0] py-2">${cells.map((c) => `<span class="text-[#1B2A4A] text-sm flex-1">${c}</span>`).join("")}</div>`;
+      return `<div class="flex gap-4 border-b border-[#D4C9B8] py-2">${cells.map((c) => `<span class="text-[#1B2A4A] text-sm flex-1">${c}</span>`).join("")}</div>`;
     })
     .replace(/^- (.+)$/gm, '<li class="text-[#1B2A4A] text-sm leading-relaxed ml-4">· $1</li>')
     .replace(/\n\n/g, '</p><p class="text-[#1B2A4A] leading-relaxed mt-4">')
@@ -56,7 +56,7 @@ export default async function NewsDetailPage({ params }: Props) {
   const colorClass = categoryColors[post.category] ?? categoryColors["ブログ"];
 
   return (
-    <div className="min-h-screen bg-[#FAFAF7]">
+    <div className="min-h-screen bg-[#F5F0E6]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
         {/* パンくずリスト */}
         <nav className="flex items-center gap-2 text-[#A0AAB8] text-xs mb-8"

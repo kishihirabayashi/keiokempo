@@ -41,19 +41,19 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
           isScrolled
-            ? "bg-white/95 backdrop-blur-sm shadow-sm"
-            : "bg-white/80 backdrop-blur-sm"
+            ? "shadow-sm"
+            : ""
         }`}
-        style={isScrolled ? {
+        style={{
+          background: isScrolled ? "rgba(245,240,230,0.96)" : "rgba(245,240,230,0.88)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
           borderBottom: "10px solid transparent",
           borderImage: "linear-gradient(to right, #002B5C 0%, #002B5C 18%, #C41E3A 35%, #C41E3A 65%, #002B5C 82%, #002B5C 100%) 1",
-          boxShadow: "0 2px 14px rgba(196,30,58,0.18), 0 1px 0 rgba(0,43,92,0.06)",
-        } : {
-          borderBottom: "10px solid transparent",
-          borderImage: "linear-gradient(to right, #002B5C 0%, #002B5C 18%, #C41E3A 35%, #C41E3A 65%, #002B5C 82%, #002B5C 100%) 1",
+          boxShadow: isScrolled ? "0 2px 14px rgba(27,42,74,0.10)" : "none",
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* ロゴ */}
             <Link href="/" className="flex items-center gap-3 group">
@@ -67,7 +67,7 @@ export default function Header() {
                 </span>
                 <span
                   className="text-[#002B5C] font-bold text-sm sm:text-base tracking-wide"
-                  style={{ fontFamily: "var(--font-noto-serif-jp)" }}
+                  style={{ fontFamily: "var(--font-noto-serif-jp)", letterSpacing: "0.04em" }}
                 >
                   慶應義塾體育會拳法部
                 </span>
@@ -88,10 +88,11 @@ export default function Header() {
               ))}
               <Link
                 href="/join"
-                className="ml-4 px-5 py-2 bg-[#C41E3A] text-white text-sm font-bold tracking-wider hover:bg-[#A01530] transition-colors duration-200 rounded-md"
+                className="group relative ml-4 px-6 py-2.5 bg-[#C41E3A] text-white text-sm font-bold tracking-wider overflow-hidden rounded-lg transition-colors duration-200"
                 style={{ fontFamily: "var(--font-noto-sans-jp)" }}
               >
-                入部希望
+                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-400 ease-out" />
+                <span className="relative z-10">入部希望</span>
               </Link>
             </nav>
 
@@ -101,53 +102,41 @@ export default function Header() {
               className="lg:hidden relative w-8 h-8 flex flex-col justify-center items-center gap-1.5"
               aria-label="メニューを開く"
             >
-              <span
-                className={`block w-6 h-0.5 bg-[#1B2A4A] transition-all duration-300 ${
-                  isMenuOpen ? "rotate-45 translate-y-2" : ""
-                }`}
-              />
-              <span
-                className={`block w-6 h-0.5 bg-[#1B2A4A] transition-all duration-300 ${
-                  isMenuOpen ? "opacity-0" : ""
-                }`}
-              />
-              <span
-                className={`block w-6 h-0.5 bg-[#1B2A4A] transition-all duration-300 ${
-                  isMenuOpen ? "-rotate-45 -translate-y-2" : ""
-                }`}
-              />
+              <span className={`block w-6 h-0.5 bg-[#1B2A4A] transition-all duration-300 ${isMenuOpen ? "rotate-45 translate-y-2" : ""}`} />
+              <span className={`block w-6 h-0.5 bg-[#1B2A4A] transition-all duration-300 ${isMenuOpen ? "opacity-0" : ""}`} />
+              <span className={`block w-6 h-0.5 bg-[#1B2A4A] transition-all duration-300 ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
             </button>
           </div>
         </div>
       </header>
 
-      {/* モバイルメニューオーバーレイ */}
+      {/* モバイルメニュー */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
-            transition={{ type: "tween", duration: 0.4, ease: "easeInOut" }}
-            className="fixed inset-0 z-40 bg-white flex flex-col"
+            transition={{ type: "spring", damping: 28, stiffness: 100 }}
+            className="fixed inset-0 z-40 flex flex-col"
+            style={{ background: "#F5F0E6" }}
           >
-            {/* 左縦線アクセント */}
-            <div className="absolute left-0 top-0 bottom-0 w-[6px]" style={{ background: 'linear-gradient(to bottom, #C41E3A 0%, #C41E3A 50%, rgba(196,30,58,0.3) 85%, transparent 100%)' }} />
+            <div className="absolute left-0 top-0 bottom-0 w-[6px]" style={{ background: 'linear-gradient(to bottom, #C41E3A 0%, #C41E3A 50%, rgba(196,30,58,0.2) 85%, transparent 100%)' }} />
 
-            <div className="flex-1 flex flex-col justify-center px-8 pt-20">
+            <div className="flex-1 flex flex-col justify-center px-10 pt-20">
               <nav className="flex flex-col gap-6">
                 {navLinks.map((link, i) => (
                   <motion.div
                     key={link.href}
                     initial={{ opacity: 0, x: -30 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 + i * 0.06 }}
+                    transition={{ type: "spring", damping: 25, stiffness: 100, delay: 0.05 + i * 0.06 }}
                   >
                     <Link
                       href={link.href}
                       onClick={() => setIsMenuOpen(false)}
                       className="block text-2xl font-bold text-[#002B5C] hover:text-[#C41E3A] transition-colors duration-200"
-                      style={{ fontFamily: "var(--font-noto-serif-jp)" }}
+                      style={{ fontFamily: "var(--font-noto-serif-jp)", letterSpacing: "0.04em" }}
                     >
                       {link.label}
                     </Link>
@@ -157,19 +146,20 @@ export default function Header() {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
+                transition={{ delay: 0.45 }}
                 className="mt-10"
               >
                 <Link
                   href="/join"
                   onClick={() => setIsMenuOpen(false)}
-                  className="inline-block px-8 py-4 bg-[#C41E3A] text-white text-lg font-bold tracking-widest hover:bg-[#A01530] transition-colors duration-200 rounded-md"
+                  className="group relative inline-flex items-center gap-3 px-8 py-4 bg-[#C41E3A] text-white text-lg font-bold tracking-widest overflow-hidden rounded-lg"
                 >
-                  入部希望はこちら
+                  <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-400 ease-out" />
+                  <span className="relative z-10">入部希望はこちら</span>
                 </Link>
               </motion.div>
             </div>
-            <div className="p-8 border-t-[3px] border-[#C41E3A]/15">
+            <div className="p-8 border-t-[2px] border-[#C41E3A]/15">
               <p className="text-[#6B7A99] text-xs tracking-wider">
                 © 慶應義塾體育會拳法部
               </p>

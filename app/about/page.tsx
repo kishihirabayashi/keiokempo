@@ -24,9 +24,9 @@ const schedule = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#FAFAF7]">
+    <div className="min-h-screen bg-[#F5F0E6]">
       {/* ヘッダービジュアル */}
-      <div className="relative bg-[#F2F0EB] pt-32 pb-20 overflow-hidden">
+      <div className="relative bg-[#EDE7D9] pt-32 pb-20 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
@@ -87,7 +87,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="lg:col-span-2">
-              <div className="bg-white rounded-xl border border-[#E8DFD0] p-6 h-full"
+              <div className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-6 h-full"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
                 <h3 className="text-[#C41E3A] text-xs tracking-widest mb-6"
                   style={{ fontFamily: "var(--font-cormorant)" }}>CLUB DATA</h3>
@@ -146,7 +146,7 @@ export default function AboutPage() {
                 access: "東急東横線 日吉駅から徒歩5分",
               },
             ].map((place) => (
-              <div key={place.name} className="bg-white rounded-xl border border-[#E8DFD0] p-6"
+              <div key={place.name} className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-6"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
                 <h3
                   className="text-[#002B5C] font-bold text-xl mb-1"
@@ -191,7 +191,7 @@ export default function AboutPage() {
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
             {schedule.map(({ month, events }) => (
-              <div key={month} className="bg-white rounded-xl border border-[#E8DFD0] p-4"
+              <div key={month} className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-4"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.04)' }}>
                 <div className="text-[#C41E3A] font-bold text-sm mb-2"
                   style={{ fontFamily: "var(--font-cormorant)" }}>
@@ -243,7 +243,7 @@ export default function AboutPage() {
                 note: "技術指導を担当。週2回程度練習に参加",
               },
             ].map((staff) => (
-              <div key={staff.role} className="bg-white rounded-xl border border-[#E8DFD0] p-6"
+              <div key={staff.role} className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-6"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
                 <span className="inline-block px-2 py-0.5 border border-[#C41E3A]/40 text-[#C41E3A] text-xs rounded-full mb-3">
                   {staff.role}
@@ -265,7 +265,7 @@ export default function AboutPage() {
         </section>
 
         {/* OB会 */}
-        <section className="bg-[#F2F0EB] rounded-xl border border-[#E8DFD0] p-8 lg:p-12 mb-12">
+        <section className="bg-[#EDE7D9] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12">
           <p className="section-title-en mb-4">Alumni</p>
           <h2
             className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-4"

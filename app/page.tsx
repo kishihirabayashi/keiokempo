@@ -19,29 +19,29 @@ const ATMOSPHERE = [
     num: "01",
     label: "練習後のひとコマ",
     desc: "汗を流した後の一言に、本音が出る。",
-    colorFrom: "#C8D8E8",
-    colorTo: "#B8CCD8",
+    colorFrom: "#D4C8B4",
+    colorTo: "#C5B8A4",
   },
   {
     num: "02",
     label: "みんなで飯",
     desc: "ご飯を一緒に食べるだけで、仲間になれる。",
-    colorFrom: "#D0DCE8",
-    colorTo: "#C0CEDA",
+    colorFrom: "#D8CCBA",
+    colorTo: "#C9BDA8",
   },
   {
     num: "03",
     label: "合宿の集合写真",
     desc: "4泊5日の夏合宿、笑顔が絶えない。",
-    colorFrom: "#D8E4EE",
-    colorTo: "#C8D4E0",
+    colorFrom: "#DCCFC0",
+    colorTo: "#CEC0B2",
   },
   {
     num: "04",
     label: "初心者歓迎の体験会",
     desc: "はじめての防具、はじめての一本。",
-    colorFrom: "#C0CEDC",
-    colorTo: "#B0BECE",
+    colorFrom: "#D0C5B0",
+    colorTo: "#C2B5A0",
   },
 ];
 
@@ -62,7 +62,7 @@ export default function HomePage() {
       <HeroSection />
 
       {/* ── 部の雰囲気（ヒーロー直後） ── */}
-      <section className="bg-white py-20 lg:py-28 relative overflow-hidden">
+      <section className="bg-[#FAF7F0] py-20 lg:py-28 relative overflow-hidden">
         {/* 巨大bg watermark */}
         <div
           className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
@@ -108,7 +108,7 @@ export default function HomePage() {
             {ATMOSPHERE.map((item, i) => (
               <AnimatedSection key={item.num} delay={i * 0.1}>
                 <div
-                  className="group bg-white rounded-2xl overflow-hidden card-lift"
+                  className="group bg-[#FAF7F0] rounded-2xl overflow-hidden card-lift"
                   style={{
                     boxShadow:
                       "0 2px 12px rgba(27,42,74,0.08), 0 0 0 1px rgba(27,42,74,0.05)",
@@ -125,7 +125,7 @@ export default function HomePage() {
                     {/* 番号装飾 */}
                     <div className="absolute inset-0 flex items-center justify-center select-none pointer-events-none">
                       <span
-                        className="text-white/[0.12] font-black"
+                        className="text-[#1B2A4A]/[0.08] font-black"
                         style={{
                           fontFamily: "var(--font-cormorant)",
                           fontSize: "9rem",
@@ -138,7 +138,7 @@ export default function HomePage() {
                     {/* カメラアイコン */}
                     <div className="absolute inset-0 flex items-end p-4">
                       <svg
-                        className="w-8 h-8 text-white/20 group-hover:text-white/40 transition-colors duration-300"
+                        className="w-8 h-8 text-[#B0A090]/50 group-hover:text-[#8B7870]/70 transition-colors duration-300"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -198,9 +198,9 @@ export default function HomePage() {
       </section>
 
       {/* ── STATS ── */}
-      <AnimatedSection className="bg-[#F2F0EB] py-20 lg:py-24">
+      <AnimatedSection className="bg-[#EDE7D9] py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-[#E8DFD0]">
+          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-[#D4C9B8]">
             {STATS.map((s, i) => (
               <AnimatedSection key={s.label} delay={i * 0.1} className="text-center py-8 px-4">
                 <p
@@ -264,7 +264,7 @@ export default function HomePage() {
       </ParallaxBand>
 
       {/* ── NEWS ── */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-[#FAF7F0] py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="flex items-end justify-between gap-4 mb-12">
             <SectionHeading en="News" jp="最新情報" />
@@ -288,7 +288,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 日本拳法とは（非対称レイアウト） ── */}
-      <section className="bg-[#E8DFD0] py-20 lg:py-32 relative overflow-hidden">
+      <section className="bg-[#EDE7D9] py-20 lg:py-32 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
 
@@ -447,11 +447,11 @@ export default function HomePage() {
       </section>
 
       {/* ── NEXT MATCH ── */}
-      <AnimatedSection className="bg-[#FAFAF7] py-16 lg:py-20">
+      <AnimatedSection className="bg-[#F5F0E6] py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading en="Next Match" jp="次戦情報" className="mb-10" />
           <div
-            className="bg-white rounded-xl border border-[#E8DFD0] p-6 sm:p-8 lg:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+            className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-6 sm:p-8 lg:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
             style={{ boxShadow: "0 2px 12px rgba(27,42,74,0.07)" }}
           >
             <div>
@@ -501,7 +501,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* ── GALLERY ── */}
-      <section className="bg-[#F2F0EB] py-20 lg:py-28">
+      <section className="bg-[#EDE7D9] py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="mb-12">
             <SectionHeading en="Gallery" jp="活動写真" />
@@ -509,31 +509,16 @@ export default function HomePage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[1, 2, 3, 4].map((i) => (
               <AnimatedSection key={i} delay={i * 0.08}>
-                <div className="aspect-square bg-[#D8E4EE] rounded-xl flex items-center justify-center overflow-hidden group card-lift">
-                  <div
-                    className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-108"
-                    style={{
-                      background: `linear-gradient(135deg, #D8E4EE ${i * 5}%, #C0D0E0 100%)`,
-                    }}
-                  />
-                  <div className="relative text-center p-4">
-                    <div className="w-12 h-12 border-2 border-[#C0CEDC] rounded-lg flex items-center justify-center mx-auto mb-2 group-hover:border-[#002B5C]/40 transition-colors duration-300">
-                      <svg
-                        className="w-6 h-6 text-[#C0CEDC] group-hover:text-[#9AAAB8] transition-colors duration-300"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <p
-                      className="text-[#A8B8C8] text-xs"
-                      style={{ fontFamily: "var(--font-cormorant)" }}
-                    >
-                      Photo {i}
-                    </p>
+                <div className="aspect-square rounded-xl overflow-hidden group card-lift relative photo-placeholder">
+                  <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-105" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 select-none pointer-events-none">
+                    <svg className="w-10 h-10 text-[#B0A090] group-hover:text-[#9A8878] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span className="text-[#B0A090] text-[0.6rem] tracking-[0.5em] uppercase" style={{ fontFamily: "var(--font-cormorant)" }}>PHOTO</span>
                   </div>
+                  <div className="absolute inset-0 bg-[#002B5C]/0 group-hover:bg-[#002B5C]/10 transition-colors duration-300" />
                 </div>
               </AnimatedSection>
             ))}
