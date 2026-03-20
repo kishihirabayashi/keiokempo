@@ -1,0 +1,205 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-ink-black: #1B2A4A;
+  --color-ink-deep: #002B5C;
+  --color-ink-mid: #DDD8CF;
+  --color-ink-light: #E8DFD0;
+  --color-keio-red: #C41E3A;
+  --color-keio-red-dark: #A01530;
+  --color-keio-navy: #002B5C;
+  --color-keio-navy-light: #6B7A99;
+  --color-off-white: #FAFAF7;
+  --color-off-white-dim: #F2F0EB;
+  --color-surface: #FFFFFF;
+  --color-border: #DDD8CF;
+
+  --font-serif-jp: var(--font-noto-serif-jp);
+  --font-sans-jp: var(--font-noto-sans-jp);
+  --font-display: var(--font-cormorant);
+}
+
+/* ─────────────────────────────────────
+   Base
+───────────────────────────────────── */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #FAFAF7;
+  color: #1B2A4A;
+  font-family: var(--font-noto-sans-jp), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-noto-serif-jp), serif;
+}
+
+/* ─────────────────────────────────────
+   Scrollbar
+───────────────────────────────────── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #E8DFD0; }
+::-webkit-scrollbar-thumb { background: #B8860B !important; border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: #D4A020 !important; }
+
+::selection { background: rgba(0, 43, 92, 0.15); color: #002B5C; }
+
+/* ─────────────────────────────────────
+   Typography
+───────────────────────────────────── */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* Section label (EN) — thin, wide tracking */
+.section-label {
+  font-family: var(--font-cormorant), serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.5em;
+  color: #C41E3A;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/* ─────────────────────────────────────
+   Card styles (light theme)
+───────────────────────────────────── */
+.card-white {
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(27, 42, 74, 0.07), 0 0 0 1px rgba(27, 42, 74, 0.05);
+}
+
+/* ─────────────────────────────────────
+   Glassmorphism (hero dark overlay only)
+───────────────────────────────────── */
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(27, 42, 74, 0.1);
+  border-radius: 10px;
+}
+.glass-red {
+  background: rgba(196, 30, 58, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(196, 30, 58, 0.2);
+  border-radius: 10px;
+}
+
+/* ─────────────────────────────────────
+   Shimmer light sweep (hero only)
+───────────────────────────────────── */
+@keyframes shimmer-sweep {
+  0%   { transform: translateX(-120%) skewX(-20deg); }
+  100% { transform: translateX(400%)  skewX(-20deg); }
+}
+.shimmer-sweep {
+  position: absolute;
+  top: 0; left: 0;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 100%
+  );
+  filter: blur(6px);
+  animation: shimmer-sweep 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  pointer-events: none;
+  animation-delay: 1.5s;
+}
+
+/* ─────────────────────────────────────
+   Diagonal clip — bottom of hero
+───────────────────────────────────── */
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+}
+
+/* ─────────────────────────────────────
+   Section heading — navy left border
+───────────────────────────────────── */
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.5rem;
+  border-left: 6px solid transparent;
+  border-image: linear-gradient(to bottom, #C41E3A 0%, #C41E3A 55%, rgba(196, 30, 58, 0.25) 100%) 1;
+}
+.section-heading .label {
+  font-family: var(--font-cormorant), serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.45em;
+  color: #C41E3A;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 0.35rem;
+}
+.section-heading h2 {
+  font-family: var(--font-noto-serif-jp), serif;
+  font-weight: 900;
+  color: #002B5C;
+  line-height: 1.2;
+}
+
+/* ─────────────────────────────────────
+   Card hover — lift + shadow (light)
+───────────────────────────────────── */
+.card-lift {
+  transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform;
+  border-radius: 10px;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(27, 42, 74, 0.14), 0 0 0 1px rgba(196, 30, 58, 0.12);
+}
+
+/* ─────────────────────────────────────
+   Red underline link
+───────────────────────────────────── */
+.keio-underline {
+  position: relative;
+  display: inline-block;
+}
+.keio-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -3px; left: 0;
+  width: 100%; height: 2px;
+  background: linear-gradient(to right, #C41E3A, rgba(196, 30, 58, 0.4));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.keio-underline:hover::after { transform: scaleX(1); }
+
+/* ─────────────────────────────────────
+   Count-up number
+───────────────────────────────────── */
+.number-glow {
+  color: #002B5C;
+}
+
+/* ─────────────────────────────────────
+   Floating CTA
+───────────────────────────────────── */
+.floating-cta {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 50;
+}
+@media (max-width: 640px) {
+  .floating-cta { bottom: 1rem; right: 1rem; }
+}

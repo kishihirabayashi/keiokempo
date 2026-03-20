@@ -1,0 +1,83 @@
+import type { Metadata } from "next";
+import { Noto_Serif_JP, Noto_Sans_JP, Cormorant_Garamond } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import FloatingCTA from "@/components/FloatingCTA";
+
+const notoSerifJP = Noto_Serif_JP({
+  variable: "--font-noto-serif-jp",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "900"],
+  display: "swap",
+});
+
+const notoSansJP = Noto_Sans_JP({
+  variable: "--font-noto-sans-jp",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+});
+
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: {
+    default: "慶應義塾體育會拳法部 | 日本拳法",
+    template: "%s | 慶應義塾體育會拳法部",
+  },
+  description:
+    "慶應義塾體育會拳法部の公式サイト。突き・蹴り・投げ・関節技を許された総合格闘技、日本拳法。初心者大歓迎。練習場所：慶應義塾大学（三田・日吉）。",
+  keywords: [
+    "慶應義塾",
+    "拳法部",
+    "日本拳法",
+    "体育会",
+    "慶應 日本拳法",
+    "大学 格闘技",
+    "武道",
+    "慶應義塾大学",
+    "keio",
+    "kempo",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    siteName: "慶應義塾體育會拳法部",
+    title: "慶應義塾體育會拳法部 | 日本拳法",
+    description:
+      "突き・蹴り・投げ・関節技を許された総合格闘技、日本拳法。慶應義塾體育會拳法部公式サイト。",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="ja"
+      className={`${notoSerifJP.variable} ${notoSansJP.variable} ${cormorant.variable}`}
+    >
+      <body className="min-h-screen flex flex-col bg-[#111111] text-[#F5F0E8] antialiased">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+        <FloatingCTA />
+      </body>
+    </html>
+  );
+}
