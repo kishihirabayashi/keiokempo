@@ -71,9 +71,9 @@ export default function HeroSection() {
           <h1
             className="font-black leading-[1.05] tracking-wide"
             style={{
-              fontFamily: "var(--font-noto-serif-jp)",
+              fontFamily: "var(--font-zen-maru)",
               fontSize: "clamp(3.8rem, 14vw, 13rem)",
-              fontWeight: 900,
+              fontWeight: 700,
               color: "#B8860B",
               letterSpacing: "0.04em",
             }}

@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Zen_Maru_Gothic, Noto_Sans_JP, DM_Sans } from "next/font/google";
+import { Noto_Serif_JP, Noto_Sans_JP, Cormorant_Garamond, Zen_Maru_Gothic } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 
-// 見出し：丸みのあるゴシック
-const zenMaruGothic = Zen_Maru_Gothic({
+// 見出し：元のシャープなフォント
+const notoSerifJP = Noto_Serif_JP({
   variable: "--font-noto-serif-jp",
   subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
+  weight: ["400", "700", "900"],
   display: "swap",
   preload: false,
 });
@@ -23,12 +23,21 @@ const notoSansJP = Noto_Sans_JP({
   preload: false,
 });
 
-// 英字ラベル：DM Sans（柔らかいサンセリフ）
-const dmSans = DM_Sans({
+// 英字ラベル・装飾：Cormorant Garamond
+const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-cormorant",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
+});
+
+// キャッチフレーズ専用：Zen Maru Gothic（力強さと丸みを両立）
+const zenMaruGothic = Zen_Maru_Gothic({
+  variable: "--font-zen-maru",
+  subsets: ["latin"],
+  weight: ["700", "900"],
+  display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -75,7 +84,7 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
-      className={`${zenMaruGothic.variable} ${notoSansJP.variable} ${dmSans.variable}`}
+      className={`${notoSerifJP.variable} ${notoSansJP.variable} ${cormorantGaramond.variable} ${zenMaruGothic.variable}`}
     >
       <body className="min-h-screen flex flex-col bg-[#F5F0E6] text-[#1B2A4A] antialiased">
         <Header />
