@@ -6,7 +6,7 @@ interface AnimatedSectionProps {
   children: React.ReactNode;
   className?: string;
   delay?: number;
-  /** 上からスライド量 (px) */
+  /** スライド量 (px) */
   distance?: number;
   once?: boolean;
 }
@@ -21,13 +21,15 @@ export default function AnimatedSection({
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: distance, scale: 0.95 }}
+      initial={{ opacity: 0, y: distance, scale: 0.96 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once, amount: 0.08, margin: "-80px 0px" }}
+      viewport={{ once, amount: 0.08, margin: "-60px 0px" }}
       transition={{
-        duration: 0.85,
+        type: "spring",
+        damping: 28,
+        stiffness: 90,
         delay,
-        ease: [0.22, 0.61, 0.36, 1],
+        mass: 0.8,
       }}
     >
       {children}

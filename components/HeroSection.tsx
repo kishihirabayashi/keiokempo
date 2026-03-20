@@ -8,8 +8,8 @@ export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
 
-  const bgY       = useTransform(scrollY, [0, 900], ["0%", "30%"]);
-  const textY     = useTransform(scrollY, [0, 900], ["0%", "-10%"]);
+  const bgY       = useTransform(scrollY, [0, 900], ["0%", "28%"]);
+  const textY     = useTransform(scrollY, [0, 900], ["0%", "-12%"]);
   const textOpacity = useTransform(scrollY, [0, 500], [1, 0]);
 
   return (
@@ -17,14 +17,14 @@ export default function HeroSection() {
       ref={containerRef}
       className="relative h-screen overflow-hidden clip-diagonal"
     >
-      {/* ── 背景（パララックス） ── */}
+      {/* ── 背景（パララックス + シネマティックズーム） ── */}
       <motion.div
-        className="absolute inset-0 scale-[1.2] origin-center"
+        className="absolute inset-0 origin-center"
         style={{ y: bgY }}
       >
-        {/* 明るめのプレースホルダー背景 */}
+        {/* シネマティックズームをかける背景レイヤー */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 hero-zoom-bg"
           style={{
             backgroundImage:
               "url('/images/hero/hero.jpg'), linear-gradient(160deg, #C8D8E8 0%, #E0E8F0 40%, #B8CCD8 100%)",
@@ -32,9 +32,9 @@ export default function HeroSection() {
             backgroundPosition: "center 35%",
           }}
         />
-        {/* 紺オーバーレイ：少し濃くしてコントラスト強化 */}
-        <div className="absolute inset-0" style={{ background: 'rgba(0,15,40,0.82)' }} />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#001830]/70 via-transparent to-[#001830]/25" />
+        {/* 紺オーバーレイ：濃めでコントラスト強化 */}
+        <div className="absolute inset-0" style={{ background: 'rgba(0,12,35,0.84)' }} />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#000C23]/75 via-transparent to-[#000C23]/30" />
       </motion.div>
 
       {/* ── トップ3色バー（紺・赤・紺） ── */}
@@ -54,20 +54,26 @@ export default function HeroSection() {
       >
         {/* KEIO ラベル */}
         <motion.p
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="tracking-[0.55em] text-white/70 text-xs sm:text-sm mb-8 font-light"
+          transition={{ type: "spring", damping: 30, stiffness: 100, delay: 0.3 }}
+          className="tracking-[0.55em] text-white/60 text-xs sm:text-sm mb-10 font-light"
           style={{ fontFamily: "var(--font-cormorant)" }}
         >
           KEIO UNIVERSITY ATHLETIC ASSOCIATION
         </motion.p>
 
-        {/* キャッチコピー（巨大に） */}
+        {/* キャッチコピー（画面いっぱいに） */}
         <motion.div
-          initial={{ opacity: 0, y: 80, scale: 0.82 }}
+          initial={{ opacity: 0, y: 100, scale: 0.78 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1.1, delay: 0.45, ease: [0.22, 0.61, 0.36, 1] }}
+          transition={{
+            type: "spring",
+            damping: 22,
+            stiffness: 70,
+            delay: 0.5,
+            mass: 0.9,
+          }}
           className="relative overflow-hidden inline-block"
         >
           <h1
@@ -86,10 +92,10 @@ export default function HeroSection() {
 
         {/* サブコピー */}
         <motion.p
-          initial={{ opacity: 0, y: 32 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.85, delay: 0.9 }}
-          className="text-white/75 text-sm sm:text-base leading-relaxed mt-8 mb-12 max-w-lg"
+          transition={{ type: "spring", damping: 30, stiffness: 100, delay: 1.0 }}
+          className="text-white/70 text-sm sm:text-base leading-relaxed mt-8 mb-12 max-w-lg"
           style={{ fontFamily: "var(--font-noto-sans-jp)", fontWeight: 400 }}
         >
           慶應義塾體育會拳法部 — 日本拳法で繋がる仲間と、本気の大学生活を。
@@ -97,28 +103,29 @@ export default function HeroSection() {
 
         {/* CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 32 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.85, delay: 1.15 }}
+          transition={{ type: "spring", damping: 30, stiffness: 100, delay: 1.2 }}
           className="flex flex-col sm:flex-row gap-4 items-center"
         >
           <Link
             href="/join"
-            className="group relative inline-flex items-center gap-3 px-10 py-5 bg-[#C41E3A] text-white font-black text-sm tracking-[0.22em] overflow-hidden hover:bg-[#A01530] transition-colors duration-300 rounded-md"
+            className="group relative inline-flex items-center gap-3 px-10 py-5 bg-[#C41E3A] text-white font-black text-sm tracking-[0.22em] overflow-hidden rounded-md"
             style={{ fontFamily: "var(--font-noto-sans-jp)" }}
           >
+            <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-500 ease-out" aria-hidden="true" />
             <span className="relative z-10">まずは道場へ。</span>
-            <svg className="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="relative z-10 w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-            <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/12 to-transparent transition-transform duration-700 ease-in-out" aria-hidden="true" />
           </Link>
           <Link
             href="/about-kempo"
-            className="inline-flex items-center gap-2 px-8 py-5 bg-white/15 backdrop-blur-sm text-white font-bold text-sm tracking-[0.2em] hover:bg-white/25 transition-all duration-300 rounded-md border border-white/25"
+            className="group relative inline-flex items-center gap-2 px-8 py-5 overflow-hidden text-white font-bold text-sm tracking-[0.2em] rounded-md border border-white/30"
             style={{ fontFamily: "var(--font-noto-sans-jp)" }}
           >
-            日本拳法とは
+            <span className="absolute inset-0 bg-white/15 -translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out" aria-hidden="true" />
+            <span className="relative z-10">日本拳法とは</span>
           </Link>
         </motion.div>
       </motion.div>
@@ -127,7 +134,7 @@ export default function HeroSection() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2.0, duration: 0.8 }}
+        transition={{ delay: 2.2, duration: 0.8 }}
         className="absolute bottom-16 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
       >
         <p
@@ -138,7 +145,7 @@ export default function HeroSection() {
         </p>
         <motion.div
           animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
           className="flex flex-col items-center gap-1"
         >
           <div className="w-[2px] h-10 bg-gradient-to-b from-white/80 to-transparent" />
