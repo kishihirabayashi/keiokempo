@@ -44,7 +44,7 @@ export default function ContactForm() {
         </h3>
         <p
           className="text-[#6B7A99] text-sm"
-          style={{ fontFamily: "var(--font-noto-sans-jp)", lineHeight: 1.85 }}
+          style={{ fontFamily: "var(--font-noto-sans-jp)", lineHeight: 1.95 }}
         >
           内容を確認の上、2〜3日以内にご連絡いたします。
           <br />
@@ -55,7 +55,7 @@ export default function ContactForm() {
   }
 
   const inputClass =
-    "w-full bg-[#FAF7F0] border border-[#D4C9B8] text-[#1B2A4A] px-4 py-3 text-sm focus:outline-none focus:border-[#002B5C] focus:ring-2 focus:ring-[#002B5C]/10 transition-all duration-200 rounded-lg placeholder-[#B0A090]";
+    "w-full bg-[#FAF7F0] border border-[#D4C9B8] text-[#2D3748] px-4 py-3 text-sm focus:outline-none focus:border-[#002B5C] focus:ring-2 focus:ring-[#002B5C]/10 transition-all duration-300 rounded-lg placeholder-[#B0A090]";
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -64,7 +64,7 @@ export default function ContactForm() {
           <div>
             <label
               htmlFor="name"
-              className="block text-[#1B2A4A] text-xs font-medium mb-2"
+              className="block text-[#2D3748] text-xs font-medium mb-2"
               style={{ fontFamily: "var(--font-noto-sans-jp)", letterSpacing: "0.05em" }}
             >
               お名前 <span className="text-[#C41E3A]">*</span>
@@ -82,7 +82,7 @@ export default function ContactForm() {
           <div>
             <label
               htmlFor="faculty"
-              className="block text-[#1B2A4A] text-xs font-medium mb-2"
+              className="block text-[#2D3748] text-xs font-medium mb-2"
               style={{ fontFamily: "var(--font-noto-sans-jp)", letterSpacing: "0.05em" }}
             >
               学部（任意）
@@ -101,7 +101,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="email"
-            className="block text-[#1B2A4A] text-xs font-medium mb-2"
+            className="block text-[#2D3748] text-xs font-medium mb-2"
             style={{ fontFamily: "var(--font-noto-sans-jp)", letterSpacing: "0.05em" }}
           >
             メールアドレス <span className="text-[#C41E3A]">*</span>
@@ -119,7 +119,7 @@ export default function ContactForm() {
 
         <div>
           <label
-            className="block text-[#1B2A4A] text-xs font-medium mb-3"
+            className="block text-[#2D3748] text-xs font-medium mb-3"
             style={{ fontFamily: "var(--font-noto-sans-jp)", letterSpacing: "0.05em" }}
           >
             お問い合わせ種別 <span className="text-[#C41E3A]">*</span>
@@ -136,7 +136,7 @@ export default function ContactForm() {
                   className="accent-[#C41E3A]"
                 />
                 <span
-                  className="text-[#1B2A4A] text-sm"
+                  className="text-[#2D3748] text-sm"
                   style={{ fontFamily: "var(--font-noto-sans-jp)" }}
                 >
                   {t}
@@ -149,7 +149,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="message"
-            className="block text-[#1B2A4A] text-xs font-medium mb-2"
+            className="block text-[#2D3748] text-xs font-medium mb-2"
             style={{ fontFamily: "var(--font-noto-sans-jp)", letterSpacing: "0.05em" }}
           >
             ご質問・メッセージ（任意）
@@ -190,7 +190,7 @@ export default function ContactForm() {
               <p className="text-[#6B7A99] text-xs mb-1">メール</p>
               <a
                 href="mailto:keio.kempo@example.com"
-                className="text-[#1B2A4A] text-sm hover:text-[#C41E3A] transition-colors"
+                className="text-[#2D3748] text-sm hover:text-[#C41E3A] transition-colors"
               >
                 keio.kempo@example.com
               </a>
@@ -201,7 +201,7 @@ export default function ContactForm() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#1B2A4A] text-sm hover:text-[#C41E3A] transition-colors"
+                className="text-[#2D3748] text-sm hover:text-[#C41E3A] transition-colors"
               >
                 @keio_kempo
               </a>
@@ -217,7 +217,7 @@ export default function ContactForm() {
           </h3>
           <p
             className="text-[#6B7A99] text-xs"
-            style={{ fontFamily: "var(--font-noto-sans-jp)", lineHeight: 1.85 }}
+            style={{ fontFamily: "var(--font-noto-sans-jp)", lineHeight: 1.95 }}
           >
             事前連絡なしでの見学も歓迎です。練習日に武道場へ直接お越しください。
           </p>

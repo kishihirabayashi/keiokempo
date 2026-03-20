@@ -60,7 +60,7 @@ export default function ResultTable({ results, year }: ResultTableProps) {
           {filtered.map((r, i) => (
             <tr
               key={i}
-              className="border-b border-[#D4C9B8] hover:bg-[#EDE7D9] transition-colors duration-150"
+              className="border-b border-[#D4C9B8] hover:bg-[#EDE7D9] transition-colors duration-300"
             >
               <td
                 className="py-4 px-4 text-[#6B7A99] tabular-nums"
@@ -69,7 +69,7 @@ export default function ResultTable({ results, year }: ResultTableProps) {
                 {r.year}
               </td>
               <td
-                className="py-4 px-4 text-[#1B2A4A]"
+                className="py-4 px-4 text-[#2D3748]"
                 style={{ fontFamily: "var(--font-noto-sans-jp)", lineHeight: 1.6 }}
               >
                 {r.tournament}

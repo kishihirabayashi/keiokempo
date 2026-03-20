@@ -64,13 +64,13 @@ export default function MemberCard({ member }: MemberCardProps) {
             </span>
           )}
         </div>
-        <p className="text-[#6B7A99] text-xs mb-3" style={{ lineHeight: 1.85 }}>
+        <p className="text-[#6B7A99] text-xs mb-3" style={{ lineHeight: 1.95 }}>
           {member.faculty}　{member.origin && `出身：${member.origin}`}
         </p>
         {member.comment && (
           <p
-            className="text-[#1B2A4A]/70 text-sm italic border-l-[3px] border-[#C41E3A]/30 pl-3 bg-[#EDE7D9] py-2 rounded-r-md"
-            style={{ lineHeight: 1.85 }}
+            className="text-[#2D3748]/70 text-sm italic border-l-[3px] border-[#C41E3A]/30 pl-3 bg-[#EDE7D9] py-2 rounded-r-md"
+            style={{ lineHeight: 1.95 }}
           >
             「{member.comment}」
           </p>

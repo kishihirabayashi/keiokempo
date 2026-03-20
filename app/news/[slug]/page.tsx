@@ -35,13 +35,13 @@ function renderMarkdown(text: string): string {
     .replace(/^# (.+)$/gm, '<h1 class="text-3xl font-black text-[#002B5C] mt-8 mb-4">$1</h1>')
     .replace(/^## (.+)$/gm, '<h2 class="text-2xl font-bold text-[#002B5C] mt-6 mb-3">$1</h2>')
     .replace(/^### (.+)$/gm, '<h3 class="text-xl font-bold text-[#002B5C] mt-5 mb-2">$1</h3>')
-    .replace(/\*\*(.+?)\*\*/g, '<strong class="text-[#1B2A4A] font-bold">$1</strong>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong class="text-[#2D3748] font-bold">$1</strong>')
     .replace(/^\| (.+) \|$/gm, (line) => {
       const cells = line.split(" | ").map((c) => c.trim().replace(/^\|/, "").replace(/\|$/, ""));
-      return `<div class="flex gap-4 border-b border-[#D4C9B8] py-2">${cells.map((c) => `<span class="text-[#1B2A4A] text-sm flex-1">${c}</span>`).join("")}</div>`;
+      return `<div class="flex gap-4 border-b border-[#D4C9B8] py-2">${cells.map((c) => `<span class="text-[#2D3748] text-sm flex-1">${c}</span>`).join("")}</div>`;
     })
-    .replace(/^- (.+)$/gm, '<li class="text-[#1B2A4A] text-sm leading-relaxed ml-4">· $1</li>')
-    .replace(/\n\n/g, '</p><p class="text-[#1B2A4A] leading-relaxed mt-4">')
+    .replace(/^- (.+)$/gm, '<li class="text-[#2D3748] text-sm leading-relaxed ml-4">· $1</li>')
+    .replace(/\n\n/g, '</p><p class="text-[#2D3748] leading-relaxed mt-4">')
     .replace(/^(?!<)(.+)$/gm, '$1');
 }
 
@@ -57,7 +57,7 @@ export default async function NewsDetailPage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-[#F5F0E6]">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-24">
         {/* パンくずリスト */}
         <nav className="flex items-center gap-2 text-[#A0AAB8] text-xs mb-8"
           style={{ fontFamily: "var(--font-cormorant)" }}>
@@ -98,9 +98,9 @@ export default async function NewsDetailPage({ params }: Props) {
           style={{ fontFamily: "var(--font-noto-sans-jp)" }}
         >
           <div
-            className="text-[#1B2A4A] leading-relaxed space-y-4"
+            className="text-[#2D3748] leading-relaxed space-y-4"
             dangerouslySetInnerHTML={{
-              __html: `<p class="text-[#1B2A4A] leading-relaxed">${renderMarkdown(post.body ?? "")}</p>`,
+              __html: `<p class="text-[#2D3748] leading-relaxed">${renderMarkdown(post.body ?? "")}</p>`,
             }}
           />
         </article>
@@ -114,7 +114,7 @@ export default async function NewsDetailPage({ params }: Props) {
         <div className="flex justify-between">
           <Link
             href="/news"
-            className="inline-flex items-center gap-2 text-[#C41E3A] text-sm hover:gap-4 transition-all duration-200"
+            className="inline-flex items-center gap-2 text-[#C41E3A] text-sm hover:gap-4 transition-all duration-300"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

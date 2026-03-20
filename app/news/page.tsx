@@ -55,7 +55,7 @@ export default function NewsPage() {
   return (
     <div className="min-h-screen bg-[#F5F0E6]">
       {/* ヘッダービジュアル */}
-      <div className="relative bg-[#EDE7D9] pt-32 pb-20 overflow-hidden">
+      <div className="relative bg-[#EDE7D9] pt-36 pb-24 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
@@ -74,7 +74,7 @@ export default function NewsPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* カテゴリフィルター */}
         <div className="flex flex-wrap gap-2 mb-10">
           {categories.map((cat) => (
@@ -84,7 +84,7 @@ export default function NewsPage() {
               className={`px-4 py-1.5 text-sm border rounded-md transition-colors duration-150 ${
                 activeCategory === cat
                   ? "bg-[#C41E3A] border-[#C41E3A] text-white font-bold"
-                  : "bg-[#FAF7F0] border-[#D4C9B8] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#1B2A4A]"
+                  : "bg-[#FAF7F0] border-[#D4C9B8] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#2D3748]"
               }`}
               style={{ fontFamily: "var(--font-noto-sans-jp)" }}
             >
@@ -120,7 +120,7 @@ export default function NewsPage() {
                 </div>
                 <div className="flex-1">
                   <h2
-                    className="text-[#002B5C] font-bold text-lg mb-2 group-hover:text-[#C41E3A] transition-colors duration-200"
+                    className="text-[#002B5C] font-bold text-lg mb-2 group-hover:text-[#C41E3A] transition-colors duration-300"
                     style={{ fontFamily: "var(--font-noto-serif-jp)" }}
                   >
                     {post.title}
@@ -132,7 +132,7 @@ export default function NewsPage() {
                     </p>
                   )}
                 </div>
-                <div className="shrink-0 self-center text-[#C41E3A] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                <div className="shrink-0 self-center text-[#C41E3A] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>

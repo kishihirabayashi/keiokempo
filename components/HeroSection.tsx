@@ -89,7 +89,7 @@ export default function HeroSection() {
           <motion.span
             className="block font-black leading-[1.08] text-center"
             style={{
-              fontFamily: "var(--font-zen-maru)",
+              fontFamily: "var(--font-noto-serif-jp)",
               fontSize: "clamp(3.2rem, 15vw, 15rem)",
               fontWeight: 700,
               color: "#B8860B",
@@ -106,7 +106,7 @@ export default function HeroSection() {
           <motion.span
             className="block font-black leading-[1.08] text-center"
             style={{
-              fontFamily: "var(--font-zen-maru)",
+              fontFamily: "var(--font-noto-serif-jp)",
               fontSize: "clamp(3.2rem, 15vw, 15rem)",
               fontWeight: 700,
               color: "#B8860B",
@@ -126,7 +126,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: elegantEase, delay: 1.7 }}
           className="text-white/70 text-sm sm:text-base leading-relaxed mb-12 max-w-lg"
-          style={{ fontFamily: "var(--font-noto-sans-jp)", fontWeight: 400, lineHeight: 1.85 }}
+          style={{ fontFamily: "var(--font-noto-sans-jp)", fontWeight: 400, lineHeight: 1.95 }}
         >
           慶應義塾體育會拳法部 — 日本拳法で繋がる仲間と、本気の大学生活を。
         </motion.p>

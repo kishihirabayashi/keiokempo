@@ -34,7 +34,7 @@ export default function AboutKempoPage() {
   return (
     <div className="min-h-screen bg-[#F5F0E6]">
       {/* ヘッダービジュアル */}
-      <div className="relative bg-[#EDE7D9] pt-32 pb-20 overflow-hidden">
+      <div className="relative bg-[#EDE7D9] pt-36 pb-24 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
@@ -62,9 +62,9 @@ export default function AboutKempoPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         {/* 歴史 */}
-        <section className="mb-20">
+        <section className="mb-24">
           <div className="flex items-center gap-4 mb-8">
             <p className="section-title-en">History</p>
             <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
@@ -77,7 +77,7 @@ export default function AboutKempoPage() {
               >
                 1932年、澤山宗海が創始
               </h2>
-              <div className="space-y-4 text-[#1B2A4A] leading-relaxed"
+              <div className="space-y-4 text-[#2D3748] leading-relaxed"
                 style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
                 <p>
                   日本拳法は1932年（昭和7年）、澤山宗海（さわやまむねとし）によって大阪で創始された日本発祥の総合武道です。
@@ -115,7 +115,7 @@ export default function AboutKempoPage() {
                     </div>
                     <div className="flex-1">
                       <div className="w-2 h-2 bg-[#C41E3A] rounded-full mt-1.5 -ml-1 float-left mr-3" />
-                      <p className="text-[#1B2A4A] text-sm">{item.event}</p>
+                      <p className="text-[#2D3748] text-sm">{item.event}</p>
                     </div>
                   </div>
                 ))}
@@ -125,7 +125,7 @@ export default function AboutKempoPage() {
         </section>
 
         {/* ルール */}
-        <section className="mb-20">
+        <section className="mb-24">
           <div className="flex items-center gap-4 mb-8">
             <p className="section-title-en">Rules</p>
             <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
@@ -169,7 +169,7 @@ export default function AboutKempoPage() {
                 content: "試合前後の礼を重んじる武道精神が基本。技術だけでなく、人格の陶冶も日本拳法の重要な柱。",
               },
             ].map((item) => (
-              <div key={item.title} className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-6 hover:border-[#C41E3A]/30 transition-colors duration-200"
+              <div key={item.title} className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-6 hover:border-[#C41E3A]/30 transition-colors duration-300"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
                 <div className="text-2xl mb-3">{item.icon}</div>
                 <h3
@@ -188,7 +188,7 @@ export default function AboutKempoPage() {
         </section>
 
         {/* 防具説明 */}
-        <section className="mb-20">
+        <section className="mb-24">
           <div className="flex items-center gap-4 mb-8">
             <p className="section-title-en">Equipment</p>
             <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
@@ -238,7 +238,7 @@ export default function AboutKempoPage() {
         </section>
 
         {/* 他武道との比較 */}
-        <section className="mb-20">
+        <section className="mb-24">
           <div className="flex items-center gap-4 mb-8">
             <p className="section-title-en">Comparison</p>
             <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
@@ -273,7 +273,7 @@ export default function AboutKempoPage() {
                       style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
                       {c.similarity}
                     </td>
-                    <td className="py-4 px-5 text-[#1B2A4A]"
+                    <td className="py-4 px-5 text-[#2D3748]"
                       style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
                       {c.difference}
                     </td>
@@ -296,7 +296,7 @@ export default function AboutKempoPage() {
               >
                 実用武道として
               </h2>
-              <p className="text-[#1B2A4A] leading-relaxed mb-4"
+              <p className="text-[#2D3748] leading-relaxed mb-4"
                 style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
                 日本拳法は自衛隊・警察・海上保安庁など、実際の護身・逮捕術として採用されている実用武道です。
                 そのフルコンタクトの実戦的な技術体系が、各機関から高い評価を受けています。
@@ -327,7 +327,7 @@ export default function AboutKempoPage() {
           </p>
           <Link
             href="/join"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-[#C41E3A] text-white font-black text-sm tracking-widest hover:bg-[#a01530] transition-colors duration-200 rounded-md"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-[#C41E3A] text-white font-black text-sm tracking-widest hover:bg-[#a01530] transition-colors duration-300 rounded-md"
           >
             入部案内・体験申し込み
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -36,7 +36,7 @@ function FAQAccordionItem({
             Q
           </span>
           <span
-            className="text-[#002B5C] font-bold group-hover:text-[#C41E3A] transition-colors duration-200"
+            className="text-[#002B5C] font-bold group-hover:text-[#C41E3A] transition-colors duration-300"
             style={{ fontFamily: "var(--font-noto-serif-jp)", letterSpacing: "0.03em", lineHeight: 1.5 }}
           >
             {item.question}
@@ -71,8 +71,8 @@ function FAQAccordionItem({
                   A
                 </span>
                 <p
-                  className="text-[#1B2A4A] text-sm"
-                  style={{ fontFamily: "var(--font-noto-sans-jp)", lineHeight: 1.85 }}
+                  className="text-[#2D3748] text-sm"
+                  style={{ fontFamily: "var(--font-noto-sans-jp)", lineHeight: 1.95 }}
                 >
                   {item.answer}
                 </p>

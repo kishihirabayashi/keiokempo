@@ -62,7 +62,7 @@ export default function HomePage() {
       <HeroSection />
 
       {/* ── 部の雰囲気（ヒーロー直後） ── */}
-      <section className="bg-[#FAF7F0] py-20 lg:py-28 relative overflow-hidden">
+      <section className="bg-[#FAF7F0] py-24 lg:py-32 relative overflow-hidden">
         {/* 巨大bg watermark */}
         <div
           className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
@@ -125,7 +125,7 @@ export default function HomePage() {
                     {/* 番号装飾 */}
                     <div className="absolute inset-0 flex items-center justify-center select-none pointer-events-none">
                       <span
-                        className="text-[#1B2A4A]/[0.08] font-black"
+                        className="text-[#2D3748]/[0.08] font-black"
                         style={{
                           fontFamily: "var(--font-cormorant)",
                           fontSize: "9rem",
@@ -169,7 +169,7 @@ export default function HomePage() {
                       {item.label}
                     </p>
                     <p
-                      className="text-[#1B2A4A] text-sm font-bold leading-snug"
+                      className="text-[#2D3748] text-sm font-bold leading-snug"
                       style={{ fontFamily: "var(--font-noto-serif-jp)" }}
                     >
                       {item.desc}
@@ -188,7 +188,7 @@ export default function HomePage() {
               style={{ fontFamily: "var(--font-noto-sans-jp)" }}
             >
               <span className="absolute inset-0 bg-[#002B5C] -translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out" aria-hidden="true" />
-              <span className="relative z-10 group-hover:text-white transition-colors duration-200">まずは雰囲気を見に来てください</span>
+              <span className="relative z-10 group-hover:text-white transition-colors duration-300">まずは雰囲気を見に来てください</span>
               <svg className="relative z-10 w-4 h-4 group-hover:text-white group-hover:translate-x-1.5 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -198,11 +198,11 @@ export default function HomePage() {
       </section>
 
       {/* ── STATS ── */}
-      <AnimatedSection className="bg-[#EDE7D9] py-20 lg:py-24">
+      <AnimatedSection className="bg-[#EDE7D9] py-24 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-[#D4C9B8]">
             {STATS.map((s, i) => (
-              <AnimatedSection key={s.label} delay={i * 0.1} className="text-center py-8 px-4">
+              <AnimatedSection key={s.label} delay={i * 0.1} className="text-center py-10 px-4">
                 <p
                   className="number-glow font-black leading-none mb-3"
                   style={{
@@ -264,13 +264,13 @@ export default function HomePage() {
       </ParallaxBand>
 
       {/* ── NEWS ── */}
-      <section className="bg-[#FAF7F0] py-20 lg:py-28">
+      <section className="bg-[#FAF7F0] py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="flex items-end justify-between gap-4 mb-12">
             <SectionHeading en="News" jp="最新情報" />
             <Link
               href="/news"
-              className="text-[#6B7A99] hover:text-[#C41E3A] text-xs tracking-[0.35em] transition-colors duration-200 pb-1 shrink-0"
+              className="text-[#6B7A99] hover:text-[#C41E3A] text-xs tracking-[0.35em] transition-colors duration-300 pb-1 shrink-0"
               style={{ fontFamily: "var(--font-cormorant)" }}
             >
               ALL NEWS →
@@ -288,7 +288,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 日本拳法とは（非対称レイアウト） ── */}
-      <section className="bg-[#EDE7D9] py-20 lg:py-32 relative overflow-hidden">
+      <section className="bg-[#EDE7D9] py-24 lg:py-40 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
 
@@ -340,7 +340,7 @@ export default function HomePage() {
 
                 <div className="space-y-4 mb-10">
                   <p
-                    className="text-[#1B2A4A] leading-relaxed text-base"
+                    className="text-[#2D3748] leading-relaxed text-base"
                     style={{ fontFamily: "var(--font-noto-sans-jp)" }}
                   >
                     防具を纏い、拳ひとつで相手と向き合う——それが日本拳法。
@@ -362,7 +362,7 @@ export default function HomePage() {
                       <div key={item} className="flex items-center gap-2">
                         <div className="w-1.5 h-4 bg-[#C41E3A] rounded-full shrink-0" />
                         <span
-                          className="text-[#1B2A4A] text-xs"
+                          className="text-[#2D3748] text-xs"
                           style={{ fontFamily: "var(--font-noto-sans-jp)" }}
                         >
                           {item}
@@ -378,7 +378,7 @@ export default function HomePage() {
                   style={{ fontFamily: "var(--font-noto-sans-jp)" }}
                 >
                   <span className="absolute inset-0 bg-[#002B5C] -translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out" aria-hidden="true" />
-                  <span className="relative z-10 group-hover:text-white transition-colors duration-200">日本拳法をもっと知る</span>
+                  <span className="relative z-10 group-hover:text-white transition-colors duration-300">日本拳法をもっと知る</span>
                   <svg className="relative z-10 w-4 h-4 group-hover:text-white group-hover:translate-x-1.5 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -417,7 +417,7 @@ export default function HomePage() {
               { display: "約30", unit: "名", label: "現役部員（男女）" },
               { display: "80",  unit: "%",  label: "大学から始めた部員" },
             ].map((item, i) => (
-              <AnimatedSection key={item.label} delay={i * 0.12} className="text-center py-16 lg:py-20 px-8">
+              <AnimatedSection key={item.label} delay={i * 0.12} className="text-center py-20 lg:py-24 px-8">
                 <p
                   className="font-black leading-none text-white mb-4"
                   style={{
@@ -447,7 +447,7 @@ export default function HomePage() {
       </section>
 
       {/* ── NEXT MATCH ── */}
-      <AnimatedSection className="bg-[#F5F0E6] py-16 lg:py-20">
+      <AnimatedSection className="bg-[#F5F0E6] py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading en="Next Match" jp="次戦情報" className="mb-10" />
           <div
@@ -501,7 +501,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* ── GALLERY ── */}
-      <section className="bg-[#EDE7D9] py-20 lg:py-28">
+      <section className="bg-[#EDE7D9] py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="mb-12">
             <SectionHeading en="Gallery" jp="活動写真" />

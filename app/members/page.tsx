@@ -76,7 +76,7 @@ export default function MembersPage() {
   return (
     <div className="min-h-screen bg-[#F5F0E6]">
       {/* ヘッダービジュアル */}
-      <div className="relative bg-[#EDE7D9] pt-32 pb-20 overflow-hidden">
+      <div className="relative bg-[#EDE7D9] pt-36 pb-24 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
@@ -99,7 +99,7 @@ export default function MembersPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* フィルター */}
         <div className="flex flex-wrap gap-3 mb-10">
           <div className="flex flex-wrap gap-2">
@@ -112,7 +112,7 @@ export default function MembersPage() {
                 className={`px-4 py-1.5 text-sm border rounded-md transition-colors duration-150 ${
                   gradeFilter === g
                     ? "bg-[#C41E3A] border-[#C41E3A] text-white font-bold"
-                    : "bg-[#FAF7F0] border-[#D4C9B8] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#1B2A4A]"
+                    : "bg-[#FAF7F0] border-[#D4C9B8] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#2D3748]"
                 }`}
               >
                 {g === "all" ? "全学年" : `${g}年`}
@@ -134,7 +134,7 @@ export default function MembersPage() {
                 className={`px-4 py-1.5 text-sm border rounded-md transition-colors duration-150 ${
                   typeFilter === v
                     ? "bg-[#C41E3A] border-[#C41E3A] text-white font-bold"
-                    : "bg-[#FAF7F0] border-[#D4C9B8] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#1B2A4A]"
+                    : "bg-[#FAF7F0] border-[#D4C9B8] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#2D3748]"
                 }`}
               >
                 {l}

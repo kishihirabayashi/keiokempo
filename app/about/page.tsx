@@ -26,7 +26,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[#F5F0E6]">
       {/* ヘッダービジュアル */}
-      <div className="relative bg-[#EDE7D9] pt-32 pb-20 overflow-hidden">
+      <div className="relative bg-[#EDE7D9] pt-36 pb-24 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
@@ -49,10 +49,10 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
 
         {/* 沿革・歴史 */}
-        <section className="mb-20">
+        <section className="mb-24">
           <div className="flex items-center gap-4 mb-8">
             <p className="section-title-en">History</p>
             <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
@@ -65,7 +65,7 @@ export default function AboutPage() {
               >
                 慶應義塾體育會拳法部の歩み
               </h2>
-              <div className="space-y-4 text-[#1B2A4A] leading-relaxed text-sm"
+              <div className="space-y-4 text-[#2D3748] leading-relaxed text-sm"
                 style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
                 <p>
                   慶應義塾體育會拳法部は、日本拳法が全国に普及した昭和30年代に創部されました。
@@ -105,7 +105,7 @@ export default function AboutPage() {
                         style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
                         {dt}
                       </dt>
-                      <dd className="text-[#1B2A4A] text-sm"
+                      <dd className="text-[#2D3748] text-sm"
                         style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
                         {dd}
                       </dd>
@@ -118,7 +118,7 @@ export default function AboutPage() {
         </section>
 
         {/* 練習場所・時間 */}
-        <section className="mb-20">
+        <section className="mb-24">
           <div className="flex items-center gap-4 mb-8">
             <p className="section-title-en">Practice</p>
             <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
@@ -161,15 +161,15 @@ export default function AboutPage() {
                 <dl className="space-y-2">
                   <div className="flex gap-3">
                     <dt className="text-[#A0AAB8] text-xs w-16">練習日</dt>
-                    <dd className="text-[#1B2A4A] text-sm">{place.days}</dd>
+                    <dd className="text-[#2D3748] text-sm">{place.days}</dd>
                   </div>
                   <div className="flex gap-3">
                     <dt className="text-[#A0AAB8] text-xs w-16">時間</dt>
-                    <dd className="text-[#1B2A4A] text-sm">{place.time}</dd>
+                    <dd className="text-[#2D3748] text-sm">{place.time}</dd>
                   </div>
                   <div className="flex gap-3">
                     <dt className="text-[#A0AAB8] text-xs w-16">アクセス</dt>
-                    <dd className="text-[#1B2A4A] text-sm">{place.access}</dd>
+                    <dd className="text-[#2D3748] text-sm">{place.access}</dd>
                   </div>
                 </dl>
               </div>
@@ -178,7 +178,7 @@ export default function AboutPage() {
         </section>
 
         {/* 年間スケジュール */}
-        <section className="mb-20">
+        <section className="mb-24">
           <div className="flex items-center gap-4 mb-8">
             <p className="section-title-en">Annual Schedule</p>
             <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
@@ -211,7 +211,7 @@ export default function AboutPage() {
         </section>
 
         {/* 指導体制 */}
-        <section className="mb-20">
+        <section className="mb-24">
           <div className="flex items-center gap-4 mb-8">
             <p className="section-title-en">Coaching Staff</p>
             <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
@@ -273,7 +273,7 @@ export default function AboutPage() {
           >
             OB会「三田拳法会」
           </h2>
-          <p className="text-[#1B2A4A] leading-relaxed max-w-2xl"
+          <p className="text-[#2D3748] leading-relaxed max-w-2xl"
             style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
             卒業生は「三田拳法会」として組織され、定期的な親睦会や現役部員への
             指導・支援活動を行っています。慶應のネットワークと拳法を通じて
@@ -286,7 +286,7 @@ export default function AboutPage() {
         <div className="text-center">
           <Link
             href="/join"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-[#C41E3A] text-white font-black text-sm tracking-widest hover:bg-[#a01530] transition-colors duration-200 rounded-md"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-[#C41E3A] text-white font-black text-sm tracking-widest hover:bg-[#a01530] transition-colors duration-300 rounded-md"
           >
             入部案内・体験申し込み
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

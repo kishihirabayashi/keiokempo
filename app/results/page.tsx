@@ -37,7 +37,7 @@ export default function ResultsPage() {
   return (
     <div className="min-h-screen bg-[#F5F0E6]">
       {/* ヘッダービジュアル */}
-      <div className="relative bg-[#EDE7D9] pt-32 pb-20 overflow-hidden">
+      <div className="relative bg-[#EDE7D9] pt-36 pb-24 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
@@ -56,10 +56,10 @@ export default function ResultsPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
         {/* ハイライト */}
-        <section className="mb-16">
+        <section className="mb-20">
           <div className="flex items-center gap-4 mb-8">
             <p className="section-title-en">Highlights</p>
             <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
@@ -97,7 +97,7 @@ export default function ResultsPage() {
               className={`px-4 py-1.5 text-sm border rounded-md transition-colors duration-150 ${
                 selectedYear === "all"
                   ? "bg-[#C41E3A] border-[#C41E3A] text-white font-bold"
-                  : "bg-[#FAF7F0] border-[#D4C9B8] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#1B2A4A]"
+                  : "bg-[#FAF7F0] border-[#D4C9B8] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#2D3748]"
               }`}
             >
               全年度
@@ -109,7 +109,7 @@ export default function ResultsPage() {
                 className={`px-4 py-1.5 text-sm border rounded-md transition-colors duration-150 ${
                   selectedYear === y
                     ? "bg-[#C41E3A] border-[#C41E3A] text-white font-bold"
-                    : "bg-[#FAF7F0] border-[#D4C9B8] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#1B2A4A]"
+                    : "bg-[#FAF7F0] border-[#D4C9B8] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#2D3748]"
                 }`}
                 style={{ fontFamily: "var(--font-cormorant)" }}
               >

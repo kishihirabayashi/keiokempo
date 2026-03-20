@@ -75,7 +75,7 @@ export default function NewsCard({ post, featured }: NewsCardProps) {
         {post.excerpt && (
           <p
             className="text-[#6B7A99] text-sm mt-2 line-clamp-2"
-            style={{ fontFamily: "var(--font-noto-sans-jp)", lineHeight: 1.85 }}
+            style={{ fontFamily: "var(--font-noto-sans-jp)", lineHeight: 1.95 }}
           >
             {post.excerpt}
           </p>

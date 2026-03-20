@@ -80,7 +80,7 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-[#1B2A4A] hover:text-[#C41E3A] text-sm tracking-wider transition-colors duration-200 keio-underline"
+                  className="text-[#1B2A4A] hover:text-[#C41E3A] text-sm tracking-wider transition-colors duration-300 keio-underline"
                   style={{ fontFamily: "var(--font-noto-sans-jp)" }}
                 >
                   {link.label}
@@ -88,7 +88,7 @@ export default function Header() {
               ))}
               <Link
                 href="/join"
-                className="group relative ml-4 px-6 py-2.5 bg-[#C41E3A] text-white text-sm font-bold tracking-wider overflow-hidden rounded-lg transition-colors duration-200"
+                className="group relative ml-4 px-6 py-2.5 bg-[#C41E3A] text-white text-sm font-bold tracking-wider overflow-hidden rounded-lg transition-colors duration-300"
                 style={{ fontFamily: "var(--font-noto-sans-jp)" }}
               >
                 <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-400 ease-out" />
@@ -135,7 +135,7 @@ export default function Header() {
                     <Link
                       href={link.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className="block text-2xl font-bold text-[#002B5C] hover:text-[#C41E3A] transition-colors duration-200"
+                      className="block text-2xl font-bold text-[#002B5C] hover:text-[#C41E3A] transition-colors duration-300"
                       style={{ fontFamily: "var(--font-noto-serif-jp)", letterSpacing: "0.04em" }}
                     >
                       {link.label}

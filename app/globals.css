@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-ink-black: #1B2A4A;
+  --color-ink-black: #2D3748;
   --color-ink-deep: #002B5C;
   --color-ink-mid: #D4C9B8;
   --color-ink-light: #DDD4C2;
@@ -28,10 +28,10 @@ html { scroll-behavior: smooth; }
 
 body {
   background: #F5F0E6;
-  color: #1B2A4A;
+  color: #2D3748;
   font-family: var(--font-noto-sans-jp), sans-serif;
   font-size: 1rem;
-  line-height: 1.85;
+  line-height: 1.95;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;

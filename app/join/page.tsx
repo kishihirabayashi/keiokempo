@@ -68,7 +68,7 @@ export default function JoinPage() {
   return (
     <div className="min-h-screen bg-[#F5F0E6]">
       {/* ヒーロービジュアル */}
-      <div className="relative bg-[#EDE7D9] pt-32 pb-20 overflow-hidden">
+      <div className="relative bg-[#EDE7D9] pt-36 pb-24 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
@@ -90,7 +90,7 @@ export default function JoinPage() {
           >
             入部案内
           </h1>
-          <p className="text-[#1B2A4A] text-xl font-bold mb-3"
+          <p className="text-[#2D3748] text-xl font-bold mb-3"
             style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
             大学から始めても、大丈夫。
           </p>
@@ -102,10 +102,10 @@ export default function JoinPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
 
         {/* 入部の流れ */}
-        <section className="mb-20">
+        <section className="mb-24">
           <div className="flex items-center gap-4 mb-8">
             <p className="section-title-en">How to Join</p>
             <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
@@ -187,7 +187,7 @@ export default function JoinPage() {
                 ].map(({ item, cost }) => (
                   <div key={item} className="flex justify-between items-center pb-3 border-b border-[#D4C9B8]">
                     <span className="text-[#6B7A99] text-sm">{item}</span>
-                    <span className="text-[#1B2A4A] text-sm font-bold">{cost}</span>
+                    <span className="text-[#2D3748] text-sm font-bold">{cost}</span>
                   </div>
                 ))}
               </div>
@@ -196,7 +196,7 @@ export default function JoinPage() {
         </section>
 
         {/* FAQ */}
-        <section className="mb-20">
+        <section className="mb-24">
           <div className="flex items-center gap-4 mb-8">
             <p className="section-title-en">FAQ</p>
             <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
