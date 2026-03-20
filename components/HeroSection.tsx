@@ -85,7 +85,7 @@ export default function HeroSection() {
 
         {/* キャッチコピー（2行 · 金色 · Zen Maru Gothic · 2段階フェードイン） */}
         <h1 className="mb-8">
-          {/* 1行目：腕は強し、 */}
+          {/* 1行目：拳は強し、 */}
           <motion.span
             className="block font-black leading-[1.08] text-center"
             style={{
@@ -99,7 +99,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.1, ease: elegantEase, delay: 0.55 }}
           >
-            腕は強し、
+            拳は強し、
           </motion.span>
 
           {/* 2行目：心は優し。（少し遅れてフェードイン） */}
