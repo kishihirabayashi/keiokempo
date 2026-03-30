@@ -9,6 +9,7 @@ const roleColors: Record<string, string> = {
   "主将": "text-[#C41E3A] border-[#C41E3A]/40 bg-[#C41E3A]/8",
   "副将": "text-[#C41E3A] border-[#C41E3A]/30 bg-[#C41E3A]/5",
   "主務": "text-[#002B5C] border-[#002B5C]/40 bg-[#002B5C]/8",
+  "副務": "text-[#002B5C] border-[#002B5C]/30 bg-[#002B5C]/5",
   "マネージャー": "text-[#6B7A99] border-[#C9BEAC] bg-[#EDE7D9]",
 };
 
@@ -24,7 +25,7 @@ export default function MemberCard({ member }: MemberCardProps) {
       <div className="relative w-full aspect-[4/5] overflow-hidden rounded-t-xl group">
         {member.photo ? (
           <Image
-            src={member.photo}
+            src={`/images/members/${member.photo}`}
             alt={member.name}
             fill
             className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
@@ -37,12 +38,12 @@ export default function MemberCard({ member }: MemberCardProps) {
             <span>PHOTO</span>
           </div>
         )}
-        {/* グレードバッジ */}
+        {/* 学年バッジ */}
         <div
           className="absolute top-3 left-3 bg-[#FAF7F0]/88 backdrop-blur-sm px-2.5 py-0.5 text-[#002B5C] text-xs rounded-full"
           style={{ fontFamily: "var(--font-cormorant)" }}
         >
-          {member.grade}年
+          {member.grade}
         </div>
       </div>
 
@@ -50,7 +51,7 @@ export default function MemberCard({ member }: MemberCardProps) {
       <div className="p-4">
         <div className="flex items-start justify-between gap-2 mb-1">
           <h3
-            className="text-[#002B5C] font-bold text-lg"
+            className="text-[#002B5C] font-bold text-base leading-snug"
             style={{ fontFamily: "var(--font-noto-serif-jp)", letterSpacing: "0.04em" }}
           >
             {member.name}
@@ -64,17 +65,28 @@ export default function MemberCard({ member }: MemberCardProps) {
             </span>
           )}
         </div>
-        <p className="text-[#6B7A99] text-xs mb-3" style={{ lineHeight: 1.95 }}>
-          {member.faculty}　{member.origin && `出身：${member.origin}`}
+        <p className="text-[#6B7A99] text-xs mb-3" style={{ fontFamily: "var(--font-noto-sans-jp)", lineHeight: 1.6 }}>
+          {member.faculty}
+          {member.origin && <><br />{member.origin}</>}
         </p>
-        {member.comment && (
-          <p
-            className="text-[#2D3748]/70 text-sm italic border-l-[3px] border-[#C41E3A]/30 pl-3 bg-[#EDE7D9] py-2 rounded-r-md"
-            style={{ lineHeight: 1.95 }}
-          >
-            「{member.comment}」
-          </p>
-        )}
+        <div className="flex flex-wrap gap-1.5">
+          {member.rank && (
+            <span
+              className="inline-flex items-center gap-1 text-[0.65rem] px-2 py-0.5 bg-[#002B5C]/8 border border-[#002B5C]/20 text-[#002B5C] rounded-full"
+              style={{ fontFamily: "var(--font-cormorant)" }}
+            >
+              {member.rank}
+            </span>
+          )}
+          {member.skill && (
+            <span
+              className="inline-flex items-center gap-1 text-[0.65rem] px-2 py-0.5 bg-[#C41E3A]/8 border border-[#C41E3A]/20 text-[#C41E3A] rounded-full"
+              style={{ fontFamily: "var(--font-noto-sans-jp)" }}
+            >
+              {member.skill}
+            </span>
+          )}
+        </div>
       </div>
     </div>
   );
