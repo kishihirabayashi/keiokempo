@@ -5,25 +5,41 @@ import ResultTable from "@/components/ResultTable";
 import type { TournamentResult } from "@/lib/getResults";
 
 const results: TournamentResult[] = [
-  { year: 2024, tournament: "第72回全日本学生拳法選手権大会", category: "団体戦", result: "ベスト8", details: "準々決勝で関西大学に惜敗" },
-  { year: 2024, tournament: "第72回全日本学生拳法選手権大会", category: "個人戦", result: "ベスト16" },
-  { year: 2024, tournament: "関東学生拳法選手権大会", category: "団体戦", result: "準優勝", details: "決勝で日本大学と対戦" },
-  { year: 2024, tournament: "関東学生拳法選手権大会", category: "個人戦", result: "3位", details: "田中主将がベスト4進出" },
-  { year: 2024, tournament: "東日本大学拳法選手権大会", category: "団体戦", result: "ベスト8" },
-  { year: 2023, tournament: "第71回全日本学生拳法選手権大会", category: "団体戦", result: "ベスト16" },
-  { year: 2023, tournament: "関東学生拳法選手権大会", category: "団体戦", result: "ベスト8" },
-  { year: 2023, tournament: "関東学生拳法選手権大会", category: "個人戦", result: "優勝", details: "佐藤翔（現副将）が個人タイトル獲得" },
-  { year: 2022, tournament: "第70回全日本学生拳法選手権大会", category: "団体戦", result: "ベスト8" },
-  { year: 2022, tournament: "関東学生拳法選手権大会", category: "団体戦", result: "3位" },
-  { year: 2021, tournament: "関東学生拳法選手権大会", category: "団体戦", result: "準優勝" },
+  // 2025年度 団体戦
+  { year: 2025, tournament: "早慶定期戦", category: "団体戦", result: "優勝", details: "2連覇達成" },
+  { year: 2025, tournament: "東日本大学新人戦", category: "団体戦", result: "準優勝" },
+  { year: 2025, tournament: "東日本大学リーグ戦", category: "団体戦", result: "3位" },
+  { year: 2025, tournament: "東日本大学選手権大会", category: "団体戦", result: "3位" },
+  { year: 2025, tournament: "全国大学選抜選手権大会", category: "団体戦", result: "ベスト16" },
+  { year: 2025, tournament: "全日本学生拳法選手権大会", category: "団体戦", result: "ベスト8" },
+  // 2025年度 個人戦
+  { year: 2025, tournament: "東日本学生個人選手権 級の部", category: "個人戦", result: "優勝" },
+  { year: 2025, tournament: "全日本体重別選手権 男子81kg以上の部", category: "個人戦", result: "準優勝" },
+  { year: 2025, tournament: "全日本体重別選手権 男子73kg未満の部", category: "個人戦", result: "ベスト4" },
+  { year: 2025, tournament: "埼玉県選手権大会 級の部", category: "個人戦", result: "4位" },
+  // 2024年度 団体戦
+  { year: 2024, tournament: "東日本大学新人戦", category: "団体戦", result: "優勝" },
+  { year: 2024, tournament: "早慶定期戦", category: "団体戦", result: "優勝" },
+  { year: 2024, tournament: "東日本大学選手権大会", category: "団体戦", result: "4位" },
+  { year: 2024, tournament: "全日本学生拳法選手権大会", category: "団体戦", result: "ベスト8" },
+  // 2024年度 個人戦
+  { year: 2024, tournament: "高幡不動尊奉納大会 級の部", category: "個人戦", result: "優勝" },
+  { year: 2024, tournament: "高幡不動尊奉納大会 級の部", category: "個人戦", result: "4位" },
+  { year: 2024, tournament: "埼玉県錬成大会 級の部", category: "個人戦", result: "優勝", details: "ゴジラ賞受賞" },
+  { year: 2024, tournament: "埼玉県錬成大会 級の部", category: "個人戦", result: "3位" },
+  { year: 2024, tournament: "埼玉県錬成大会 級の部", category: "個人戦", result: "4位" },
+  { year: 2024, tournament: "全日本体重別選手権大会 男子73kg未満の部", category: "個人戦", result: "3位" },
 ];
 
 const years = [...new Set(results.map((r) => r.year))].sort((a, b) => b - a);
 
 const highlights = [
-  { year: "2023", title: "個人戦 優勝", name: "佐藤翔（現副将）", tournament: "関東学生拳法選手権大会" },
-  { year: "2024", title: "団体戦 準優勝", name: "チーム全体", tournament: "関東学生拳法選手権大会" },
-  { year: "2021", title: "団体戦 準優勝", name: "チーム全体", tournament: "関東学生拳法選手権大会" },
+  { year: "2025", title: "団体戦 優勝", name: "2連覇達成", tournament: "早慶定期戦" },
+  { year: "2025", title: "個人戦 優勝", name: "級の部", tournament: "東日本学生個人選手権" },
+  { year: "2024", title: "団体戦 優勝", name: "団体戦", tournament: "東日本大学新人戦" },
+  { year: "2024", title: "団体戦 優勝", name: "団体戦", tournament: "早慶定期戦" },
+  { year: "2024", title: "個人戦 優勝", name: "級の部", tournament: "高幡不動尊奉納大会" },
+  { year: "2024", title: "個人戦 優勝", name: "級の部・ゴジラ賞", tournament: "埼玉県錬成大会" },
 ];
 
 export default function ResultsPage() {

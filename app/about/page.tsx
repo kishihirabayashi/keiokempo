@@ -132,18 +132,22 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {[
               {
-                name: "三田武道場",
-                campus: "三田キャンパス",
-                days: "火・木・土",
-                time: "18:00〜21:00",
-                access: "田町駅・三田駅から徒歩8分",
+                name: "蛯谷拳法道場",
+                campus: "日吉キャンパス",
+                items: [
+                  { label: "練習日", value: "火・水・木・金 ＋ 日曜日" },
+                  { label: "時間", value: "平日 18:00〜20:30 ／ 日曜 10:00〜13:00" },
+                  { label: "参加目安", value: "選手：平日3日＋日曜日 ／ マネージャー：週2日（相談可）" },
+                ],
               },
               {
-                name: "日吉記念館武道場",
-                campus: "日吉キャンパス",
-                days: "月・水・金",
-                time: "18:30〜21:30",
-                access: "東急東横線 日吉駅から徒歩5分",
+                name: "活動費用",
+                campus: "Activity Cost",
+                items: [
+                  { label: "部費", value: "年10,000円" },
+                  { label: "その他", value: "道着代・合宿費（別途）" },
+                  { label: "備考", value: "費用詳細は入部後にご案内します" },
+                ],
               },
             ].map((place) => (
               <div key={place.name} className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-6"
@@ -159,18 +163,12 @@ export default function AboutPage() {
                   {place.campus}
                 </p>
                 <dl className="space-y-2">
-                  <div className="flex gap-3">
-                    <dt className="text-[#A0AAB8] text-xs w-16">練習日</dt>
-                    <dd className="text-[#2D3748] text-sm">{place.days}</dd>
-                  </div>
-                  <div className="flex gap-3">
-                    <dt className="text-[#A0AAB8] text-xs w-16">時間</dt>
-                    <dd className="text-[#2D3748] text-sm">{place.time}</dd>
-                  </div>
-                  <div className="flex gap-3">
-                    <dt className="text-[#A0AAB8] text-xs w-16">アクセス</dt>
-                    <dd className="text-[#2D3748] text-sm">{place.access}</dd>
-                  </div>
+                  {place.items.map(({ label, value }) => (
+                    <div key={label} className="flex gap-3">
+                      <dt className="text-[#A0AAB8] text-xs w-16 shrink-0">{label}</dt>
+                      <dd className="text-[#2D3748] text-sm">{value}</dd>
+                    </div>
+                  ))}
                 </dl>
               </div>
             ))}
