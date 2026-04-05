@@ -1,12 +1,11 @@
 import MemberCard from "@/components/MemberCard";
 import { getAllMembers } from "@/lib/getMembers";
 
-const GRADE_ORDER = ["4年", "3年", "2年", "修士1年"];
+const GRADE_ORDER = ["4年", "3年", "2年"];
 const GRADE_EN: Record<string, string> = {
   "4年": "4th Year",
   "3年": "3rd Year",
   "2年": "2nd Year",
-  "修士1年": "Master's 1st Year",
 };
 
 export default function MembersPage() {
