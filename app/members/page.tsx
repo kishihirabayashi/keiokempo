@@ -50,29 +50,26 @@ export default function MembersPage() {
           const gradeMembers = grouped[grade];
           if (!gradeMembers?.length) return null;
           return (
-            <section key={grade} className="mb-20 last:mb-0">
+            <section key={grade} className="mb-16 last:mb-0">
               {/* 学年見出し */}
-              <div className="flex items-center gap-6 mb-10">
+              <div className="flex items-center gap-4 mb-8">
                 <div>
                   <p
-                    className="text-[#C41E3A] text-xs tracking-[0.5em] uppercase mb-1"
+                    className="text-[#C41E3A] text-xs tracking-[0.45em] uppercase mb-0.5"
                     style={{ fontFamily: "var(--font-cormorant)" }}
                   >
                     {GRADE_EN[grade]}
                   </p>
                   <h2
-                    className="text-3xl sm:text-4xl font-black text-[#002B5C]"
+                    className="text-2xl font-black text-[#002B5C]"
                     style={{ fontFamily: "var(--font-noto-serif-jp)" }}
                   >
                     {grade}
                   </h2>
                 </div>
-                <div
-                  className="flex-1 h-[3px] rounded-full"
-                  style={{ background: "linear-gradient(to right, rgba(196,30,58,0.5), rgba(196,30,58,0.1), transparent)" }}
-                />
+                <div className="flex-1 h-px bg-[#D4C9B8]" />
                 <span
-                  className="text-[#A0AAB8] text-base font-medium"
+                  className="text-[#A0AAB8] text-sm"
                   style={{ fontFamily: "var(--font-cormorant)" }}
                 >
                   {gradeMembers.length} members

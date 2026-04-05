@@ -68,15 +68,15 @@ export default function AboutPage() {
               <div className="space-y-4 text-[#2D3748] leading-relaxed text-sm"
                 style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
                 <p>
-                  慶應義塾體育會拳法部は、日本拳法が全国に普及した昭和30年代に創部されました。
+                  慶應義塾體育會拳法部は1953年（昭和28年）に創部されました。
                   以来、「文武両道」の慶應精神を体現する部として、
                   多くの優秀な選手を輩出してきました。
                 </p>
                 <p>
-                  全日本学生拳法選手権大会でのベスト8進出をはじめ、
-                  関東学生選手権では複数回の準優勝・上位入賞を果たしています。
-                  また個人戦でも多くの入賞者を輩出し、
-                  関東の大学拳法界において確固たる地位を築いています。
+                  日本拳法とは、防具とグローブを着用して打撃技・投げ技・寝技を駆使して勝敗を競い合う競技武道です。
+                  防具をつけているので安全性は確保されており、経験豊富なコーチ陣によるサポート体制も充実しています。
+                  主な実績として、東日本大学選手権大会（形部門）優勝、東日本学生個人選手権大会 優勝、
+                  東日本大学新人戦 優勝など、多数の上位入賞を果たしています。
                 </p>
                 <p>
                   卒業生は「三田拳法会」としてOB会を組織し、
@@ -94,9 +94,11 @@ export default function AboutPage() {
                 <dl className="space-y-4">
                   {[
                     { dt: "所属", dd: "慶應義塾體育會" },
+                    { dt: "創部", dd: "1953年（昭和28年）" },
                     { dt: "種目", dd: "日本拳法" },
-                    { dt: "主な活動拠点", dd: "三田武道場・日吉記念館武道場" },
-                    { dt: "練習回数", dd: "週4〜5回" },
+                    { dt: "主な活動拠点", dd: "日吉キャンパス 蝮谷拳法道場" },
+                    { dt: "合宿", dd: "年2回（3月・9月）" },
+                    { dt: "部費", dd: "¥5,000/年" },
                     { dt: "部員数", dd: "約30名（男女）" },
                     { dt: "OB会", dd: "三田拳法会" },
                   ].map(({ dt, dd }) => (
@@ -132,21 +134,21 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {[
               {
-                name: "蛯谷拳法道場",
+                name: "蝮谷拳法道場",
                 campus: "日吉キャンパス",
                 items: [
-                  { label: "練習日", value: "火・水・木・金 ＋ 日曜日" },
-                  { label: "時間", value: "平日 18:00〜20:30 ／ 日曜 10:00〜13:00" },
-                  { label: "参加目安", value: "選手：平日3日＋日曜日 ／ マネージャー：週2日（相談可）" },
+                  { label: "練習日", value: "平日（火・水・木・金）＋ 日曜日" },
+                  { label: "時間", value: "平日 18:00〜20:30 ／ 日曜 10:30〜13:00" },
+                  { label: "参加条件", value: "水木はどちらか参加。日曜日参加必須。" },
                 ],
               },
               {
                 name: "活動費用",
                 campus: "Activity Cost",
                 items: [
-                  { label: "部費", value: "年10,000円" },
-                  { label: "その他", value: "道着代・合宿費（別途）" },
-                  { label: "備考", value: "費用詳細は入部後にご案内します" },
+                  { label: "部費", value: "¥5,000/年" },
+                  { label: "合宿", value: "年2回（3月・9月）" },
+                  { label: "その他", value: "道着代等（詳細は入部後にご案内）" },
                 ],
               },
             ].map((place) => (
@@ -278,6 +280,38 @@ export default function AboutPage() {
             生涯にわたって繋がれるのが、この部の大きな魅力のひとつです。
             各界で活躍するOBが多数在籍しており、就職活動でのサポートも充実しています。
           </p>
+        </section>
+
+        {/* SNS・入部情報 */}
+        <section className="bg-[#EDE7D9] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12">
+          <p className="section-title-en mb-4">Contact & SNS</p>
+          <h2
+            className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-4"
+            style={{ fontFamily: "var(--font-noto-serif-jp)" }}
+          >
+            お問い合わせ・SNS
+          </h2>
+          <p className="text-[#2D3748] leading-relaxed mb-6 max-w-2xl"
+            style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+            入部は年中365日受け付けています。興味を持ったタイミングでいつでもお気軽にご連絡ください。
+            SNSのDMやフォームからのご連絡も歓迎します。
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <div className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] px-5 py-3"
+              style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.04)' }}>
+              <p className="text-[#A0AAB8] text-xs mb-0.5" style={{ fontFamily: "var(--font-cormorant)" }}>Instagram</p>
+              <p className="text-[#002B5C] font-bold text-sm" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+                @keio_nikken_shinkan
+              </p>
+            </div>
+            <div className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] px-5 py-3"
+              style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.04)' }}>
+              <p className="text-[#A0AAB8] text-xs mb-0.5" style={{ fontFamily: "var(--font-cormorant)" }}>X (Twitter)</p>
+              <p className="text-[#002B5C] font-bold text-sm" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+                @keionikken
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* CTA */}
