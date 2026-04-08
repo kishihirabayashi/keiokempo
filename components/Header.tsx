@@ -39,35 +39,44 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
-          isScrolled
-            ? "shadow-sm"
-            : ""
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 ${isScrolled ? "shadow-sm" : ""}`}
         style={{
-          background: isScrolled ? "rgba(245,240,230,0.96)" : "rgba(245,240,230,0.88)",
+          background: isScrolled ? "rgba(245,240,230,0.96)" : "rgba(0,15,40,0.12)",
           backdropFilter: "blur(12px)",
           WebkitBackdropFilter: "blur(12px)",
           borderBottom: "10px solid transparent",
           borderImage: "linear-gradient(to right, #002B5C 0%, #002B5C 18%, #C41E3A 35%, #C41E3A 65%, #002B5C 82%, #002B5C 100%) 1",
           boxShadow: isScrolled ? "0 2px 14px rgba(27,42,74,0.10)" : "none",
+          transition: "background 0.45s ease, box-shadow 0.45s ease",
         }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* ロゴ */}
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-[5px] h-12 shrink-0" style={{ background: 'linear-gradient(to bottom, #C41E3A 0%, #C41E3A 60%, #7A1020 100%)' }} />
+              <div
+                className="w-[5px] h-12 shrink-0"
+                style={{ background: "linear-gradient(to bottom, #C41E3A 0%, #C41E3A 60%, #7A1020 100%)" }}
+              />
               <div className="flex flex-col leading-tight">
                 <span
-                  className="text-[#6B7A99] text-xs tracking-widest"
-                  style={{ fontFamily: "var(--font-cormorant)" }}
+                  className="text-xs tracking-widest"
+                  style={{
+                    fontFamily: "var(--font-cormorant)",
+                    color: isScrolled ? "#6B7A99" : "rgba(255,255,255,0.55)",
+                    transition: "color 0.45s ease",
+                  }}
                 >
                   KEIO UNIVERSITY
                 </span>
                 <span
-                  className="text-[#002B5C] font-bold text-sm sm:text-base tracking-wide"
-                  style={{ fontFamily: "var(--font-noto-serif-jp)", letterSpacing: "0.04em" }}
+                  className="font-bold text-sm sm:text-base tracking-wide"
+                  style={{
+                    fontFamily: "var(--font-noto-serif-jp)",
+                    letterSpacing: "0.04em",
+                    color: isScrolled ? "#002B5C" : "rgba(255,255,255,0.92)",
+                    transition: "color 0.45s ease",
+                  }}
                 >
                   慶應義塾體育會拳法部
                 </span>
@@ -80,7 +89,11 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-[#1B2A4A] hover:text-[#C41E3A] text-sm tracking-wider transition-colors duration-300 keio-underline"
+                  className={`text-sm tracking-wider transition-colors duration-300 keio-underline ${
+                    isScrolled
+                      ? "text-[#1B2A4A] hover:text-[#C41E3A]"
+                      : "text-white/75 hover:text-white"
+                  }`}
                   style={{ fontFamily: "var(--font-noto-sans-jp)" }}
                 >
                   {link.label}
@@ -102,9 +115,18 @@ export default function Header() {
               className="lg:hidden relative w-8 h-8 flex flex-col justify-center items-center gap-1.5"
               aria-label="メニューを開く"
             >
-              <span className={`block w-6 h-0.5 bg-[#1B2A4A] transition-all duration-300 ${isMenuOpen ? "rotate-45 translate-y-2" : ""}`} />
-              <span className={`block w-6 h-0.5 bg-[#1B2A4A] transition-all duration-300 ${isMenuOpen ? "opacity-0" : ""}`} />
-              <span className={`block w-6 h-0.5 bg-[#1B2A4A] transition-all duration-300 ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+              <span
+                className={`block w-6 h-0.5 transition-all duration-300 ${isMenuOpen ? "rotate-45 translate-y-2" : ""}`}
+                style={{ background: isScrolled ? "#1B2A4A" : "rgba(255,255,255,0.85)" }}
+              />
+              <span
+                className={`block w-6 h-0.5 transition-all duration-300 ${isMenuOpen ? "opacity-0" : ""}`}
+                style={{ background: isScrolled ? "#1B2A4A" : "rgba(255,255,255,0.85)" }}
+              />
+              <span
+                className={`block w-6 h-0.5 transition-all duration-300 ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+                style={{ background: isScrolled ? "#1B2A4A" : "rgba(255,255,255,0.85)" }}
+              />
             </button>
           </div>
         </div>
@@ -121,7 +143,10 @@ export default function Header() {
             className="fixed inset-0 z-40 flex flex-col"
             style={{ background: "#F5F0E6" }}
           >
-            <div className="absolute left-0 top-0 bottom-0 w-[6px]" style={{ background: 'linear-gradient(to bottom, #C41E3A 0%, #C41E3A 50%, rgba(196,30,58,0.2) 85%, transparent 100%)' }} />
+            <div
+              className="absolute left-0 top-0 bottom-0 w-[6px]"
+              style={{ background: "linear-gradient(to bottom, #C41E3A 0%, #C41E3A 50%, rgba(196,30,58,0.2) 85%, transparent 100%)" }}
+            />
 
             <div className="flex-1 flex flex-col justify-center px-10 pt-20">
               <nav className="flex flex-col gap-6">

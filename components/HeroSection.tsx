@@ -70,7 +70,7 @@ export default function HeroSection() {
       {/* ── メインコンテンツ ── */}
       <motion.div
         style={{ y: textY, opacity: textOpacity }}
-        className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 pb-28"
+        className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 pt-[120px] pb-20"
       >
         {/* KEIO ラベル */}
         <motion.p
@@ -90,7 +90,7 @@ export default function HeroSection() {
             className="block font-black leading-[1.08] text-center"
             style={{
               fontFamily: "var(--font-noto-serif-jp)",
-              fontSize: "clamp(3.2rem, 15vw, 15rem)",
+              fontSize: "clamp(2.6rem, 9vw, 8rem)",
               fontWeight: 700,
               color: "#B8860B",
               letterSpacing: "0.03em",
@@ -107,7 +107,7 @@ export default function HeroSection() {
             className="block font-black leading-[1.08] text-center"
             style={{
               fontFamily: "var(--font-noto-serif-jp)",
-              fontSize: "clamp(3.2rem, 15vw, 15rem)",
+              fontSize: "clamp(2.6rem, 9vw, 8rem)",
               fontWeight: 700,
               color: "#B8860B",
               letterSpacing: "0.03em",
