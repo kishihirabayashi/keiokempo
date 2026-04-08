@@ -70,14 +70,14 @@ export default function HeroSection() {
       {/* ── メインコンテンツ ── */}
       <motion.div
         style={{ y: textY, opacity: textOpacity }}
-        className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 pt-[120px] pb-20"
+        className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 pt-[120px] pb-[30px]"
       >
         {/* KEIO ラベル */}
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: elegantEase, delay: 0.2 }}
-          className="tracking-[0.6em] text-white/55 text-xs sm:text-sm mb-10 font-medium"
+          className="tracking-[0.6em] text-white/55 text-xs sm:text-sm mb-5 font-medium"
           style={{ fontFamily: "var(--font-cormorant)" }}
         >
           KEIO UNIVERSITY ATHLETIC ASSOCIATION
