@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 慶應義塾體育會拳法部 公式サイト
 
-## Getting Started
+Next.js 製の公式 Web サイトです。
 
-First, run the development server:
+---
+
+## 開発サーバー起動
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[http://localhost:3000](http://localhost:3000) で確認できます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## お問い合わせフォームの設定（Formspree）
 
-## Learn More
+### 概要
 
-To learn more about Next.js, take a look at the following resources:
+フォームは **Formspree** を使って `keio.kempo1@gmail.com` 宛にメールを転送します。
+環境変数 `NEXT_PUBLIC_FORMSPREE_ENDPOINT` が**未設定**の場合は、`mailto:` リンクで Gmail アプリが開くフォールバックが働きます。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 設定手順
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. [https://formspree.io](https://formspree.io) にアクセスし、`keio.kempo1@gmail.com` でアカウント作成（無料）
+2. **New Form** を作成し、送信先メールアドレスに `keio.kempo1@gmail.com` を設定
+3. 発行された **フォームエンドポイント URL** をコピー（例: `https://formspree.io/f/xpzgabcd`）
+4. プロジェクトルートに `.env.local` ファイルを作成し、以下を記述：
 
-## Deploy on Vercel
+```bash
+# .env.local
+NEXT_PUBLIC_FORMSPREE_ENDPOINT=https://formspree.io/f/xpzgabcd
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> `.env.local.example` をコピーして使うと便利です：
+> ```bash
+> cp .env.local.example .env.local
+> # .env.local を編集して XXXXXXXX を実際のフォームIDに置き換える
+> ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. 開発サーバーを再起動してテスト送信を行い、`keio.kempo1@gmail.com` に届くことを確認
+
+### Vercel デプロイ時の設定
+
+Vercel にデプロイしている場合は、ダッシュボードでも環境変数を設定する必要があります：
+
+1. Vercel Dashboard → プロジェクト → **Settings** → **Environment Variables**
+2. `NEXT_PUBLIC_FORMSPREE_ENDPOINT` を追加し、値に Formspree の URL を設定
+3. **Save** → **Redeploy**
+
+---
+
+## アクセス解析（Vercel Analytics）
+
+`@vercel/analytics` を導入済みです。ユーザーには何も表示されません。
+
+### 閲覧方法
+
+1. [https://vercel.com](https://vercel.com) のダッシュボードにログイン
+2. プロジェクトを選択
+3. **Analytics** タブでページビュー・訪問者数を確認
+
+> Vercel にデプロイ後、Analytics タブが有効になります。ローカル開発中は計測されません。
+
+---
+
+## デプロイ
+
+[Vercel](https://vercel.com) への接続を推奨します。GitHub リポジトリを連携するだけで自動デプロイが設定できます。

@@ -8,49 +8,49 @@ import ParallaxBand from "@/components/ParallaxBand";
 import { getAllNews } from "@/lib/getNews";
 
 const STATS = [
-  { end: 93,  suffix: "年", label: "創部からの歴史",   prefix: "" },
-  { end: 30,  suffix: "名", label: "現役部員数",       prefix: "約" },
-  { end: 80,  suffix: "%",  label: "大学から始めた部員", prefix: "" },
-  { end: 5,   suffix: "冠", label: "直近の主要タイトル", prefix: "" },
+  { end: 72,  suffix: "年", label: "創部からの歴史",   prefix: "" },
+  { end: 26,  suffix: "名", label: "現役部員数",       prefix: "" },
+  { end: 90,  suffix: "%",  label: "大学から始めた部員", prefix: "" },
+  { end: 3,   suffix: "冠", label: "直近の主要タイトル", prefix: "" },
 ];
 
 const ATMOSPHERE = [
   {
     num: "01",
-    label: "練習後のひとコマ",
-    desc: "汗を流した後の一言に、本音が出る。",
+    label: "",
+    desc: "",
     colorFrom: "#D4C8B4",
     colorTo: "#C5B8A4",
   },
   {
     num: "02",
-    label: "みんなで飯",
-    desc: "ご飯を一緒に食べるだけで、仲間になれる。",
+    label: "",
+    desc: "",
     colorFrom: "#D8CCBA",
     colorTo: "#C9BDA8",
   },
   {
     num: "03",
-    label: "合宿の集合写真",
-    desc: "4泊5日の夏合宿、笑顔が絶えない。",
+    label: "",
+    desc: "",
     colorFrom: "#DCCFC0",
     colorTo: "#CEC0B2",
   },
   {
     num: "04",
-    label: "初心者歓迎の体験会",
-    desc: "はじめての防具、はじめての一本。",
+    label: "",
+    desc: "",
     colorFrom: "#D0C5B0",
     colorTo: "#C2B5A0",
   },
 ];
 
 const NEXT_MATCH = {
-  opponent: "早稲田大学",
-  date: "2025年4月20日（日）",
-  time: "13:00",
-  venue: "慶應義塾大学 日吉記念館武道場",
-  event: "関東学生拳法春季大会",
+  opponent: "",
+  date: "",
+  time: "",
+  venue: "",
+  event: "",
 };
 
 export default function HomePage() {
@@ -413,9 +413,9 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
             {[
-              { display: "1932", unit: "年", label: "慶應義塾体育会拳法部 創部" },
-              { display: "約30", unit: "名", label: "現役部員（男女）" },
-              { display: "80",  unit: "%",  label: "大学から始めた部員" },
+              { display: "1953", unit: "年", label: "慶應義塾体育会拳法部 創部" },
+              { display: "26",  unit: "名", label: "現役部員（男女）" },
+              { display: "90",  unit: "%",  label: "大学から始めた部員" },
             ].map((item, i) => (
               <AnimatedSection key={item.label} delay={i * 0.12} className="text-center py-20 lg:py-24 px-8">
                 <p
@@ -622,7 +622,7 @@ export default function HomePage() {
             className="text-white/65 text-base mb-14 max-w-xl mx-auto leading-relaxed"
             style={{ fontFamily: "var(--font-noto-sans-jp)" }}
           >
-            未経験者歓迎。部員の8割が大学から日本拳法を始めました。
+            未経験者歓迎。部員の9割が大学から日本拳法を始めました。
             <br className="hidden sm:block" />
             見学だけでも大丈夫。強さと仲間は、ここにある。
           </p>

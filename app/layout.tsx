@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
+import { Analytics } from "@vercel/analytics/next";
 
 // 見出し：元のシャープなフォント
 const notoSerifJP = Noto_Serif_JP({
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     template: "%s | 慶應義塾體育會拳法部",
   },
   description:
-    "慶應義塾體育會拳法部の公式サイト。突き・蹴り・投げ・関節技を許された総合格闘技、日本拳法。初心者大歓迎。練習場所：慶應義塾大学（三田・日吉）。",
+    "慶應義塾體育會拳法部の公式サイト。突き・蹴り・投げ・関節技を許された総合格闘技、日本拳法。初心者大歓迎。練習場所：日吉キャンパス 蝮谷拳法道場。",
   keywords: [
     "慶應義塾",
     "拳法部",
@@ -91,6 +92,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <FloatingCTA />
+        <Analytics />
       </body>
     </html>
   );

@@ -47,7 +47,7 @@ export default function Footer() {
               慶應義塾體育會に所属し、文武両道を体現する。
             </p>
             <p className="text-white/35 text-xs mt-4">
-              〒108-8345 東京都港区三田2-15-45
+              蝮谷拳法道場｜神奈川県横浜市港北区日吉4-16-1
             </p>
           </div>
 
@@ -94,7 +94,7 @@ export default function Footer() {
             <div className="flex gap-3 mb-6">
               {/* Instagram */}
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/keio_kempo/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 border border-white/20 rounded-md flex items-center justify-center text-white/50 hover:text-white hover:border-white/50 transition-all duration-200"
@@ -106,7 +106,7 @@ export default function Footer() {
               </a>
               {/* X (Twitter) */}
               <a
-                href="https://x.com"
+                href="https://x.com/KeioNikken"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 border border-white/20 rounded-md flex items-center justify-center text-white/50 hover:text-white hover:border-white/50 transition-all duration-200"
@@ -118,7 +118,7 @@ export default function Footer() {
               </a>
               {/* YouTube */}
               <a
-                href="https://youtube.com"
+                href="https://www.youtube.com/@%E6%85%B6%E6%87%89%E7%BE%A9%E5%A1%BE%E9%AB%94%E8%82%B2%E6%9C%83%E6%8B%B3%E6%B3%95%E9%83%A8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 border border-white/20 rounded-md flex items-center justify-center text-white/50 hover:text-white hover:border-white/50 transition-all duration-200"
@@ -132,10 +132,10 @@ export default function Footer() {
             <div>
               <p className="text-white/35 text-xs mb-1">お問い合わせ</p>
               <a
-                href="mailto:keio.kempo@example.com"
+                href="mailto:keio.kempo1@gmail.com"
                 className="text-white/65 hover:text-white text-sm transition-colors duration-200"
               >
-                keio.kempo@example.com
+                keio.kempo1@gmail.com
               </a>
             </div>
           </div>

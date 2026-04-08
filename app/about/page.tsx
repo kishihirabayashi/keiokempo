@@ -8,18 +8,18 @@ export const metadata: Metadata = {
 };
 
 const schedule = [
-  { month: "4月", events: ["春季新歓体験入部", "関東学生拳法春季大会"] },
-  { month: "5月", events: ["部内練習試合", "強化練習"] },
-  { month: "6月", events: ["関東学生拳法選手権大会"] },
-  { month: "7月", events: ["夏合宿（4泊5日）"] },
-  { month: "8月", events: ["夏合宿②", "オープン大会参加"] },
-  { month: "9月", events: ["東日本大学拳法選手権大会"] },
-  { month: "10月", events: ["秋季部内試合", "OB戦"] },
-  { month: "11月", events: ["全日本学生拳法選手権大会"] },
-  { month: "12月", events: ["忘年会・引退式（4年生）"] },
-  { month: "1月", events: ["冬合宿", "始動式"] },
+  { month: "1月", events: ["鏡開き大会", "冬合宿", "始動式"] },
   { month: "2月", events: ["強化練習期間"] },
-  { month: "3月", events: ["春合宿", "新歓準備"] },
+  { month: "3月", events: ["通い合宿", "春合宿", "新歓準備"] },
+  { month: "4月", events: ["春季新歓体験入部", "第1回 本部昇段級審査会"] },
+  { month: "5月", events: ["東日本大学リーグ戦", "矢野杯争奪 東日本学生拳法個人選手権（5/31予定）"] },
+  { month: "6月", events: ["全国大学選抜選手権（6/21予定）", "第2回 本部昇段級審査会"] },
+  { month: "7月", events: ["夏合宿（4泊5日）"] },
+  { month: "8月", events: ["オープン大会参加"] },
+  { month: "9月", events: ["夏合宿", "第3回 本部昇段級審査会"] },
+  { month: "10月", events: ["東日本学生拳法選手権（10/11予定）", "全日本学生拳法個人選手権（10/18予定）", "秋季部内試合", "OB戦"] },
+  { month: "11月", events: ["早慶戦", "全日本学生拳法選手権"] },
+  { month: "12月", events: ["全日本学生拳法選手権（12/6予定）", "第4回 本部昇段級審査会", "忘年会・引退式（4年生）"] },
 ];
 
 export default function AboutPage() {
@@ -96,10 +96,10 @@ export default function AboutPage() {
                     { dt: "所属", dd: "慶應義塾體育會" },
                     { dt: "創部", dd: "1953年（昭和28年）" },
                     { dt: "種目", dd: "日本拳法" },
-                    { dt: "主な活動拠点", dd: "日吉キャンパス 蝮谷拳法道場" },
+                    { dt: "主な活動拠点", dd: "蝮谷拳法道場（神奈川県横浜市港北区日吉4-16-1、tel. 045-563-5904）" },
                     { dt: "合宿", dd: "年2回（3月・9月）" },
-                    { dt: "部費", dd: "¥5,000/年" },
-                    { dt: "部員数", dd: "約30名（男女）" },
+                    { dt: "部費", dd: "¥10,000/年" },
+                    { dt: "部員数", dd: "26名（男女）" },
                     { dt: "OB会", dd: "三田拳法会" },
                   ].map(({ dt, dd }) => (
                     <div key={dt} className="flex gap-4">
@@ -135,7 +135,7 @@ export default function AboutPage() {
             {[
               {
                 name: "蝮谷拳法道場",
-                campus: "日吉キャンパス",
+                campus: "日吉キャンパス｜神奈川県横浜市港北区日吉4-16-1",
                 items: [
                   { label: "練習日", value: "平日（火・水・木・金）＋ 日曜日" },
                   { label: "時間", value: "平日 18:00〜20:30 ／ 日曜 10:30〜13:00" },
@@ -146,7 +146,7 @@ export default function AboutPage() {
                 name: "活動費用",
                 campus: "Activity Cost",
                 items: [
-                  { label: "部費", value: "¥5,000/年" },
+                  { label: "部費", value: "¥10,000/年" },
                   { label: "合宿", value: "年2回（3月・9月）" },
                   { label: "その他", value: "道着代等（詳細は入部後にご案内）" },
                 ],
@@ -226,21 +226,21 @@ export default function AboutPage() {
             {[
               {
                 role: "部長",
-                name: "山本 一郎 先生",
-                dept: "慶應義塾大学法学部 教授",
-                note: "競技経験者として部の運営を全面的にサポート",
+                name: "石塚 壮太郎",
+                dept: "",
+                note: "",
               },
               {
                 role: "監督",
-                name: "中田 誠二",
-                dept: "OB・三田拳法会",
-                note: "全日本学生選手権出場経験を持つ実力者",
+                name: "岡田 勇介",
+                dept: "",
+                note: "",
               },
               {
                 role: "コーチ",
-                name: "河合 大介",
-                dept: "OB・三田拳法会",
-                note: "技術指導を担当。週2回程度練習に参加",
+                name: "吉澤 斗吾",
+                dept: "",
+                note: "",
               },
             ].map((staff) => (
               <div key={staff.role} className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-6"
@@ -297,20 +297,30 @@ export default function AboutPage() {
             SNSのDMやフォームからのご連絡も歓迎します。
           </p>
           <div className="flex flex-wrap gap-4">
-            <div className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] px-5 py-3"
-              style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.04)' }}>
+            <a
+              href="https://www.instagram.com/keio_kempo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] px-5 py-3 transition-all duration-200 hover:scale-[1.03] hover:shadow-md hover:border-[#C41E3A]/30"
+              style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.04)' }}
+            >
               <p className="text-[#A0AAB8] text-xs mb-0.5" style={{ fontFamily: "var(--font-cormorant)" }}>Instagram</p>
               <p className="text-[#002B5C] font-bold text-sm" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
-                @keio_nikken_shinkan
+                @keio_kempo
               </p>
-            </div>
-            <div className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] px-5 py-3"
-              style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.04)' }}>
+            </a>
+            <a
+              href="https://x.com/KeioNikken"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] px-5 py-3 transition-all duration-200 hover:scale-[1.03] hover:shadow-md hover:border-[#002B5C]/30"
+              style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.04)' }}
+            >
               <p className="text-[#A0AAB8] text-xs mb-0.5" style={{ fontFamily: "var(--font-cormorant)" }}>X (Twitter)</p>
               <p className="text-[#002B5C] font-bold text-sm" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
-                @keionikken
+                @KeioNikken
               </p>
-            </div>
+            </a>
           </div>
         </section>
 

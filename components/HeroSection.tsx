@@ -18,7 +18,7 @@ export default function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="relative h-screen overflow-hidden clip-diagonal"
+      className="relative h-screen min-h-[700px] overflow-hidden"
     >
       {/* ── 背景（パララックス + シネマティックズーム） ── */}
       <motion.div
@@ -70,7 +70,7 @@ export default function HeroSection() {
       {/* ── メインコンテンツ ── */}
       <motion.div
         style={{ y: textY, opacity: textOpacity }}
-        className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6"
+        className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 pb-28"
       >
         {/* KEIO ラベル */}
         <motion.p

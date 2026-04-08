@@ -32,32 +32,40 @@ const FIELDS = [
 // アニメーション variants
 const overlayVariants = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.3, ease: "easeOut" as const } },
-  exit:   { opacity: 0, transition: { duration: 0.22, ease: "easeIn" as const, delay: 0.05 } },
+  visible: { opacity: 1, transition: { duration: 0.6, ease: "easeOut" as const } },
+  exit:   { opacity: 0, transition: { duration: 0.25, ease: "easeIn" as const, delay: 0.05 } },
 };
 
 const modalVariants = {
-  hidden:  { opacity: 0, scale: 0.9, y: 28 },
+  hidden:  { opacity: 0, scale: 0.92, y: 24 },
   visible: {
     opacity: 1, scale: 1, y: 0,
-    transition: { type: "spring" as const, stiffness: 300, damping: 26, delay: 0.06 },
+    transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
   },
-  exit:    {
-    opacity: 0, scale: 0.94, y: 14,
-    transition: { duration: 0.18, ease: [0.4, 0, 1, 1] as [number, number, number, number] },
+  exit: {
+    opacity: 0, scale: 0.95, y: 12,
+    transition: { duration: 0.2, ease: [0.4, 0, 1, 1] as [number, number, number, number] },
   },
 };
 
+// 写真: 0.5sでフェードイン（delay 0.2s）
+const photoVariants = {
+  hidden:  { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.5, ease: "easeOut" as const, delay: 0.2 } },
+  exit:    { opacity: 0, transition: { duration: 0.1 } },
+};
+
+// 情報エリアのコンテナ: 写真の後に0.1s間隔でstagger
 const containerVariants = {
   hidden:  {},
-  visible: { transition: { staggerChildren: 0.055, delayChildren: 0.18 } },
+  visible: { transition: { staggerChildren: 0.1, delayChildren: 0.6 } },
   exit:    {},
 };
 
 const itemVariants = {
-  hidden:  { opacity: 0, y: 10 },
-  visible: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 280, damping: 26 } },
-  exit:    { opacity: 0, y: -6, transition: { duration: 0.1 } },
+  hidden:  { opacity: 0, y: 8 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" as const } },
+  exit:    { opacity: 0, transition: { duration: 0.1 } },
 };
 
 export default function MemberCard({ member }: MemberCardProps) {
@@ -138,14 +146,15 @@ export default function MemberCard({ member }: MemberCardProps) {
                 exit="exit"
               />
 
-              {/* モーダル本体 */}
+              {/* モーダル本体 — overflow-hidden を外し overflowY:auto のみで制御 */}
               <motion.div
-                className="relative w-full max-w-sm overflow-hidden bg-[#FAF7F0]"
+                className="relative w-full max-w-sm bg-[#FAF7F0]"
                 style={{
                   borderRadius: 20,
                   boxShadow: "0 40px 100px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.07)",
                   maxHeight: "90vh",
                   overflowY: "auto",
+                  overflowX: "hidden",
                 }}
                 variants={modalVariants}
                 initial="hidden"
@@ -153,10 +162,14 @@ export default function MemberCard({ member }: MemberCardProps) {
                 exit="exit"
                 onClick={(e) => e.stopPropagation()}
               >
-                {/* ─ 写真エリア ─ */}
+                {/* ─ 写真エリア（aspect-ratio で高さ確保） ─ */}
                 <motion.div
-                  className="relative w-full aspect-[3/4]"
-                  variants={itemVariants}
+                  className="relative w-full"
+                  style={{ aspectRatio: "3 / 4" }}
+                  variants={photoVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
                 >
                   {member.photo ? (
                     <Image
@@ -174,29 +187,11 @@ export default function MemberCard({ member }: MemberCardProps) {
                     </div>
                   )}
 
-                  {/* 上部 慶應紺グラデーション帯 */}
-                  <div
-                    className="absolute top-0 left-0 right-0"
-                    style={{
-                      height: 88,
-                      background: "linear-gradient(to bottom, rgba(0,43,92,0.88) 0%, rgba(0,43,92,0.3) 60%, transparent 100%)",
-                    }}
-                  />
-
-                  {/* 下部 クリームフェード */}
-                  <div
-                    className="absolute bottom-0 left-0 right-0"
-                    style={{
-                      height: 80,
-                      background: "linear-gradient(to top, #FAF7F0 0%, rgba(250,247,240,0.6) 50%, transparent 100%)",
-                    }}
-                  />
-
                   {/* 閉じるボタン */}
                   <button
                     className="absolute top-3 right-3 z-10 w-8 h-8 flex items-center justify-center rounded-full transition-all duration-200 hover:scale-110"
                     style={{
-                      background: "rgba(255,255,255,0.18)",
+                      background: "rgba(0,0,0,0.28)",
                       backdropFilter: "blur(8px)",
                       color: "rgba(255,255,255,0.9)",
                     }}
@@ -209,9 +204,9 @@ export default function MemberCard({ member }: MemberCardProps) {
                   </button>
                 </motion.div>
 
-                {/* ─ 情報エリア ─ */}
+                {/* ─ 情報エリア（写真の真下・余白しっかり） ─ */}
                 <motion.div
-                  className="px-6 pb-7 -mt-1"
+                  className="px-6 pt-8 pb-8"
                   variants={containerVariants}
                   initial="hidden"
                   animate="visible"
@@ -219,7 +214,7 @@ export default function MemberCard({ member }: MemberCardProps) {
                 >
                   {/* 名前 + 役職バッジ */}
                   <motion.div
-                    className="flex items-start justify-between gap-3 mb-5"
+                    className="flex items-start justify-between gap-3 mb-6"
                     variants={itemVariants}
                   >
                     <h2
@@ -246,8 +241,8 @@ export default function MemberCard({ member }: MemberCardProps) {
                     )}
                   </motion.div>
 
-                  {/* 6項目 2カラムグリッド（全項目必ず表示） */}
-                  <div className="grid grid-cols-2 gap-x-5 gap-y-4">
+                  {/* 6項目 縦一列 */}
+                  <div className="flex flex-col gap-5">
                     {FIELDS.map(({ en, key }) => {
                       const value = memberData[key];
                       return (
@@ -260,7 +255,7 @@ export default function MemberCard({ member }: MemberCardProps) {
                               color: "#A0AAB8",
                               fontWeight: 600,
                               textTransform: "uppercase",
-                              marginBottom: 3,
+                              marginBottom: 4,
                             }}
                           >
                             {en}
@@ -268,15 +263,14 @@ export default function MemberCard({ member }: MemberCardProps) {
                           <p
                             style={{
                               fontFamily: key === "rank" ? "var(--font-cormorant)" : "var(--font-noto-sans-jp)",
-                              fontSize: key === "rank" ? "0.95rem" : "0.78rem",
-                              color: value
-                                ? (key === "skill" ? "#C41E3A" : "#2D3748")
-                                : "#D4C9B8",
-                              lineHeight: 1.5,
-                              fontWeight: value && key === "skill" ? 600 : 400,
+                              fontSize: key === "rank" ? "0.95rem" : "0.82rem",
+                              color: key === "skill" ? "#C41E3A" : "#2D3748",
+                              lineHeight: 1.6,
+                              fontWeight: key === "skill" ? 600 : 400,
+                              minHeight: "1.2em",
                             }}
                           >
-                            {value || "—"}
+                            {value}
                           </p>
                         </motion.div>
                       );
