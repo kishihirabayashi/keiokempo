@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Swords, Target, Shield, Trophy, Users, Heart, Shirt } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "日本拳法とは",
@@ -27,6 +28,39 @@ const comparisons = [
     sport: "MMA（総合格闘技）",
     similarity: "打・投・関節の総合性",
     difference: "日本拳法は防具着用で安全性を確保しつつ総合技術を鍛錬",
+  },
+];
+
+const rules = [
+  {
+    title: "試合形式",
+    Icon: Swords,
+    content: "3本勝負制。先に2本先取した側が勝者。試合時間は通常3〜5分で、時間内に決着がつかない場合は延長戦へ。",
+  },
+  {
+    title: "有効技",
+    Icon: Target,
+    content: "突き・蹴り・投げ・関節技のすべてが有効。面（頭部）・胴（胴体）への突き蹴りが主な攻撃ポイント。投げや関節技でも「一本」が取れる。",
+  },
+  {
+    title: "防具",
+    Icon: Shield,
+    content: "面（剣道の面に類似）、胴（ボクシング用グローブ付き）、その他の防具を着用。フルコンタクトでも安全に競技できる設計。",
+  },
+  {
+    title: "勝敗の決め方",
+    Icon: Trophy,
+    content: "「一本」（有効な打撃・投げ・関節技）で1本ずつ加算。2本先取か、時間終了時点での本数差で勝敗を決定。",
+  },
+  {
+    title: "団体戦",
+    Icon: Users,
+    content: "複数名が出場する団体戦形式。大学対抗戦では通常5〜7名で構成。チーム全体の本数で勝敗を決める。",
+  },
+  {
+    title: "礼節",
+    Icon: Heart,
+    content: "試合前後の礼を重んじる武道精神が基本。技術だけでなく、人格の陶冶も日本拳法の重要な柱。",
   },
 ];
 
@@ -137,50 +171,21 @@ export default function AboutKempoPage() {
             競技ルールの概要
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {[
-              {
-                title: "試合形式",
-                icon: "⚔️",
-                content: "3本勝負制。先に2本先取した側が勝者。試合時間は通常3〜5分で、時間内に決着がつかない場合は延長戦へ。",
-              },
-              {
-                title: "有効技",
-                icon: "👊",
-                content: "突き・蹴り・投げ・関節技のすべてが有効。面（頭部）・胴（胴体）への突き蹴りが主な攻撃ポイント。投げや関節技でも「一本」が取れる。",
-              },
-              {
-                title: "防具",
-                icon: "🛡️",
-                content: "面（剣道の面に類似）、胴（ボクシング用グローブ付き）、その他の防具を着用。フルコンタクトでも安全に競技できる設計。",
-              },
-              {
-                title: "勝敗の決め方",
-                icon: "🏆",
-                content: "「一本」（有効な打撃・投げ・関節技）で1本ずつ加算。2本先取か、時間終了時点での本数差で勝敗を決定。",
-              },
-              {
-                title: "団体戦",
-                icon: "👥",
-                content: "複数名が出場する団体戦形式。大学対抗戦では通常5〜7名で構成。チーム全体の本数で勝敗を決める。",
-              },
-              {
-                title: "礼節",
-                icon: "🙏",
-                content: "試合前後の礼を重んじる武道精神が基本。技術だけでなく、人格の陶冶も日本拳法の重要な柱。",
-              },
-            ].map((item) => (
-              <div key={item.title} className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-6 hover:border-[#C41E3A]/30 transition-colors duration-300"
+            {rules.map(({ title, Icon, content }) => (
+              <div key={title} className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-6 hover:border-[#C41E3A]/30 transition-colors duration-300"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
-                <div className="text-2xl mb-3">{item.icon}</div>
+                <div className="w-12 h-12 rounded-full bg-[#C41E3A]/8 flex items-center justify-center mb-4">
+                  <Icon className="w-6 h-6" color="#002B5C" strokeWidth={1.5} />
+                </div>
                 <h3
                   className="text-[#002B5C] font-bold text-lg mb-3"
                   style={{ fontFamily: "var(--font-noto-serif-jp)" }}
                 >
-                  {item.title}
+                  {title}
                 </h3>
                 <p className="text-[#6B7A99] text-sm leading-relaxed"
                   style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
-                  {item.content}
+                  {content}
                 </p>
               </div>
             ))}
@@ -220,7 +225,7 @@ export default function AboutKempoPage() {
               <div key={item.name} className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-6"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
                 <div className="w-full aspect-video bg-[#EDE7D9] rounded-lg border border-[#D4C9B8] mb-4 flex items-center justify-center">
-                  <span className="text-[#C8D0DC] text-4xl">🥋</span>
+                  <Shirt className="w-10 h-10 text-[#C8D0DC]" strokeWidth={1.2} />
                 </div>
                 <h3
                   className="text-[#002B5C] font-bold text-xl mb-3"
