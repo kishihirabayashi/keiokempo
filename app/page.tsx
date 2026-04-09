@@ -7,6 +7,9 @@ import SectionHeading from "@/components/SectionHeading";
 import ParallaxBand from "@/components/ParallaxBand";
 import { getAllNews } from "@/lib/getNews";
 
+// CLUB ATMOSPHEREセクションは現在非表示。復活させるには下記のshowClubAtmosphereをtrueに変更
+const showClubAtmosphere = false;
+
 const STATS = [
   { end: 72,  suffix: "年", label: "創部からの歴史",   prefix: "" },
   { end: 26,  suffix: "名", label: "現役部員数",       prefix: "" },
@@ -62,7 +65,7 @@ export default function HomePage() {
       <HeroSection />
 
       {/* ── 部の雰囲気（ヒーロー直後） ── */}
-      <section className="bg-[#FAF7F0] py-24 lg:py-32 relative overflow-hidden">
+      {showClubAtmosphere && <section className="bg-[#FAF7F0] py-24 lg:py-32 relative overflow-hidden">
         {/* 巨大bg watermark */}
         <div
           className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
@@ -195,7 +198,7 @@ export default function HomePage() {
             </Link>
           </AnimatedSection>
         </div>
-      </section>
+      </section>}
 
       {/* ── STATS ── */}
       <AnimatedSection className="bg-[#EDE7D9] py-24 lg:py-28">
