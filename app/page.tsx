@@ -1,11 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
 import HeroSection from "@/components/HeroSection";
 import NewsCard from "@/components/NewsCard";
 import AnimatedSection from "@/components/AnimatedSection";
 import CountUp from "@/components/CountUp";
 import SectionHeading from "@/components/SectionHeading";
 import ParallaxBand from "@/components/ParallaxBand";
+import GallerySection from "@/components/GallerySection";
 import { getAllNews } from "@/lib/getNews";
 
 // CLUB ATMOSPHEREセクションは現在非表示。復活させるには下記のshowClubAtmosphereをtrueに変更
@@ -459,17 +459,11 @@ export default function HomePage() {
             style={{ boxShadow: "0 2px 12px rgba(27,42,74,0.07)" }}
           >
             <div>
-              <p
-                className="text-[#C41E3A] text-xs tracking-[0.3em] mb-3"
-                style={{ fontFamily: "var(--font-cormorant)" }}
-              >
-                {NEXT_MATCH.event}
-              </p>
               <h3
                 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#002B5C] mb-5"
                 style={{ fontFamily: "var(--font-noto-serif-jp)" }}
               >
-                VS {NEXT_MATCH.opponent}
+                {NEXT_MATCH.event}
               </h3>
               <div className="flex flex-col sm:flex-row gap-4 text-sm text-[#6B7A99]">
                 <div className="flex items-center gap-2">
@@ -510,27 +504,7 @@ export default function HomePage() {
           <AnimatedSection className="mb-12">
             <SectionHeading en="Gallery" jp="活動写真" />
           </AnimatedSection>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              "/images/gallery/photo1.jpg",
-              "/images/gallery/photo2.jpg",
-              "/images/gallery/photo3.jpg",
-              "/images/gallery/photo4.jpg",
-            ].map((src, i) => (
-              <AnimatedSection key={src} delay={i * 0.08}>
-                <div className="aspect-square rounded-xl overflow-hidden group card-lift relative">
-                  <Image
-                    src={src}
-                    alt={`活動写真 ${i + 1}`}
-                    fill
-                    sizes="(max-width: 640px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-[#002B5C]/0 group-hover:bg-[#002B5C]/15 transition-colors duration-400 rounded-xl" />
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
+          <GallerySection />
         </div>
       </section>
 
