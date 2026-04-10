@@ -41,39 +41,66 @@ const zenMaruGothic = Zen_Maru_Gothic({
   preload: false,
 });
 
+const SITE_URL = "https://keiokempo.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "慶應義塾體育會拳法部 | 日本拳法",
+    default: "慶應義塾體育會拳法部 | 日本拳法 | Keio Nippon Kempo",
     template: "%s | 慶應義塾體育會拳法部",
   },
   description:
-    "慶應義塾體育會拳法部の公式サイト。突き・蹴り・投げ・関節技を許された総合格闘技、日本拳法。初心者大歓迎。練習場所：日吉キャンパス 蝮谷拳法道場。",
+    "慶應義塾體育會拳法部の公式ウェブサイト。1953年創部、日本拳法を通じて心技体を磨く。新入部員募集中。蝮谷拳法道場（日吉キャンパス）にて活動。",
   keywords: [
-    "慶應義塾",
-    "拳法部",
+    "慶應",
+    "拳法",
     "日本拳法",
-    "体育会",
-    "慶應 日本拳法",
-    "大学 格闘技",
-    "武道",
+    "慶應拳法部",
     "慶應義塾大学",
+    "体育会",
+    "武道",
+    "格闘技",
+    "新歓",
+    "慶應義塾",
     "keio",
     "kempo",
+    "nippon kempo",
+    "日吉",
+    "蝮谷",
   ],
   openGraph: {
     type: "website",
     locale: "ja_JP",
+    url: SITE_URL,
     siteName: "慶應義塾體育會拳法部",
-    title: "慶應義塾體育會拳法部 | 日本拳法",
+    title: "慶應義塾體育會拳法部 | 日本拳法 | Keio Nippon Kempo",
     description:
-      "突き・蹴り・投げ・関節技を許された総合格闘技、日本拳法。慶應義塾體育會拳法部公式サイト。",
+      "慶應義塾體育會拳法部の公式ウェブサイト。1953年創部、日本拳法を通じて心技体を磨く。新入部員募集中。",
+    images: [
+      {
+        url: "/images/hero/hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "慶應義塾體育會拳法部",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    title: "慶應義塾體育會拳法部 | 日本拳法",
+    description: "慶應義塾體育會拳法部の公式ウェブサイト。1953年創部、新入部員募集中。",
+    images: ["/images/hero/hero.jpg"],
+  },
+  alternates: {
+    canonical: SITE_URL,
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 };
 

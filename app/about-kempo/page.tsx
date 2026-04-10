@@ -5,7 +5,13 @@ import { Swords, Target, Shield, Trophy, Users, Heart, Shirt } from "lucide-reac
 export const metadata: Metadata = {
   title: "日本拳法とは",
   description:
-    "1932年創始の総合格闘技・日本拳法について。突き・蹴り・投げ・関節技のすべてを許された武道の歴史・ルール・防具を解説。",
+    "日本拳法とは、1932年創始の総合格闘技。突き・蹴り・投げ・関節技すべてを許された武道。防具を着用したフルコンタクト形式で自衛隊・警察でも採用。慶應拳法部で体験できます。",
+  alternates: { canonical: "https://keiokempo.vercel.app/about-kempo" },
+  openGraph: {
+    title: "日本拳法とは | 慶應義塾體育會拳法部",
+    description: "1932年創始の総合格闘技・日本拳法。突き・蹴り・投げ・関節技のすべてを許された武道の歴史・ルール・防具を解説。",
+    url: "https://keiokempo.vercel.app/about-kempo",
+  },
 };
 
 const comparisons = [
