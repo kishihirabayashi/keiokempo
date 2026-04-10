@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   title: "部員紹介",
   description:
     "慶應義塾體育會拳法部の現役部員紹介。26名（男女）が蝮谷拳法道場を拠点に活動中。9割が大学から日本拳法を始めた初心者出身。",
-  alternates: { canonical: "https://keiokempo.vercel.app/members" },
+  alternates: { canonical: "https://keiokempo.com/members" },
   openGraph: {
     title: "部員紹介 | 慶應義塾體育會拳法部",
     description: "慶應拳法部の現役部員26名を紹介。9割が大学から日本拳法を始めた初心者出身。",
-    url: "https://keiokempo.vercel.app/members",
+    url: "https://keiokempo.com/members",
   },
 };
 

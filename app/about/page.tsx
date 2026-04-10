@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   title: "部の紹介",
   description:
     "慶應拳法部について。1953年創部の歴史、蝮谷拳法道場（日吉キャンパス）での練習、年間スケジュール、指導体制をご紹介。部費¥10,000/年、初心者歓迎。",
-  alternates: { canonical: "https://keiokempo.vercel.app/about" },
+  alternates: { canonical: "https://keiokempo.com/about" },
   openGraph: {
     title: "部の紹介 | 慶應義塾體育會拳法部",
     description: "慶應拳法部について。1953年創部の歴史、蝮谷拳法道場での練習、年間スケジュールをご紹介。",
-    url: "https://keiokempo.vercel.app/about",
+    url: "https://keiokempo.com/about",
   },
 };
 

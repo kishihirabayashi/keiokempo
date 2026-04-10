@@ -41,7 +41,7 @@ const zenMaruGothic = Zen_Maru_Gothic({
   preload: false,
 });
 
-const SITE_URL = "https://keiokempo.vercel.app";
+const SITE_URL = "https://keiokempo.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -73,9 +73,9 @@ export const metadata: Metadata = {
     locale: "ja_JP",
     url: SITE_URL,
     siteName: "慶應義塾體育會拳法部",
-    title: "慶應義塾體育會拳法部 | 日本拳法 | Keio Nippon Kempo",
+    title: "慶應義塾體育會拳法部",
     description:
-      "慶應義塾體育會拳法部の公式ウェブサイト。1953年創部、日本拳法を通じて心技体を磨く。新入部員募集中。",
+      "1953年創部。日本拳法を通じて心技体を磨く慶應義塾大学の公認体育会。",
     images: [
       {
         url: "/images/hero/hero.jpg",
@@ -93,6 +93,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: SITE_URL,
+  },
+  verification: {
+    google: "Nc1cNsacrjSOCueJebWS0emIKv3japFt5djYu0jEIcU",
   },
   robots: {
     index: true,
