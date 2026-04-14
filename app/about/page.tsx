@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "慶應拳法部について。1953年創部の歴史、蝮谷拳法道場（日吉キャンパス）での練習、年間スケジュール、指導体制をご紹介。部費¥10,000/年、初心者歓迎。",
   alternates: { canonical: "https://keiokempo.com/about" },
   openGraph: {
-    title: "部の紹介 | 慶應義塾體育會拳法部",
+    title: "部の紹介 | 慶應義塾大学體育會拳法部",
     description: "慶應拳法部について。1953年創部の歴史、蝮谷拳法道場での練習、年間スケジュールをご紹介。",
     url: "https://keiokempo.com/about",
   },
@@ -50,7 +50,7 @@ export default function AboutPage() {
           </h1>
           <p className="text-[#6B7A99] text-lg max-w-2xl"
             style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
-            慶應義塾體育會拳法部について
+            慶應義塾大学體育會拳法部について
           </p>
         </div>
       </div>
@@ -69,12 +69,12 @@ export default function AboutPage() {
                 className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-6"
                 style={{ fontFamily: "var(--font-noto-serif-jp)" }}
               >
-                慶應義塾體育會拳法部の歩み
+                慶應義塾大学體育會拳法部の歩み
               </h2>
               <div className="space-y-4 text-[#2D3748] leading-relaxed text-sm"
                 style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
                 <p>
-                  慶應義塾體育會拳法部は1953年（昭和28年）に創部されました。
+                  慶應義塾大学體育會拳法部は1953年（昭和28年）に創部されました。
                   以来、「文武両道」の慶應精神を体現する部として、
                   多くの優秀な選手を輩出してきました。
                 </p>

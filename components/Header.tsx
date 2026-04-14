@@ -78,7 +78,7 @@ export default function Header() {
                     transition: "color 0.45s ease",
                   }}
                 >
-                  慶應義塾體育會拳法部
+                  慶應義塾大学體育會拳法部
                 </span>
               </div>
             </Link>
@@ -186,7 +186,7 @@ export default function Header() {
             </div>
             <div className="p-8 border-t-[2px] border-[#C41E3A]/15">
               <p className="text-[#6B7A99] text-xs tracking-wider">
-                © 慶應義塾體育會拳法部
+                © 慶應義塾大学體育會拳法部
               </p>
             </div>
           </motion.div>

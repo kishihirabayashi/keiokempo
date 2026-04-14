@@ -46,11 +46,11 @@ const SITE_URL = "https://keiokempo.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "慶應義塾體育會拳法部",
-    template: "%s | 慶應義塾體育會拳法部",
+    default: "慶應義塾大学體育會拳法部",
+    template: "%s | 慶應義塾大学體育會拳法部",
   },
   description:
-    "慶應義塾體育會拳法部の公式ウェブサイト。1953年創部、日本拳法を通じて心技体を磨く。新入部員募集中。蝮谷拳法道場（日吉キャンパス）にて活動。",
+    "慶應義塾大学體育會拳法部の公式ウェブサイト。1953年創部、日本拳法を通じて心技体を磨く。新入部員募集中。蝮谷拳法道場（日吉キャンパス）にて活動。",
   keywords: [
     "慶應",
     "拳法",
@@ -72,8 +72,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ja_JP",
     url: SITE_URL,
-    siteName: "慶應義塾體育會拳法部",
-    title: "慶應義塾體育會拳法部",
+    siteName: "慶應義塾大学體育會拳法部",
+    title: "慶應義塾大学體育會拳法部",
     description:
       "1953年創部。日本拳法を通じて心技体を磨く慶應義塾大学の公認体育会。",
     images: [
@@ -81,14 +81,14 @@ export const metadata: Metadata = {
         url: "/images/hero/hero.jpg",
         width: 1200,
         height: 630,
-        alt: "慶應義塾體育會拳法部",
+        alt: "慶應義塾大学體育會拳法部",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "慶應義塾體育會拳法部 | 日本拳法",
-    description: "慶應義塾體育會拳法部の公式ウェブサイト。1953年創部、新入部員募集中。",
+    title: "慶應義塾大学體育會拳法部 | 日本拳法",
+    description: "慶應義塾大学體育會拳法部の公式ウェブサイト。1953年創部、新入部員募集中。",
     images: ["/images/hero/hero.jpg"],
   },
   alternates: {
@@ -124,7 +124,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "慶應義塾體育會拳法部",
+              "name": "慶應義塾大学體育會拳法部",
               "alternateName": "Keio University Nippon Kempo Club",
               "url": "https://keiokempo.com",
             }),
@@ -136,7 +136,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "SportsOrganization",
-              "name": "慶應義塾體育會拳法部",
+              "name": "慶應義塾大学體育會拳法部",
               "alternateName": "Keio University Nippon Kempo Club",
               "url": "https://keiokempo.com",
               "foundingDate": "1953",

@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   title: "入部案内・新歓",
   alternates: { canonical: "https://keiokempo.com/join" },
   openGraph: {
-    title: "入部案内・新歓 | 慶應義塾體育會拳法部",
+    title: "入部案内・新歓 | 慶應義塾大学體育會拳法部",
     url: "https://keiokempo.com/join",
   },
   description:
-    "慶應義塾體育會拳法部への入部案内。大学から始めた部員が9割以上。未経験者・初心者大歓迎。見学・体験入部随時受付中。",
+    "慶應義塾大学體育會拳法部への入部案内。大学から始めた部員が9割以上。未経験者・初心者大歓迎。見学・体験入部随時受付中。",
 };
 
 const steps = [
