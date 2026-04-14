@@ -46,7 +46,7 @@ const SITE_URL = "https://keiokempo.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "慶應義塾體育會拳法部 | 日本拳法 | Keio Nippon Kempo",
+    default: "慶應義塾體育會拳法部",
     template: "%s | 慶應義塾體育會拳法部",
   },
   description:
@@ -118,6 +118,43 @@ export default function RootLayout({
       className={`${notoSerifJP.variable} ${notoSansJP.variable} ${cormorantGaramond.variable} ${zenMaruGothic.variable}`}
     >
       <body className="min-h-screen flex flex-col bg-[#F5F0E6] text-[#1B2A4A] antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "慶應義塾體育會拳法部",
+              "alternateName": "Keio University Nippon Kempo Club",
+              "url": "https://keiokempo.com",
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SportsOrganization",
+              "name": "慶應義塾體育會拳法部",
+              "alternateName": "Keio University Nippon Kempo Club",
+              "url": "https://keiokempo.com",
+              "foundingDate": "1953",
+              "sport": "日本拳法",
+              "location": {
+                "@type": "Place",
+                "name": "蝮谷拳法道場",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "日吉4-16-1",
+                  "addressLocality": "港北区",
+                  "addressRegion": "神奈川県",
+                  "addressCountry": "JP",
+                },
+              },
+            }),
+          }}
+        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
