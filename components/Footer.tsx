@@ -38,7 +38,7 @@ export default function Footer() {
                   className="text-white font-bold text-lg tracking-wide"
                   style={{ fontFamily: "var(--font-noto-serif-jp)" }}
                 >
-                  慶應義塾大学體育會拳法部
+                  慶應義塾體育會拳法部
                 </span>
               </div>
             </Link>
@@ -144,7 +144,7 @@ export default function Footer() {
         {/* 下部 */}
         <div className="mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 border-t border-white/15">
           <p className="text-white/30 text-xs">
-            © {new Date().getFullYear()} 慶應義塾大学體育會拳法部. All rights reserved.
+            © {new Date().getFullYear()} 慶應義塾體育會拳法部. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link

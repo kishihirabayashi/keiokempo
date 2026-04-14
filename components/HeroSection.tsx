@@ -128,7 +128,7 @@ export default function HeroSection() {
           className="text-white/70 text-sm sm:text-base leading-relaxed mb-12 max-w-lg"
           style={{ fontFamily: "var(--font-noto-sans-jp)", fontWeight: 400, lineHeight: 1.95 }}
         >
-          慶應義塾大学體育會拳法部 — 日本拳法で繋がる仲間と、本気の大学生活を。
+          慶應義塾體育會拳法部 — 日本拳法で繋がる仲間と、本気の大学生活を。
         </motion.p>
 
         {/* CTA */}
