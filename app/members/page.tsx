@@ -32,7 +32,7 @@ export default function MembersPage() {
   return (
     <div className="min-h-screen bg-[#F5F0E6]">
       {/* ヘッダービジュアル */}
-      <div className="relative bg-[#EDE7D9] pt-36 pb-24 overflow-hidden">
+      <div className="relative bg-[#F5F0E6] pt-36 pb-24 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{

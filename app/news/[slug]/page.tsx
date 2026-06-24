@@ -26,7 +26,7 @@ const categoryColors: Record<string, string> = {
   "試合結果": "bg-[#C41E3A]/10 text-[#C41E3A] border-[#C41E3A]/30",
   "お知らせ": "bg-[#002B5C]/10 text-[#002B5C] border-[#002B5C]/25",
   "イベント": "bg-[#C41E3A]/10 text-[#C41E3A] border-[#C41E3A]/30",
-  "ブログ": "bg-[#EDE7D9] text-[#6B7A99] border-[#DDD8CF]",
+  "ブログ": "bg-[#F5F0E6] text-[#6B7A99] border-[#D4C9B8]",
 };
 
 // Markdownのシンプルなレンダリング（実際のプロジェクトではreact-markdownを推奨）

@@ -40,7 +40,7 @@ const categoryColors: Record<string, string> = {
   "試合結果": "bg-[#C41E3A]/10 text-[#C41E3A] border-[#C41E3A]/30",
   "お知らせ": "bg-[#002B5C]/10 text-[#002B5C] border-[#002B5C]/25",
   "イベント": "bg-[#C41E3A]/10 text-[#C41E3A] border-[#C41E3A]/30",
-  "ブログ": "bg-[#EDE7D9] text-[#6B7A99] border-[#DDD8CF]",
+  "ブログ": "bg-[#F5F0E6] text-[#6B7A99] border-[#D4C9B8]",
 };
 
 export default function NewsPage() {
@@ -54,7 +54,7 @@ export default function NewsPage() {
   return (
     <div className="min-h-screen bg-[#F5F0E6]">
       {/* ヘッダービジュアル */}
-      <div className="relative bg-[#EDE7D9] pt-36 pb-24 overflow-hidden">
+      <div className="relative bg-[#F5F0E6] pt-36 pb-24 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{

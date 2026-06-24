@@ -74,7 +74,7 @@ export default function AboutKempoPage() {
   return (
     <div className="min-h-screen bg-[#F5F0E6]">
       {/* ヘッダービジュアル */}
-      <div className="relative bg-[#EDE7D9] pt-36 pb-24 overflow-hidden">
+      <div className="relative bg-[#F5F0E6] pt-36 pb-24 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
@@ -230,7 +230,7 @@ export default function AboutKempoPage() {
             ].map((item) => (
               <div key={item.name} className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-6"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
-                <div className="w-full aspect-video bg-[#EDE7D9] rounded-lg border border-[#D4C9B8] mb-4 flex items-center justify-center">
+                <div className="w-full aspect-video bg-[#F5F0E6] rounded-lg border border-[#D4C9B8] mb-4 flex items-center justify-center">
                   <Shirt className="w-10 h-10 text-[#C8D0DC]" strokeWidth={1.2} />
                 </div>
                 <h3

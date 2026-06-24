@@ -202,7 +202,7 @@ export default function HomePage() {
       </section>}
 
       {/* ── STATS ── */}
-      <AnimatedSection className="bg-[#EDE7D9] py-24 lg:py-28">
+      <AnimatedSection className="bg-[#F5F0E6] py-24 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-[#D4C9B8]">
             {STATS.map((s, i) => (
@@ -292,7 +292,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 日本拳法とは（非対称レイアウト） ── */}
-      <section className="bg-[#EDE7D9] py-24 lg:py-40 relative overflow-hidden">
+      <section className="bg-[#F5F0E6] py-24 lg:py-40 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
 
@@ -501,7 +501,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* ── GALLERY ── */}
-      <section className="bg-[#EDE7D9] py-24 lg:py-32">
+      <section className="bg-[#F5F0E6] py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="mb-12">
             <SectionHeading en="Gallery" jp="活動写真" />

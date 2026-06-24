@@ -73,7 +73,7 @@ export default function JoinPage() {
   return (
     <div className="min-h-screen bg-[#F5F0E6]">
       {/* ヒーロービジュアル */}
-      <div className="relative bg-[#EDE7D9] pt-36 pb-24 overflow-hidden">
+      <div className="relative bg-[#F5F0E6] pt-36 pb-24 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
@@ -150,7 +150,7 @@ export default function JoinPage() {
         </section>
 
         {/* 練習日程 */}
-        <section className="mb-20 bg-[#EDE7D9] rounded-xl border border-[#D4C9B8] p-8 lg:p-10">
+        <section className="mb-20 bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-8 lg:p-10" style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             <div>
               <p className="section-title-en mb-4">Practice Schedule</p>

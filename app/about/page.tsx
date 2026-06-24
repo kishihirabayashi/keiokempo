@@ -32,7 +32,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[#F5F0E6]">
       {/* ヘッダービジュアル */}
-      <div className="relative bg-[#EDE7D9] pt-36 pb-24 overflow-hidden">
+      <div className="relative bg-[#F5F0E6] pt-36 pb-24 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
@@ -271,7 +271,7 @@ export default function AboutPage() {
         </section>
 
         {/* OB会 */}
-        <section className="bg-[#EDE7D9] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12">
+        <section className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12" style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
           <p className="section-title-en mb-4">Alumni</p>
           <h2
             className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-4"
@@ -289,7 +289,7 @@ export default function AboutPage() {
         </section>
 
         {/* SNS・入部情報 */}
-        <section className="bg-[#EDE7D9] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12">
+        <section className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12" style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
           <p className="section-title-en mb-4">Contact & SNS</p>
           <h2
             className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-4"
