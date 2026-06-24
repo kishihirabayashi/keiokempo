@@ -5,6 +5,9 @@ import ResultTable from "@/components/ResultTable";
 import type { TournamentResult } from "@/lib/getResults";
 
 const results: TournamentResult[] = [
+  // 2026年度 団体戦
+  { year: 2026, tournament: "第39回 全国大学選抜選手権大会", category: "団体戦", result: "男子の部 第3位（部史上初）", details: "Cブロックを勝ち進み準決勝進出 → 準決勝敗退 → 3位決定戦 勝利。近畿大○・同志社大○・龍谷大○・関西大×・関西学院大○" },
+  { year: 2026, tournament: "第39回 東日本大学リーグ戦", category: "団体戦", result: "男子の部 第3位", details: "予選1位通過 → 決勝リーグ進出 → 3位決定戦 勝利" },
   // 2025年度 団体戦
   { year: 2025, tournament: "早慶定期戦", category: "団体戦", result: "優勝", details: "2連覇達成" },
   { year: 2025, tournament: "東日本大学新人戦", category: "団体戦", result: "準優勝" },
@@ -34,6 +37,8 @@ const results: TournamentResult[] = [
 const years = [...new Set(results.map((r) => r.year))].sort((a, b) => b - a);
 
 const highlights = [
+  { year: "2026", title: "団体戦 第3位（部史上初）", name: "男子の部", tournament: "第39回 全国大学選抜選手権大会" },
+  { year: "2026", title: "団体戦 第3位", name: "男子の部", tournament: "第39回 東日本大学リーグ戦" },
   { year: "2025", title: "団体戦 優勝", name: "2連覇達成", tournament: "早慶定期戦" },
   { year: "2025", title: "個人戦 優勝", name: "級の部", tournament: "東日本学生個人選手権" },
   { year: "2024", title: "団体戦 優勝", name: "団体戦", tournament: "東日本大学新人戦" },

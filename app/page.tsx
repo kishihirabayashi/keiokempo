@@ -13,7 +13,7 @@ const showClubAtmosphere = false;
 
 const STATS = [
   { end: 72,  suffix: "年", label: "創部からの歴史",   prefix: "" },
-  { end: 26,  suffix: "名", label: "現役部員数",       prefix: "" },
+  { end: 41,  suffix: "名", label: "現役部員数",       prefix: "" },
   { end: 90,  suffix: "%",  label: "大学から始めた部員", prefix: "" },
   { end: 3,   suffix: "冠", label: "直近の主要タイトル", prefix: "" },
 ];
@@ -51,10 +51,10 @@ const ATMOSPHERE = [
 
 const NEXT_MATCH = {
   opponent: "",
-  date: "2026年4月26日（日）",
+  date: "2026年6月28日(日)",
   time: "",
-  venue: "明治大学和泉キャンパス",
-  event: "昇段級",
+  venue: "",
+  event: "第2回 本部昇段級審査会",
 };
 
 export default function HomePage() {
@@ -418,7 +418,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
             {[
               { display: "1953", unit: "年", label: "慶應義塾体育会拳法部 創部" },
-              { display: "26",  unit: "名", label: "現役部員（男女）" },
+              { display: "41",  unit: "名", label: "現役部員（男女）" },
               { display: "90",  unit: "%",  label: "大学から始めた部員" },
             ].map((item, i) => (
               <AnimatedSection key={item.label} delay={i * 0.12} className="text-center py-20 lg:py-24 px-8">
@@ -470,15 +470,17 @@ export default function HomePage() {
                   <svg className="w-4 h-4 text-[#C41E3A] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
-                  <span style={{ fontFamily: "var(--font-noto-sans-jp)" }}>{NEXT_MATCH.date} {NEXT_MATCH.time}〜</span>
+                  <span style={{ fontFamily: "var(--font-noto-sans-jp)" }}>{NEXT_MATCH.date}{NEXT_MATCH.time ? ` ${NEXT_MATCH.time}〜` : ""}</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-[#C41E3A] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <span style={{ fontFamily: "var(--font-noto-sans-jp)" }}>{NEXT_MATCH.venue}</span>
-                </div>
+                {NEXT_MATCH.venue && (
+                  <div className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-[#C41E3A] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span style={{ fontFamily: "var(--font-noto-sans-jp)" }}>{NEXT_MATCH.venue}</span>
+                  </div>
+                )}
               </div>
             </div>
             <div className="lg:text-right">

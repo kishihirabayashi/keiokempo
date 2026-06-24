@@ -105,7 +105,7 @@ export default function AboutPage() {
                     { dt: "主な活動拠点", dd: "蝮谷拳法道場（神奈川県横浜市港北区日吉4-16-1、tel. 045-563-5904）" },
                     { dt: "合宿", dd: "年2回（3月・9月）" },
                     { dt: "部費", dd: "¥10,000/年" },
-                    { dt: "部員数", dd: "26名（男女）" },
+                    { dt: "部員数", dd: "41名（男女）" },
                     { dt: "OB会", dd: "三田拳法会" },
                   ].map(({ dt, dd }) => (
                     <div key={dt} className="flex gap-4">
