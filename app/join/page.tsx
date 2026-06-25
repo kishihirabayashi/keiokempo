@@ -71,9 +71,9 @@ const faqs: FAQItem[] = [
 
 export default function JoinPage() {
   return (
-    <div className="min-h-screen bg-[#F5F0E6]">
+    <div className="min-h-screen bg-[#E8DEC6]">
       {/* ヒーロービジュアル */}
-      <div className="relative bg-[#F5F0E6] pt-36 pb-24 overflow-hidden">
+      <div className="relative bg-[#E8DEC6] pt-36 pb-24 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
@@ -123,7 +123,7 @@ export default function JoinPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {steps.map((step, i) => (
-              <div key={step.step} className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-8 relative"
+              <div key={step.step} className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-8 relative"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
                 {i < steps.length - 1 && (
                   <div className="hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 bg-[#C41E3A] rotate-45 rounded-sm" />
@@ -150,7 +150,7 @@ export default function JoinPage() {
         </section>
 
         {/* 練習日程 */}
-        <section className="mb-20 bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-8 lg:p-10" style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
+        <section className="mb-20 bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-8 lg:p-10" style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             <div>
               <p className="section-title-en mb-4">Practice Schedule</p>

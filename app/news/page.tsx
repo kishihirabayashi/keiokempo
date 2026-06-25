@@ -40,7 +40,7 @@ const categoryColors: Record<string, string> = {
   "試合結果": "bg-[#C41E3A]/10 text-[#C41E3A] border-[#C41E3A]/30",
   "お知らせ": "bg-[#002B5C]/10 text-[#002B5C] border-[#002B5C]/25",
   "イベント": "bg-[#C41E3A]/10 text-[#C41E3A] border-[#C41E3A]/30",
-  "ブログ": "bg-[#F5F0E6] text-[#6B7A99] border-[#D4C9B8]",
+  "ブログ": "bg-[#E8DEC6] text-[#6B7A99] border-[#D4C9B8]",
 };
 
 export default function NewsPage() {
@@ -52,9 +52,9 @@ export default function NewsPage() {
       : allNews.filter((n) => n.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-[#F5F0E6]">
+    <div className="min-h-screen bg-[#E8DEC6]">
       {/* ヘッダービジュアル */}
-      <div className="relative bg-[#F5F0E6] pt-36 pb-24 overflow-hidden">
+      <div className="relative bg-[#E8DEC6] pt-36 pb-24 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
@@ -83,7 +83,7 @@ export default function NewsPage() {
               className={`px-4 py-1.5 text-sm border rounded-md transition-colors duration-150 ${
                 activeCategory === cat
                   ? "bg-[#C41E3A] border-[#C41E3A] text-white font-bold"
-                  : "bg-[#FAF7F0] border-[#D4C9B8] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#2D3748]"
+                  : "bg-[#EFE7D3] border-[#D4C9B8] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#2D3748]"
               }`}
               style={{ fontFamily: "var(--font-noto-sans-jp)" }}
             >
@@ -100,7 +100,7 @@ export default function NewsPage() {
               <Link
                 key={post.slug}
                 href={`/news/${post.slug}`}
-                className="flex flex-col sm:flex-row gap-4 bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-5 hover:border-[#C41E3A]/30 transition-all duration-300 group"
+                className="flex flex-col sm:flex-row gap-4 bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-5 hover:border-[#C41E3A]/30 transition-all duration-300 group"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.05)' }}
               >
                 <div className="shrink-0 flex sm:flex-col items-center sm:items-start gap-3 sm:gap-1 w-auto sm:w-28">

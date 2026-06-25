@@ -30,9 +30,9 @@ const schedule = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#F5F0E6]">
+    <div className="min-h-screen bg-[#E8DEC6]">
       {/* ヘッダービジュアル */}
-      <div className="relative bg-[#F5F0E6] pt-36 pb-24 overflow-hidden">
+      <div className="relative bg-[#E8DEC6] pt-36 pb-24 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
@@ -93,7 +93,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="lg:col-span-2">
-              <div className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-6 h-full"
+              <div className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-6 h-full"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
                 <h3 className="text-[#C41E3A] text-xs tracking-widest mb-6"
                   style={{ fontFamily: "var(--font-cormorant)" }}>CLUB DATA</h3>
@@ -158,7 +158,7 @@ export default function AboutPage() {
                 ],
               },
             ].map((place) => (
-              <div key={place.name} className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-6"
+              <div key={place.name} className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-6"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
                 <h3
                   className="text-[#002B5C] font-bold text-xl mb-1"
@@ -197,7 +197,7 @@ export default function AboutPage() {
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
             {schedule.map(({ month, events }) => (
-              <div key={month} className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-4"
+              <div key={month} className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-4"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.04)' }}>
                 <div className="text-[#C41E3A] font-bold text-sm mb-2"
                   style={{ fontFamily: "var(--font-cormorant)" }}>
@@ -249,7 +249,7 @@ export default function AboutPage() {
                 note: "",
               },
             ].map((staff) => (
-              <div key={staff.role} className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-6"
+              <div key={staff.role} className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-6"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
                 <span className="inline-block px-2 py-0.5 border border-[#C41E3A]/40 text-[#C41E3A] text-xs rounded-full mb-3">
                   {staff.role}
@@ -271,7 +271,7 @@ export default function AboutPage() {
         </section>
 
         {/* OB会 */}
-        <section className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12" style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
+        <section className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12" style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
           <p className="section-title-en mb-4">Alumni</p>
           <h2
             className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-4"
@@ -289,7 +289,7 @@ export default function AboutPage() {
         </section>
 
         {/* SNS・入部情報 */}
-        <section className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12" style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
+        <section className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12" style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
           <p className="section-title-en mb-4">Contact & SNS</p>
           <h2
             className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-4"
@@ -307,7 +307,7 @@ export default function AboutPage() {
               href="https://www.instagram.com/keio_kempo/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] px-5 py-3 transition-all duration-200 hover:scale-[1.03] hover:shadow-md hover:border-[#C41E3A]/30"
+              className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] px-5 py-3 transition-all duration-200 hover:scale-[1.03] hover:shadow-md hover:border-[#C41E3A]/30"
               style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.04)' }}
             >
               <p className="text-[#A0AAB8] text-xs mb-0.5" style={{ fontFamily: "var(--font-cormorant)" }}>Instagram</p>
@@ -319,7 +319,7 @@ export default function AboutPage() {
               href="https://x.com/KeioNikken"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#FAF7F0] rounded-xl border border-[#D4C9B8] px-5 py-3 transition-all duration-200 hover:scale-[1.03] hover:shadow-md hover:border-[#002B5C]/30"
+              className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] px-5 py-3 transition-all duration-200 hover:scale-[1.03] hover:shadow-md hover:border-[#002B5C]/30"
               style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.04)' }}
             >
               <p className="text-[#A0AAB8] text-xs mb-0.5" style={{ fontFamily: "var(--font-cormorant)" }}>X (Twitter)</p>

@@ -26,7 +26,7 @@ const categoryColors: Record<string, string> = {
   "試合結果": "bg-[#C41E3A]/10 text-[#C41E3A] border-[#C41E3A]/30",
   "お知らせ": "bg-[#002B5C]/10 text-[#002B5C] border-[#002B5C]/25",
   "イベント": "bg-[#C41E3A]/10 text-[#C41E3A] border-[#C41E3A]/30",
-  "ブログ": "bg-[#F5F0E6] text-[#6B7A99] border-[#D4C9B8]",
+  "ブログ": "bg-[#E8DEC6] text-[#6B7A99] border-[#D4C9B8]",
 };
 
 // Markdownのシンプルなレンダリング（実際のプロジェクトではreact-markdownを推奨）
@@ -56,7 +56,7 @@ export default async function NewsDetailPage({ params }: Props) {
   const colorClass = categoryColors[post.category] ?? categoryColors["ブログ"];
 
   return (
-    <div className="min-h-screen bg-[#F5F0E6]">
+    <div className="min-h-screen bg-[#E8DEC6]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-24">
         {/* パンくずリスト */}
         <nav className="flex items-center gap-2 text-[#A0AAB8] text-xs mb-8"

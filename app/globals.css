@@ -9,9 +9,9 @@
   --color-keio-red-dark: #A01530;
   --color-keio-navy: #002B5C;
   --color-keio-navy-light: #6B7A99;
-  --color-off-white: #F5F0E6;
-  --color-off-white-dim: #F5F0E6;
-  --color-surface: #FAF7F0;
+  --color-off-white: #E8DEC6;
+  --color-off-white-dim: #E8DEC6;
+  --color-surface: #EFE7D3;
   --color-border: #D4C9B8;
 
   --font-serif-jp: var(--font-noto-serif-jp);
@@ -27,7 +27,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: #F5F0E6;
+  background: #E8DEC6;
   color: #2D3748;
   font-family: var(--font-noto-sans-jp), sans-serif;
   font-size: 1rem;
@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
    Card styles (cream theme)
 ───────────────────────────────────── */
 .card-cream {
-  background: #FAF7F0;
+  background: #EFE7D3;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(27, 42, 74, 0.06), 0 0 0 1px rgba(27, 42, 74, 0.04);
 }
@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
    Glass
 ───────────────────────────────────── */
 .glass {
-  background: rgba(250, 247, 240, 0.82);
+  background: rgba(239, 231, 211, 0.82);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(27, 42, 74, 0.08);
