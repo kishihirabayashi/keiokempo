@@ -11,7 +11,7 @@
   --color-keio-navy-light: #6B7A99;
   --color-off-white: #E0D8B9;
   --color-off-white-dim: #E0D8B9;
-  --color-surface: #E9E3CC;
+  --color-surface: #E4DCBE;
   --color-border: #D4C9B8;
 
   --font-serif-jp: var(--font-noto-serif-jp);
@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
    Card styles (cream theme)
 ───────────────────────────────────── */
 .card-cream {
-  background: #E9E3CC;
+  background: #E4DCBE;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(27, 42, 74, 0.06), 0 0 0 1px rgba(27, 42, 74, 0.04);
 }
@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
    Glass
 ───────────────────────────────────── */
 .glass {
-  background: rgba(233, 227, 204, 0.82);
+  background: rgba(228, 220, 190, 0.82);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(27, 42, 74, 0.08);
@@ -335,7 +335,7 @@ h1, h2, h3, h4, h5, h6 {
 .news-featured {
   position: relative;
   overflow: hidden;
-  background: #E9E3CC;
+  background: #E4DCBE;
   border-radius: 12px;
   display: flex;
   flex-direction: column;

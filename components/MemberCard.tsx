@@ -97,7 +97,7 @@ export default function MemberCard({ member }: MemberCardProps) {
     <>
       {/* ─── カード（写真＋名前のみ） ─── */}
       <div
-        className="bg-[#E9E3CC] rounded-xl overflow-hidden card-lift cursor-pointer"
+        className="bg-[#E4DCBE] rounded-xl overflow-hidden card-lift cursor-pointer"
         style={{ boxShadow: "0 2px 8px rgba(27,42,74,0.06), 0 0 0 1px rgba(27,42,74,0.04)" }}
         onClick={() => setOpen(true)}
       >
@@ -148,7 +148,7 @@ export default function MemberCard({ member }: MemberCardProps) {
 
               {/* モーダル本体 — overflow-hidden を外し overflowY:auto のみで制御 */}
               <motion.div
-                className="relative w-full max-w-sm bg-[#E9E3CC]"
+                className="relative w-full max-w-sm bg-[#E4DCBE]"
                 style={{
                   borderRadius: 20,
                   boxShadow: "0 40px 100px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.07)",

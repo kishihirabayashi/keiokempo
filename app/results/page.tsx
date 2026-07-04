@@ -98,7 +98,7 @@ export default function ResultsPage() {
           {highlights.length > 0 && (
             <div className="mb-5">
               <div
-                className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-stretch"
+                className="bg-[#E4DCBE] rounded-xl border border-[#D4C9B8] overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-stretch"
                 style={{ boxShadow: '0 4px 18px rgba(27,42,74,0.10)' }}
               >
                 {/* 左: 大きな年度パネル */}
@@ -136,7 +136,7 @@ export default function ResultsPage() {
             {highlights.slice(1).map((h, i) => (
               <div
                 key={i}
-                className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-6 relative overflow-hidden"
+                className="bg-[#E4DCBE] rounded-xl border border-[#D4C9B8] p-6 relative overflow-hidden"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
               >
                 <span className="inline-block px-3 py-1 bg-[#B01E33]/10 text-[#B01E33] text-xs border border-[#B01E33]/30 rounded-full mb-4">
@@ -167,7 +167,7 @@ export default function ResultsPage() {
               className={`px-4 py-1.5 text-sm border rounded-md transition-colors duration-150 ${
                 selectedYear === "all"
                   ? "bg-[#B01E33] border-[#B01E33] text-white font-bold"
-                  : "bg-[#E9E3CC] border-[#D4C9B8] text-[#6B7A99] hover:border-[#B01E33]/40 hover:text-[#2D3748]"
+                  : "bg-[#E4DCBE] border-[#D4C9B8] text-[#6B7A99] hover:border-[#B01E33]/40 hover:text-[#2D3748]"
               }`}
             >
               全年度
@@ -179,7 +179,7 @@ export default function ResultsPage() {
                 className={`px-4 py-1.5 text-sm border rounded-md transition-colors duration-150 ${
                   selectedYear === y
                     ? "bg-[#B01E33] border-[#B01E33] text-white font-bold"
-                    : "bg-[#E9E3CC] border-[#D4C9B8] text-[#6B7A99] hover:border-[#B01E33]/40 hover:text-[#2D3748]"
+                    : "bg-[#E4DCBE] border-[#D4C9B8] text-[#6B7A99] hover:border-[#B01E33]/40 hover:text-[#2D3748]"
                 }`}
                 style={{ fontFamily: "var(--font-cormorant)" }}
               >
@@ -189,7 +189,7 @@ export default function ResultsPage() {
           </div>
 
           <div
-            className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] overflow-hidden"
+            className="bg-[#E4DCBE] rounded-xl border border-[#D4C9B8] overflow-hidden"
             style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
           >
             <ResultTable results={filtered} />

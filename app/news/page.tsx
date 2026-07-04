@@ -91,7 +91,7 @@ export default function NewsPage() {
               className={`px-4 py-1.5 text-sm border rounded-md transition-colors duration-150 ${
                 activeCategory === cat
                   ? "bg-[#B01E33] border-[#B01E33] text-white font-bold"
-                  : "bg-[#E9E3CC] border-[#D4C9B8] text-[#6B7A99] hover:border-[#B01E33]/40 hover:text-[#2D3748]"
+                  : "bg-[#E4DCBE] border-[#D4C9B8] text-[#6B7A99] hover:border-[#B01E33]/40 hover:text-[#2D3748]"
               }`}
               style={{ fontFamily: "var(--font-noto-sans-jp)" }}
             >
@@ -106,7 +106,7 @@ export default function NewsPage() {
             {/* 1件目: フィーチャー大 */}
             <Link
               href={`/news/${filtered[0].slug}`}
-              className="block mb-5 bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-8 lg:p-10 group hover:border-[#B01E33]/30 transition-all duration-300 relative overflow-hidden"
+              className="block mb-5 bg-[#E4DCBE] rounded-xl border border-[#D4C9B8] p-8 lg:p-10 group hover:border-[#B01E33]/30 transition-all duration-300 relative overflow-hidden"
               style={{ boxShadow: '0 4px 16px rgba(27,42,74,0.08)' }}
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start relative z-10">
@@ -163,7 +163,7 @@ export default function NewsPage() {
                     <Link
                       key={post.slug}
                       href={`/news/${post.slug}`}
-                      className="flex flex-col sm:flex-row gap-4 bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-5 hover:border-[#B01E33]/30 transition-all duration-300 group"
+                      className="flex flex-col sm:flex-row gap-4 bg-[#E4DCBE] rounded-xl border border-[#D4C9B8] p-5 hover:border-[#B01E33]/30 transition-all duration-300 group"
                       style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.05)' }}
                     >
                       <div className="shrink-0 flex sm:flex-col items-center sm:items-start gap-3 sm:gap-1 w-auto sm:w-28">

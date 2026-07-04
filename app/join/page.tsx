@@ -128,7 +128,7 @@ export default function JoinPage() {
             {steps.map((step, i) => (
               <div key={step.step} className="flex gap-6 items-start">
                 {/* ステップ番号 */}
-                <div className="shrink-0 flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#B01E33]/40 bg-[#E9E3CC]">
+                <div className="shrink-0 flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#B01E33]/40 bg-[#E4DCBE]">
                   <span
                     className="font-black text-[#B01E33]"
                     style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(1.4rem, 3vw, 2rem)" }}
@@ -138,7 +138,7 @@ export default function JoinPage() {
                 </div>
                 {/* コンテンツ */}
                 <div
-                  className="flex-1 bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-6 lg:p-8"
+                  className="flex-1 bg-[#E4DCBE] rounded-xl border border-[#D4C9B8] p-6 lg:p-8"
                   style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
                 >
                   <h3
@@ -162,7 +162,7 @@ export default function JoinPage() {
 
         {/* ─── 練習日程 ─── */}
         <section
-          className="mb-20 bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-8 lg:p-10"
+          className="mb-20 bg-[#E4DCBE] rounded-xl border border-[#D4C9B8] p-8 lg:p-10"
           style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">

@@ -103,7 +103,7 @@ export default function AboutKempoPage() {
                 </div>
                 {/* タイムライン */}
                 <div
-                  className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-6"
+                  className="bg-[#E4DCBE] rounded-xl border border-[#D4C9B8] p-6"
                   style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
                 >
                   <h3 className="text-[#B01E33] text-sm tracking-widest mb-6" style={{ fontFamily: "var(--font-cormorant)" }}>TIMELINE</h3>
@@ -148,7 +148,7 @@ export default function AboutKempoPage() {
               const { title: t0, Icon: Icon0, content: c0 } = rules[0];
               return (
                 <div
-                  className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-6 hover:border-[#B01E33]/30 transition-colors duration-300 grid grid-cols-1 lg:grid-cols-3 gap-6 items-center"
+                  className="bg-[#E4DCBE] rounded-xl border border-[#D4C9B8] p-6 hover:border-[#B01E33]/30 transition-colors duration-300 grid grid-cols-1 lg:grid-cols-3 gap-6 items-center"
                   style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
                 >
                   <div className="flex items-center gap-4">
@@ -170,7 +170,7 @@ export default function AboutKempoPage() {
               {rules.slice(1).map(({ title, Icon, content }) => (
                 <div
                   key={title}
-                  className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-6 hover:border-[#B01E33]/30 transition-colors duration-300"
+                  className="bg-[#E4DCBE] rounded-xl border border-[#D4C9B8] p-6 hover:border-[#B01E33]/30 transition-colors duration-300"
                   style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
                 >
                   <div className="w-12 h-12 rounded-full bg-[#B01E33]/8 flex items-center justify-center mb-4">
@@ -214,7 +214,7 @@ export default function AboutKempoPage() {
             ].map((item) => (
               <div
                 key={item.name}
-                className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-6"
+                className="bg-[#E4DCBE] rounded-xl border border-[#D4C9B8] p-6"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
               >
                 <div className="w-full aspect-video bg-[#E0D8B9] rounded-lg border border-[#D4C9B8] mb-4 flex items-center justify-center">
@@ -241,7 +241,7 @@ export default function AboutKempoPage() {
             他格闘技との違い
           </h2>
           <div
-            className="overflow-x-auto bg-[#E9E3CC] rounded-xl border border-[#D4C9B8]"
+            className="overflow-x-auto bg-[#E4DCBE] rounded-xl border border-[#D4C9B8]"
             style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
           >
             <table className="w-full text-sm border-collapse">
@@ -273,7 +273,7 @@ export default function AboutKempoPage() {
 
         {/* ─── 実用性（非対称 + 縦書き） ─── */}
         <section
-          className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12"
+          className="bg-[#E4DCBE] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12"
           style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
         >
           <div>

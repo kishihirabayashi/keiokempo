@@ -66,7 +66,7 @@ export default function HomePage() {
       <HeroSection />
 
       {/* ── 部の雰囲気（ヒーロー直後） ── */}
-      {showClubAtmosphere && <section className="bg-[#E9E3CC] py-24 lg:py-32 relative overflow-hidden">
+      {showClubAtmosphere && <section className="bg-[#E4DCBE] py-24 lg:py-32 relative overflow-hidden">
         {/* 巨大bg watermark */}
         <div
           className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
@@ -112,7 +112,7 @@ export default function HomePage() {
             {ATMOSPHERE.map((item, i) => (
               <AnimatedSection key={item.num} delay={i * 0.1}>
                 <div
-                  className="group bg-[#E9E3CC] rounded-2xl overflow-hidden card-lift"
+                  className="group bg-[#E4DCBE] rounded-2xl overflow-hidden card-lift"
                   style={{
                     boxShadow:
                       "0 2px 12px rgba(27,42,74,0.08), 0 0 0 1px rgba(27,42,74,0.05)",
@@ -290,7 +290,7 @@ export default function HomePage() {
       </ParallaxBand>
 
       {/* ── NEWS ── */}
-      <section className="bg-[#E9E3CC] py-24 lg:py-32">
+      <section className="bg-[#E4DCBE] py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="flex items-end justify-between gap-4 mb-14">
             <div className="flex items-center gap-5">
@@ -314,7 +314,7 @@ export default function HomePage() {
               <AnimatedSection className="lg:col-span-2">
                 <Link
                   href={`/news/${news[0].slug}`}
-                  className="group flex flex-col h-full min-h-[240px] lg:min-h-[300px] bg-[#E9E3CC] rounded-xl card-lift p-8 lg:p-10 relative overflow-hidden"
+                  className="group flex flex-col h-full min-h-[240px] lg:min-h-[300px] bg-[#E4DCBE] rounded-xl card-lift p-8 lg:p-10 relative overflow-hidden"
                   style={{ boxShadow: "0 4px 20px rgba(27,42,74,0.10), 0 0 0 1px rgba(27,42,74,0.05)" }}
                 >
                   {/* カテゴリ + 日付 */}
@@ -514,7 +514,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading en="Next Match" jp="次戦情報" className="mb-10" />
           <div
-            className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-6 sm:p-8 lg:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+            className="bg-[#E4DCBE] rounded-xl border border-[#D4C9B8] p-6 sm:p-8 lg:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
             style={{ boxShadow: "0 2px 12px rgba(27,42,74,0.07)" }}
           >
             <div>
