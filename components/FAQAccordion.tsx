@@ -90,7 +90,7 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
 
   return (
     <div
-      className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] divide-y divide-[#D4C9B8] px-6"
+      className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] divide-y divide-[#D4C9B8] px-6"
       style={{ boxShadow: "0 2px 8px rgba(27,42,74,0.05)" }}
     >
       {items.map((item, i) => (
