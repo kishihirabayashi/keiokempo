@@ -41,7 +41,7 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 ${isScrolled ? "shadow-sm" : ""}`}
         style={{
-          background: isScrolled ? "rgba(224,216,185,0.96)" : "rgba(0,15,40,0.12)",
+          background: isScrolled ? "rgba(215,206,169,0.96)" : "rgba(0,15,40,0.12)",
           backdropFilter: "blur(12px)",
           WebkitBackdropFilter: "blur(12px)",
           borderBottom: "10px solid transparent",
@@ -141,7 +141,7 @@ export default function Header() {
             exit={{ x: "-100%" }}
             transition={{ type: "spring", damping: 28, stiffness: 100 }}
             className="fixed inset-0 z-40 flex flex-col"
-            style={{ background: "#E0D8B9" }}
+            style={{ background: "#D7CEA9" }}
           >
             <div
               className="absolute left-0 top-0 bottom-0 w-[6px]"

@@ -9,9 +9,9 @@
   --color-keio-red-dark: #A01530;
   --color-keio-navy: #002B5C;
   --color-keio-navy-light: #6B7A99;
-  --color-off-white: #E0D8B9;
-  --color-off-white-dim: #E0D8B9;
-  --color-surface: #E4DCBE;
+  --color-off-white: #D7CEA9;
+  --color-off-white-dim: #D7CEA9;
+  --color-surface: #E1DABC;
   --color-border: #D4C9B8;
 
   --font-serif-jp: var(--font-noto-serif-jp);
@@ -27,7 +27,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: #E0D8B9;
+  background: #D7CEA9;
   /* 和紙風: 極薄の斜線テクスチャ */
   background-image: repeating-linear-gradient(
     -45deg,
@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
    Card styles (cream theme)
 ───────────────────────────────────── */
 .card-cream {
-  background: #E4DCBE;
+  background: #E1DABC;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(27, 42, 74, 0.06), 0 0 0 1px rgba(27, 42, 74, 0.04);
 }
@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
    Glass
 ───────────────────────────────────── */
 .glass {
-  background: rgba(228, 220, 190, 0.82);
+  background: rgba(225, 218, 188, 0.82);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(27, 42, 74, 0.08);
@@ -335,7 +335,7 @@ h1, h2, h3, h4, h5, h6 {
 .news-featured {
   position: relative;
   overflow: hidden;
-  background: #E4DCBE;
+  background: #E1DABC;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
