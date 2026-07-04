@@ -126,7 +126,7 @@ export default function RootLayout({
       lang="ja"
       className={`${notoSerifJP.variable} ${notoSansJP.variable} ${cormorantGaramond.variable} ${zenMaruGothic.variable}`}
     >
-      <body className="min-h-screen flex flex-col bg-[#E0D8B9] text-[#1B2A4A] antialiased">
+      <body className="min-h-screen flex flex-col bg-[#D7CEA9] text-[#1B2A4A] antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
