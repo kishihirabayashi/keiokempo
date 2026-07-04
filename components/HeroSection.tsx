@@ -62,8 +62,8 @@ export default function HeroSection() {
         className="absolute top-0 left-0 right-0 h-[10px] z-20"
         aria-hidden="true"
         style={{
-          background: "linear-gradient(to right, #002B5C 0%, #002B5C 18%, #C41E3A 35%, #C41E3A 65%, #002B5C 82%, #002B5C 100%)",
-          boxShadow: "0 2px 14px rgba(196,30,58,0.45)",
+          background: "linear-gradient(to right, #002B5C 0%, #002B5C 18%, #B01E33 35%, #B01E33 65%, #002B5C 82%, #002B5C 100%)",
+          boxShadow: "0 2px 14px rgba(176,30,51,0.45)",
         }}
       />
 
@@ -140,7 +140,7 @@ export default function HeroSection() {
         >
           <Link
             href="/join"
-            className="group relative inline-flex items-center gap-3 px-8 py-4 bg-[#C41E3A] text-white font-bold text-sm tracking-[0.18em] overflow-hidden rounded-lg"
+            className="group relative inline-flex items-center gap-3 px-8 py-4 bg-[#B01E33] text-white font-bold text-sm tracking-[0.18em] overflow-hidden rounded-lg"
             style={{ fontFamily: "var(--font-noto-sans-jp)" }}
           >
             <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-500 ease-out" aria-hidden="true" />

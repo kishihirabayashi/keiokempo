@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { NewsPost } from "@/lib/getNews";
 
 const categoryColors: Record<string, string> = {
-  "試合結果": "bg-[#C41E3A]/10 text-[#C41E3A] border-[#C41E3A]/25",
+  "試合結果": "bg-[#B01E33]/10 text-[#B01E33] border-[#B01E33]/25",
   "お知らせ": "bg-[#002B5C]/10 text-[#002B5C] border-[#002B5C]/25",
   "イベント": "bg-[#002B5C]/10 text-[#002B5C] border-[#002B5C]/25",
   "ブログ":   "bg-[#DDD4C2] text-[#6B7A99] border-[#C9BEAC]",
@@ -19,7 +19,7 @@ export default function NewsCard({ post, featured }: NewsCardProps) {
   return (
     <Link
       href={`/news/${post.slug}`}
-      className="group relative flex flex-col overflow-hidden bg-[#FAF7F0] rounded-xl card-lift"
+      className="group relative flex flex-col overflow-hidden bg-[#EBE0C6] rounded-xl card-lift"
       style={{ boxShadow: "0 2px 8px rgba(27,42,74,0.06), 0 0 0 1px rgba(27,42,74,0.04)" }}
     >
       {/* ── 画像エリア ── */}
@@ -53,7 +53,7 @@ export default function NewsCard({ post, featured }: NewsCardProps) {
         </div>
         <div className="absolute top-3 right-3">
           <time
-            className="text-[#6B7A99] text-xs bg-[#FAF7F0]/80 backdrop-blur-sm px-2 py-0.5 rounded-full"
+            className="text-[#6B7A99] text-xs bg-[#EBE0C6]/80 backdrop-blur-sm px-2 py-0.5 rounded-full"
             dateTime={post.date}
             style={{ fontFamily: "var(--font-cormorant)" }}
           >
@@ -63,9 +63,9 @@ export default function NewsCard({ post, featured }: NewsCardProps) {
       </div>
 
       {/* ── テキストエリア ── */}
-      <div className="flex-1 p-5 bg-[#FAF7F0] rounded-b-xl">
+      <div className="flex-1 p-5 bg-[#EBE0C6] rounded-b-xl">
         <h3
-          className={`text-[#002B5C] font-bold leading-snug group-hover:text-[#C41E3A] transition-colors duration-250 ${
+          className={`text-[#002B5C] font-bold leading-snug group-hover:text-[#B01E33] transition-colors duration-250 ${
             featured ? "text-xl" : "text-base"
           }`}
           style={{ fontFamily: "var(--font-noto-serif-jp)", fontWeight: 700, letterSpacing: "0.03em" }}

@@ -56,17 +56,25 @@ export default function ResultsPage() {
       : results.filter((r) => r.year === selectedYear);
 
   return (
-    <div className="min-h-screen bg-[#E8DEC6]">
-      {/* ヘッダービジュアル */}
-      <div className="relative bg-[#E8DEC6] pt-36 pb-24 overflow-hidden">
+    <div className="min-h-screen bg-[#E2D4B4]">
+      {/* ─── ヘッダービジュアル ─── */}
+      <div className="relative bg-[#E2D4B4] pt-36 pb-24 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
-            background: 'linear-gradient(to right, #002B5C 0%, #002B5C 18%, #C41E3A 35%, #C41E3A 65%, #002B5C 82%, #002B5C 100%)',
-            boxShadow: '0 2px 14px rgba(196,30,58,0.45)',
+            background: 'linear-gradient(to right, #002B5C 0%, #002B5C 18%, #B01E33 35%, #B01E33 65%, #002B5C 82%, #002B5C 100%)',
+            boxShadow: '0 2px 14px rgba(176,30,51,0.45)',
           }}
         />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* 縦書き装飾 */}
+        <div
+          className="absolute right-6 lg:right-12 top-1/2 -translate-y-1/2 select-none pointer-events-none vertical-text text-[#002B5C] font-black"
+          style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(4rem, 10vw, 8rem)", opacity: 0.04, letterSpacing: "0.1em" }}
+          aria-hidden="true"
+        >
+          Results
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <p className="section-title-en mb-4">Results</p>
           <h1
             className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#002B5C] mb-6"
@@ -79,25 +87,65 @@ export default function ResultsPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
-        {/* ハイライト */}
+        {/* ─── ハイライト ─── */}
         <section className="mb-20">
           <div className="flex items-center gap-4 mb-8">
             <p className="section-title-en">Highlights</p>
-            <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
+            <div className="red-bar" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {highlights.map((h, i) => (
-              <div key={i} className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-6 relative overflow-hidden"
-                style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
-                <div className="absolute right-4 top-4 text-[#002B5C]/[0.06] text-6xl font-black"
-                  style={{ fontFamily: "var(--font-cormorant)" }}>
-                  {h.year}
+
+          {/* 1件目: 全幅フィーチャー */}
+          {highlights.length > 0 && (
+            <div className="mb-5">
+              <div
+                className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] overflow-hidden grid grid-cols-1 lg:grid-cols-12 items-stretch"
+                style={{ boxShadow: '0 4px 18px rgba(27,42,74,0.10)' }}
+              >
+                {/* 左: 大きな年度パネル */}
+                <div className="lg:col-span-3 bg-[#002B5C] p-8 lg:p-10 flex flex-col justify-between relative overflow-hidden">
+                  <div className="relative z-10">
+                    <p className="text-white/35 text-xs tracking-[0.55em] mb-3" style={{ fontFamily: "var(--font-cormorant)" }}>YEAR</p>
+                    <span
+                      className="font-black text-white leading-none block"
+                      style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(3.5rem, 6vw, 5.5rem)", letterSpacing: "-0.03em" }}
+                    >
+                      {highlights[0].year}
+                    </span>
+                    <span className="text-[#B8860B] text-sm mt-1 block" style={{ fontFamily: "var(--font-cormorant)" }}>年度</span>
+                  </div>
                 </div>
-                <span className="inline-block px-3 py-1 bg-[#C41E3A]/10 text-[#C41E3A] text-xs border border-[#C41E3A]/30 rounded-full mb-4">
+                {/* 右: 詳細 */}
+                <div className="lg:col-span-9 p-8 lg:p-10 flex flex-col justify-center relative overflow-hidden">
+                  <span className="inline-block px-3 py-1 bg-[#B01E33]/10 text-[#B01E33] text-xs border border-[#B01E33]/30 rounded-full mb-4 w-fit">
+                    {highlights[0].title}
+                  </span>
+                  <h3
+                    className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#002B5C] mb-3 relative z-10"
+                    style={{ fontFamily: "var(--font-noto-serif-jp)" }}
+                  >
+                    {highlights[0].tournament}
+                  </h3>
+                  <p className="text-[#A0AAB8] text-sm relative z-10">{highlights[0].name}</p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* 残り: 3カラムグリッド */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {highlights.slice(1).map((h, i) => (
+              <div
+                key={i}
+                className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-6 relative overflow-hidden"
+                style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
+              >
+                <span className="inline-block px-3 py-1 bg-[#B01E33]/10 text-[#B01E33] text-xs border border-[#B01E33]/30 rounded-full mb-4">
                   {h.title}
                 </span>
-                <p className="text-[#002B5C] font-bold text-sm mb-1"
-                  style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
+                <p
+                  className="text-[#002B5C] font-bold text-sm mb-1 relative z-10"
+                  style={{ fontFamily: "var(--font-noto-serif-jp)" }}
+                >
                   {h.tournament}
                 </p>
                 <p className="text-[#A0AAB8] text-xs">{h.name}</p>
@@ -106,19 +154,20 @@ export default function ResultsPage() {
           </div>
         </section>
 
-        {/* 年度フィルター */}
+        {/* ─── 全戦績テーブル ─── */}
         <section>
           <div className="flex items-center gap-4 mb-6">
             <p className="section-title-en">All Results</p>
-            <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
+            <div className="red-bar" />
           </div>
+          {/* 年度フィルター */}
           <div className="flex flex-wrap gap-2 mb-6">
             <button
               onClick={() => setSelectedYear("all")}
               className={`px-4 py-1.5 text-sm border rounded-md transition-colors duration-150 ${
                 selectedYear === "all"
-                  ? "bg-[#C41E3A] border-[#C41E3A] text-white font-bold"
-                  : "bg-[#EFE7D3] border-[#D4C9B8] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#2D3748]"
+                  ? "bg-[#B01E33] border-[#B01E33] text-white font-bold"
+                  : "bg-[#EBE0C6] border-[#D4C9B8] text-[#6B7A99] hover:border-[#B01E33]/40 hover:text-[#2D3748]"
               }`}
             >
               全年度
@@ -129,8 +178,8 @@ export default function ResultsPage() {
                 onClick={() => setSelectedYear(y)}
                 className={`px-4 py-1.5 text-sm border rounded-md transition-colors duration-150 ${
                   selectedYear === y
-                    ? "bg-[#C41E3A] border-[#C41E3A] text-white font-bold"
-                    : "bg-[#EFE7D3] border-[#D4C9B8] text-[#6B7A99] hover:border-[#C41E3A]/40 hover:text-[#2D3748]"
+                    ? "bg-[#B01E33] border-[#B01E33] text-white font-bold"
+                    : "bg-[#EBE0C6] border-[#D4C9B8] text-[#6B7A99] hover:border-[#B01E33]/40 hover:text-[#2D3748]"
                 }`}
                 style={{ fontFamily: "var(--font-cormorant)" }}
               >
@@ -139,8 +188,10 @@ export default function ResultsPage() {
             ))}
           </div>
 
-          <div className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] overflow-hidden"
-            style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
+          <div
+            className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] overflow-hidden"
+            style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
+          >
             <ResultTable results={filtered} />
           </div>
         </section>

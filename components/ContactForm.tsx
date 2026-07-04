@@ -69,7 +69,7 @@ export default function ContactForm() {
   };
 
   const inputClass =
-    "w-full bg-[#EFE7D3] border border-[#D4C9B8] text-[#2D3748] px-4 py-3 text-sm focus:outline-none focus:border-[#002B5C] focus:ring-2 focus:ring-[#002B5C]/10 transition-all duration-300 rounded-lg placeholder-[#B0A090]";
+    "w-full bg-[#EBE0C6] border border-[#D4C9B8] text-[#2D3748] px-4 py-3 text-sm focus:outline-none focus:border-[#002B5C] focus:ring-2 focus:ring-[#002B5C]/10 transition-all duration-300 rounded-lg placeholder-[#B0A090]";
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -85,11 +85,11 @@ export default function ContactForm() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-8 text-center"
+              className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-8 text-center"
               style={{ boxShadow: "0 2px 8px rgba(27,42,74,0.05)" }}
             >
-              <div className="w-14 h-14 rounded-full bg-[#C41E3A]/10 flex items-center justify-center mx-auto mb-4">
-                <svg className="w-7 h-7 text-[#C41E3A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-14 h-14 rounded-full bg-[#B01E33]/10 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-7 h-7 text-[#B01E33]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
@@ -125,10 +125,10 @@ export default function ContactForm() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-8"
+              className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-8"
               style={{ boxShadow: "0 2px 8px rgba(27,42,74,0.05)" }}
             >
-              <div className="w-14 h-14 rounded-full bg-[#E8DEC6] flex items-center justify-center mx-auto mb-4">
+              <div className="w-14 h-14 rounded-full bg-[#E2D4B4] flex items-center justify-center mx-auto mb-4">
                 <svg className="w-7 h-7 text-[#6B7A99]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01M12 3a9 9 0 100 18A9 9 0 0012 3z" />
                 </svg>
@@ -141,7 +141,7 @@ export default function ContactForm() {
                 お手数ですが、直接{" "}
                 <a
                   href="mailto:keio.kempo1@gmail.com"
-                  className="text-[#C41E3A] hover:underline font-medium"
+                  className="text-[#B01E33] hover:underline font-medium"
                 >
                   keio.kempo1@gmail.com
                 </a>{" "}
@@ -150,7 +150,7 @@ export default function ContactForm() {
                   href="https://www.instagram.com/keio_kempo/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#C41E3A] hover:underline font-medium"
+                  className="text-[#B01E33] hover:underline font-medium"
                 >
                   @keio_kempo
                 </a>
@@ -177,7 +177,7 @@ export default function ContactForm() {
                     className="block text-[#2D3748] text-xs font-medium mb-2"
                     style={{ fontFamily: "var(--font-noto-sans-jp)", letterSpacing: "0.05em" }}
                   >
-                    お名前 <span className="text-[#C41E3A]">*</span>
+                    お名前 <span className="text-[#B01E33]">*</span>
                   </label>
                   <input
                     id="name"
@@ -214,7 +214,7 @@ export default function ContactForm() {
                   className="block text-[#2D3748] text-xs font-medium mb-2"
                   style={{ fontFamily: "var(--font-noto-sans-jp)", letterSpacing: "0.05em" }}
                 >
-                  メールアドレス <span className="text-[#C41E3A]">*</span>
+                  メールアドレス <span className="text-[#B01E33]">*</span>
                 </label>
                 <input
                   id="email"
@@ -232,7 +232,7 @@ export default function ContactForm() {
                   className="block text-[#2D3748] text-xs font-medium mb-3"
                   style={{ fontFamily: "var(--font-noto-sans-jp)", letterSpacing: "0.05em" }}
                 >
-                  お問い合わせ種別 <span className="text-[#C41E3A]">*</span>
+                  お問い合わせ種別 <span className="text-[#B01E33]">*</span>
                 </label>
                 <div className="flex flex-wrap gap-3">
                   {(["見学", "体験入部", "その他"] as const).map((t) => (
@@ -243,7 +243,7 @@ export default function ContactForm() {
                         value={t}
                         checked={form.inquiryType === t}
                         onChange={() => setForm({ ...form, inquiryType: t })}
-                        className="accent-[#C41E3A]"
+                        className="accent-[#B01E33]"
                       />
                       <span
                         className="text-[#2D3748] text-sm"
@@ -276,7 +276,7 @@ export default function ContactForm() {
 
               {status === "error" && (
                 <p
-                  className="text-[#C41E3A] text-sm bg-[#C41E3A]/5 border border-[#C41E3A]/20 rounded-lg px-4 py-3"
+                  className="text-[#B01E33] text-sm bg-[#B01E33]/5 border border-[#B01E33]/20 rounded-lg px-4 py-3"
                   style={{ fontFamily: "var(--font-noto-sans-jp)" }}
                 >
                   送信に失敗しました。もう一度お試しください。
@@ -286,7 +286,7 @@ export default function ContactForm() {
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="group relative w-full sm:w-auto px-8 py-4 bg-[#C41E3A] text-white font-bold text-sm tracking-widest overflow-hidden rounded-lg disabled:opacity-60"
+                className="group relative w-full sm:w-auto px-8 py-4 bg-[#B01E33] text-white font-bold text-sm tracking-widest overflow-hidden rounded-lg disabled:opacity-60"
               >
                 <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-500 ease-out" />
                 <span className="relative z-10">
@@ -302,7 +302,7 @@ export default function ContactForm() {
       {/* ── 右側：直接連絡先 ── */}
       <div className="space-y-4">
         <div
-          className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-6"
+          className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-6"
           style={{ boxShadow: "0 2px 8px rgba(27,42,74,0.05)" }}
         >
           <h3
@@ -316,7 +316,7 @@ export default function ContactForm() {
               <p className="text-[#6B7A99] text-xs mb-1">メール</p>
               <a
                 href="mailto:keio.kempo1@gmail.com"
-                className="text-[#2D3748] text-sm hover:text-[#C41E3A] transition-colors"
+                className="text-[#2D3748] text-sm hover:text-[#B01E33] transition-colors"
               >
                 keio.kempo1@gmail.com
               </a>
@@ -327,14 +327,14 @@ export default function ContactForm() {
                 href="https://www.instagram.com/keio_kempo/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#2D3748] text-sm hover:text-[#C41E3A] transition-colors"
+                className="text-[#2D3748] text-sm hover:text-[#B01E33] transition-colors"
               >
                 @keio_kempo
               </a>
             </div>
           </div>
         </div>
-        <div className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-6" style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.05)' }}>
+        <div className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-6" style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.05)' }}>
           <h3
             className="text-[#002B5C] text-xs tracking-widest mb-3 uppercase font-semibold"
             style={{ fontFamily: "var(--font-cormorant)" }}

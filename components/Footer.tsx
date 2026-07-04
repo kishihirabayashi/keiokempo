@@ -12,21 +12,40 @@ const siteLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#002B5C] relative">
-      {/* グラデーションボーダー上部（ページトップと同じ） */}
+    <footer className="bg-[#002B5C] relative overflow-hidden">
+      {/* グラデーションボーダー上部 */}
       <div
         className="absolute top-0 left-0 right-0 h-[10px]"
         style={{
-          background: 'linear-gradient(to right, #002B5C 0%, #002B5C 18%, #C41E3A 35%, #C41E3A 65%, #002B5C 82%, #002B5C 100%)',
-          boxShadow: '0 2px 14px rgba(196,30,58,0.45)',
+          background: 'linear-gradient(to right, #002B5C 0%, #002B5C 18%, #B01E33 35%, #B01E33 65%, #002B5C 82%, #002B5C 100%)',
+          boxShadow: '0 2px 14px rgba(176,30,51,0.45)',
         }}
       />
+
+      {/* 縦書き部名（右端装飾） */}
+      <div
+        className="absolute right-0 top-0 bottom-0 flex items-center pr-3 lg:pr-6 select-none pointer-events-none"
+        aria-hidden="true"
+      >
+        <span
+          className="vertical-text font-bold text-white"
+          style={{
+            fontFamily: "var(--font-noto-serif-jp)",
+            fontSize: "clamp(0.55rem, 0.8vw, 0.75rem)",
+            letterSpacing: "0.25em",
+            opacity: 0.08,
+          }}
+        >
+          慶應義塾大学體育會拳法部
+        </span>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10 lg:pt-20 lg:pb-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* 左: ロゴ + 説明 */}
           <div>
             <Link href="/" className="inline-flex items-center gap-3 mb-5 group">
-              <div className="w-[5px] h-12 shrink-0" style={{ background: 'linear-gradient(to bottom, #C41E3A 0%, #C41E3A 60%, #7A1020 100%)' }} />
+              <div className="w-[5px] h-12 shrink-0" style={{ background: 'linear-gradient(to bottom, #B01E33 0%, #B01E33 60%, #7A1020 100%)' }} />
               <div className="flex flex-col leading-tight">
                 <span
                   className="text-white/50 text-xs tracking-widest"
@@ -49,6 +68,16 @@ export default function Footer() {
             <p className="text-white/35 text-xs mt-4">
               蝮谷拳法道場｜神奈川県横浜市港北区日吉4-16-1
             </p>
+            {/* 落款アクセント */}
+            <div className="mt-6 flex items-center gap-3">
+              <div className="hanko" aria-hidden="true" />
+              <span
+                className="text-white/25 text-xs tracking-widest"
+                style={{ fontFamily: "var(--font-cormorant)" }}
+              >
+                Est. 1953
+              </span>
+            </div>
           </div>
 
           {/* 中: サイトマップ */}
@@ -64,7 +93,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/65 hover:text-white text-sm transition-colors duration-200"
+                    className="text-white/65 hover:text-white text-sm transition-colors duration-200 hover:translate-x-0.5 inline-block transition-transform"
                   >
                     {link.label}
                   </Link>
@@ -97,7 +126,7 @@ export default function Footer() {
                 href="https://www.instagram.com/keio_kempo/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 border border-white/20 rounded-md flex items-center justify-center text-white/50 hover:text-white hover:border-white/50 transition-all duration-200"
+                className="w-10 h-10 border border-white/20 rounded-md flex items-center justify-center text-white/50 hover:text-white hover:border-white/50 hover:bg-white/5 transition-all duration-200"
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -109,7 +138,7 @@ export default function Footer() {
                 href="https://x.com/KeioNikken"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 border border-white/20 rounded-md flex items-center justify-center text-white/50 hover:text-white hover:border-white/50 transition-all duration-200"
+                className="w-10 h-10 border border-white/20 rounded-md flex items-center justify-center text-white/50 hover:text-white hover:border-white/50 hover:bg-white/5 transition-all duration-200"
                 aria-label="X (Twitter)"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -121,7 +150,7 @@ export default function Footer() {
                 href="https://www.youtube.com/@%E6%85%B6%E6%87%89%E7%BE%A9%E5%A1%BE%E9%AB%94%E8%82%B2%E6%9C%83%E6%8B%B3%E6%B3%95%E9%83%A8"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 border border-white/20 rounded-md flex items-center justify-center text-white/50 hover:text-white hover:border-white/50 transition-all duration-200"
+                className="w-10 h-10 border border-white/20 rounded-md flex items-center justify-center text-white/50 hover:text-white hover:border-white/50 hover:bg-white/5 transition-all duration-200"
                 aria-label="YouTube"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

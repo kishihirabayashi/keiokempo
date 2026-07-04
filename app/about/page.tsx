@@ -30,17 +30,17 @@ const schedule = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#E8DEC6]">
-      {/* ヘッダービジュアル */}
-      <div className="relative bg-[#E8DEC6] pt-36 pb-24 overflow-hidden">
+    <div className="min-h-screen bg-[#E2D4B4]">
+      {/* ─── ヘッダービジュアル ─── */}
+      <div className="relative bg-[#E2D4B4] pt-36 pb-24 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
-            background: 'linear-gradient(to right, #002B5C 0%, #002B5C 18%, #C41E3A 35%, #C41E3A 65%, #002B5C 82%, #002B5C 100%)',
-            boxShadow: '0 2px 14px rgba(196,30,58,0.45)',
+            background: 'linear-gradient(to right, #002B5C 0%, #002B5C 18%, #B01E33 35%, #B01E33 65%, #002B5C 82%, #002B5C 100%)',
+            boxShadow: '0 2px 14px rgba(176,30,51,0.45)',
           }}
         />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <p className="section-title-en mb-4">About the Club</p>
           <h1
             className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#002B5C] mb-6"
@@ -48,8 +48,7 @@ export default function AboutPage() {
           >
             部の紹介
           </h1>
-          <p className="text-[#6B7A99] text-lg max-w-2xl"
-            style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+          <p className="text-[#6B7A99] text-lg max-w-2xl" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
             慶應義塾大学體育會拳法部について
           </p>
         </div>
@@ -57,79 +56,100 @@ export default function AboutPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
 
-        {/* 沿革・歴史 */}
-        <section className="mb-24">
-          <div className="flex items-center gap-4 mb-8">
-            <p className="section-title-en">History</p>
-            <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-            <div className="lg:col-span-3">
-              <h2
-                className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-6"
-                style={{ fontFamily: "var(--font-noto-serif-jp)" }}
+        {/* ─── 沿革・歴史 ─── */}
+        <section className="mb-28">
+          {/* 見出し: 縦書き "歴史" + セクションラベル */}
+          <div className="flex items-stretch gap-6 mb-12">
+            <div className="hidden lg:flex flex-col items-center shrink-0">
+              <div className="flex-1 w-px bg-gradient-to-b from-[#B01E33] via-[#B01E33]/40 to-transparent" />
+              <span
+                className="section-label-vert my-4"
+                style={{ letterSpacing: "0.5em" }}
               >
-                慶應義塾大学體育會拳法部の歩み
-              </h2>
-              <div className="space-y-4 text-[#2D3748] leading-relaxed text-sm"
-                style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
-                <p>
-                  慶應義塾大学體育會拳法部は1953年（昭和28年）に創部されました。
-                  以来、「文武両道」の慶應精神を体現する部として、
-                  多くの優秀な選手を輩出してきました。
-                </p>
-                <p>
-                  日本拳法とは、防具とグローブを着用して打撃技・投げ技・寝技を駆使して勝敗を競い合う競技武道です。
-                  防具をつけているので安全性は確保されており、経験豊富なコーチ陣によるサポート体制も充実しています。
-                  主な実績として、東日本大学選手権大会（形部門）優勝、東日本学生個人選手権大会 優勝、
-                  東日本大学新人戦 優勝など、多数の上位入賞を果たしています。
-                </p>
-                <p>
-                  卒業生は「三田拳法会」としてOB会を組織し、
-                  現役部員への指導・支援を継続的に行っています。
-                  社会に出てからも繋がり続ける強固なネットワークは、
-                  慶應拳法部の大きな財産のひとつです。
-                </p>
-              </div>
+                History
+              </span>
+              <div className="flex-1 w-px bg-gradient-to-b from-transparent to-[#D4C9B8]" />
             </div>
-            <div className="lg:col-span-2">
-              <div className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-6 h-full"
-                style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
-                <h3 className="text-[#C41E3A] text-xs tracking-widest mb-6"
-                  style={{ fontFamily: "var(--font-cormorant)" }}>CLUB DATA</h3>
-                <dl className="space-y-4">
-                  {[
-                    { dt: "所属", dd: "慶應義塾體育會" },
-                    { dt: "創部", dd: "1953年（昭和28年）" },
-                    { dt: "種目", dd: "日本拳法" },
-                    { dt: "主な活動拠点", dd: "蝮谷拳法道場（神奈川県横浜市港北区日吉4-16-1、tel. 045-563-5904）" },
-                    { dt: "合宿", dd: "年2回（3月・9月）" },
-                    { dt: "部費", dd: "¥10,000/年" },
-                    { dt: "部員数", dd: "41名（男女）" },
-                    { dt: "OB会", dd: "三田拳法会" },
-                  ].map(({ dt, dd }) => (
-                    <div key={dt} className="flex gap-4">
-                      <dt className="shrink-0 text-[#A0AAB8] text-xs w-28"
-                        style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
-                        {dt}
-                      </dt>
-                      <dd className="text-[#2D3748] text-sm"
-                        style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
-                        {dd}
-                      </dd>
+            <div className="flex-1">
+              {/* モバイル用ラベル */}
+              <div className="flex items-center gap-4 mb-6 lg:hidden">
+                <p className="section-title-en">History</p>
+                <div className="red-bar" />
+              </div>
+
+              {/* 非対称 2カラム (7:5) */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                {/* 左7: テキスト */}
+                <div className="lg:col-span-7 relative">
+                  <h2
+                    className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-6 relative z-10"
+                    style={{ fontFamily: "var(--font-noto-serif-jp)" }}
+                  >
+                    慶應義塾大学體育會拳法部の歩み
+                  </h2>
+                  <div className="space-y-4 text-[#2D3748] leading-relaxed text-sm relative z-10" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+                    <p>
+                      慶應義塾大学體育會拳法部は1953年（昭和28年）に創部されました。
+                      以来、「文武両道」の慶應精神を体現する部として、
+                      多くの優秀な選手を輩出してきました。
+                    </p>
+                    <p>
+                      日本拳法とは、防具とグローブを着用して打撃技・投げ技・寝技を駆使して勝敗を競い合う競技武道です。
+                      防具をつけているので安全性は確保されており、経験豊富なコーチ陣によるサポート体制も充実しています。
+                      主な実績として、東日本大学選手権大会（形部門）優勝、東日本学生個人選手権大会 優勝、
+                      東日本大学新人戦 優勝など、多数の上位入賞を果たしています。
+                    </p>
+                    <p>
+                      卒業生は「三田拳法会」としてOB会を組織し、
+                      現役部員への指導・支援を継続的に行っています。
+                      社会に出てからも繋がり続ける強固なネットワークは、
+                      慶應拳法部の大きな財産のひとつです。
+                    </p>
+                  </div>
+                </div>
+                {/* 右5: データカード */}
+                <div className="lg:col-span-5">
+                  <div
+                    className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-6 h-full"
+                    style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
+                  >
+                    <div className="flex items-center justify-between mb-6">
+                      <h3 className="text-[#B01E33] text-xs tracking-widest" style={{ fontFamily: "var(--font-cormorant)" }}>CLUB DATA</h3>
+                      <div className="hanko" aria-hidden="true" />
                     </div>
-                  ))}
-                </dl>
+                    <dl className="space-y-4">
+                      {[
+                        { dt: "所属", dd: "慶應義塾體育會" },
+                        { dt: "創部", dd: "1953年（昭和28年）" },
+                        { dt: "種目", dd: "日本拳法" },
+                        { dt: "主な活動拠点", dd: "蝮谷拳法道場（神奈川県横浜市港北区日吉4-16-1、tel. 045-563-5904）" },
+                        { dt: "合宿", dd: "年2回（3月・9月）" },
+                        { dt: "部費", dd: "¥10,000/年" },
+                        { dt: "部員数", dd: "41名（男女）" },
+                        { dt: "OB会", dd: "三田拳法会" },
+                      ].map(({ dt, dd }) => (
+                        <div key={dt} className="flex gap-4">
+                          <dt className="shrink-0 text-[#A0AAB8] text-xs w-28" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+                            {dt}
+                          </dt>
+                          <dd className="text-[#2D3748] text-sm" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+                            {dd}
+                          </dd>
+                        </div>
+                      ))}
+                    </dl>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 練習場所・時間 */}
-        <section className="mb-24">
-          <div className="flex items-center gap-4 mb-8">
+        {/* ─── 練習場所・時間 ─── */}
+        <section className="mb-28">
+          <div className="flex items-center gap-4 mb-10">
             <p className="section-title-en">Practice</p>
-            <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
+            <div className="red-bar" />
           </div>
           <h2
             className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-8"
@@ -158,16 +178,15 @@ export default function AboutPage() {
                 ],
               },
             ].map((place) => (
-              <div key={place.name} className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-6"
-                style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
-                <h3
-                  className="text-[#002B5C] font-bold text-xl mb-1"
-                  style={{ fontFamily: "var(--font-noto-serif-jp)" }}
-                >
+              <div
+                key={place.name}
+                className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-6"
+                style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
+              >
+                <h3 className="text-[#002B5C] font-bold text-xl mb-1" style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
                   {place.name}
                 </h3>
-                <p className="text-[#C41E3A] text-xs tracking-wider mb-4"
-                  style={{ fontFamily: "var(--font-cormorant)" }}>
+                <p className="text-[#B01E33] text-xs tracking-wider mb-4" style={{ fontFamily: "var(--font-cormorant)" }}>
                   {place.campus}
                 </p>
                 <dl className="space-y-2">
@@ -183,11 +202,11 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* 年間スケジュール */}
-        <section className="mb-24">
-          <div className="flex items-center gap-4 mb-8">
+        {/* ─── 年間スケジュール ─── */}
+        <section className="mb-28">
+          <div className="flex items-center gap-4 mb-10">
             <p className="section-title-en">Annual Schedule</p>
-            <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
+            <div className="red-bar" />
           </div>
           <h2
             className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-8"
@@ -195,18 +214,27 @@ export default function AboutPage() {
           >
             年間スケジュール
           </h2>
+          {/* エディトリアル月別グリッド: 月の数字を大きく */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
             {schedule.map(({ month, events }) => (
-              <div key={month} className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-4"
-                style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.04)' }}>
-                <div className="text-[#C41E3A] font-bold text-sm mb-2"
-                  style={{ fontFamily: "var(--font-cormorant)" }}>
+              <div
+                key={month}
+                className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-4 relative overflow-hidden"
+                style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.04)' }}
+              >
+                <div
+                  className="text-[#B01E33] font-bold text-base mb-2 relative z-10"
+                  style={{ fontFamily: "var(--font-cormorant)" }}
+                >
                   {month}
                 </div>
-                <ul className="space-y-1">
+                <ul className="space-y-1 relative z-10">
                   {events.map((e) => (
-                    <li key={e} className="text-[#6B7A99] text-xs leading-relaxed"
-                      style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+                    <li
+                      key={e}
+                      className="text-[#6B7A99] text-xs leading-relaxed"
+                      style={{ fontFamily: "var(--font-noto-sans-jp)" }}
+                    >
                       · {e}
                     </li>
                   ))}
@@ -216,11 +244,11 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* 指導体制 */}
-        <section className="mb-24">
-          <div className="flex items-center gap-4 mb-8">
+        {/* ─── 指導体制 ─── */}
+        <section className="mb-28">
+          <div className="flex items-center gap-4 mb-10">
             <p className="section-title-en">Coaching Staff</p>
-            <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
+            <div className="red-bar" />
           </div>
           <h2
             className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-8"
@@ -228,59 +256,56 @@ export default function AboutPage() {
           >
             指導体制
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {[
-              {
-                role: "部長",
-                name: "石塚 壮太郎",
-                dept: "",
-                note: "",
-              },
-              {
-                role: "監督",
-                name: "岡田 勇介",
-                dept: "",
-                note: "",
-              },
-              {
-                role: "コーチ",
-                name: "吉澤 斗吾",
-                dept: "",
-                note: "",
-              },
-            ].map((staff) => (
-              <div key={staff.role} className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-6"
-                style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
-                <span className="inline-block px-2 py-0.5 border border-[#C41E3A]/40 text-[#C41E3A] text-xs rounded-full mb-3">
-                  {staff.role}
+          {/* 非対称: 1件大 + 2件小 */}
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-5">
+            {/* 部長: 大きめカード */}
+            <div
+              className="lg:col-span-2 bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-8 flex flex-col justify-between"
+              style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
+            >
+              <div>
+                <span className="inline-block px-2 py-0.5 border border-[#B01E33]/40 text-[#B01E33] text-xs rounded-full mb-4">
+                  部長
                 </span>
-                <h3
-                  className="text-[#002B5C] font-bold text-xl mb-1"
-                  style={{ fontFamily: "var(--font-noto-serif-jp)" }}
-                >
-                  {staff.name}
+                <h3 className="text-[#002B5C] font-bold text-2xl mb-1" style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
+                  石塚 壮太郎
                 </h3>
-                <p className="text-[#A0AAB8] text-xs mb-3">{staff.dept}</p>
-                <p className="text-[#6B7A99] text-sm leading-relaxed"
-                  style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
-                  {staff.note}
-                </p>
               </div>
-            ))}
+              <div className="hanko mt-4 self-end" aria-hidden="true" />
+            </div>
+            {/* 監督・コーチ */}
+            <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {[
+                { role: "監督", name: "岡田 勇介" },
+                { role: "コーチ", name: "吉澤 斗吾" },
+              ].map((staff) => (
+                <div
+                  key={staff.role}
+                  className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-6"
+                  style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
+                >
+                  <span className="inline-block px-2 py-0.5 border border-[#B01E33]/40 text-[#B01E33] text-xs rounded-full mb-3">
+                    {staff.role}
+                  </span>
+                  <h3 className="text-[#002B5C] font-bold text-xl mb-1" style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
+                    {staff.name}
+                  </h3>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* OB会 */}
-        <section className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12" style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
+        {/* ─── OB会 ─── */}
+        <section
+          className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-8"
+          style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
+        >
           <p className="section-title-en mb-4">Alumni</p>
-          <h2
-            className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-4"
-            style={{ fontFamily: "var(--font-noto-serif-jp)" }}
-          >
+          <h2 className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-4" style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
             OB会「三田拳法会」
           </h2>
-          <p className="text-[#2D3748] leading-relaxed max-w-2xl"
-            style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+          <p className="text-[#2D3748] leading-relaxed max-w-2xl" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
             卒業生は「三田拳法会」として組織され、定期的な親睦会や現役部員への
             指導・支援活動を行っています。慶應のネットワークと拳法を通じて
             生涯にわたって繋がれるのが、この部の大きな魅力のひとつです。
@@ -288,17 +313,16 @@ export default function AboutPage() {
           </p>
         </section>
 
-        {/* SNS・入部情報 */}
-        <section className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12" style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
-          <p className="section-title-en mb-4">Contact & SNS</p>
-          <h2
-            className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-4"
-            style={{ fontFamily: "var(--font-noto-serif-jp)" }}
-          >
+        {/* ─── SNS・連絡先 ─── */}
+        <section
+          className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12"
+          style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
+        >
+          <p className="section-title-en mb-4">Contact &amp; SNS</p>
+          <h2 className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-4" style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
             お問い合わせ・SNS
           </h2>
-          <p className="text-[#2D3748] leading-relaxed mb-6 max-w-2xl"
-            style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+          <p className="text-[#2D3748] leading-relaxed mb-6 max-w-2xl" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
             入部は年中365日受け付けています。興味を持ったタイミングでいつでもお気軽にご連絡ください。
             SNSのDMやフォームからのご連絡も歓迎します。
           </p>
@@ -307,34 +331,30 @@ export default function AboutPage() {
               href="https://www.instagram.com/keio_kempo/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] px-5 py-3 transition-all duration-200 hover:scale-[1.03] hover:shadow-md hover:border-[#C41E3A]/30"
+              className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] px-5 py-3 transition-all duration-200 hover:scale-[1.03] hover:shadow-md hover:border-[#B01E33]/30"
               style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.04)' }}
             >
               <p className="text-[#A0AAB8] text-xs mb-0.5" style={{ fontFamily: "var(--font-cormorant)" }}>Instagram</p>
-              <p className="text-[#002B5C] font-bold text-sm" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
-                @keio_kempo
-              </p>
+              <p className="text-[#002B5C] font-bold text-sm" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>@keio_kempo</p>
             </a>
             <a
               href="https://x.com/KeioNikken"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] px-5 py-3 transition-all duration-200 hover:scale-[1.03] hover:shadow-md hover:border-[#002B5C]/30"
+              className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] px-5 py-3 transition-all duration-200 hover:scale-[1.03] hover:shadow-md hover:border-[#002B5C]/30"
               style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.04)' }}
             >
               <p className="text-[#A0AAB8] text-xs mb-0.5" style={{ fontFamily: "var(--font-cormorant)" }}>X (Twitter)</p>
-              <p className="text-[#002B5C] font-bold text-sm" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
-                @KeioNikken
-              </p>
+              <p className="text-[#002B5C] font-bold text-sm" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>@KeioNikken</p>
             </a>
           </div>
         </section>
 
-        {/* CTA */}
+        {/* ─── CTA ─── */}
         <div className="text-center">
           <Link
             href="/join"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-[#C41E3A] text-white font-black text-sm tracking-widest hover:bg-[#a01530] transition-colors duration-300 rounded-md"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-[#B01E33] text-white font-black text-sm tracking-widest hover:bg-[#a01530] transition-colors duration-300 rounded-md"
           >
             入部案内・体験申し込み
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -12,8 +12,8 @@ interface MemberCardProps {
 
 // ロールバッジスタイル
 const roleBadgeStyle: Record<string, string> = {
-  "主将": "bg-gradient-to-r from-[#C41E3A] to-[#a01530] text-white shadow-md shadow-[#C41E3A]/30",
-  "副将": "bg-[#C41E3A]/10 text-[#C41E3A] border border-[#C41E3A]/40",
+  "主将": "bg-gradient-to-r from-[#B01E33] to-[#a01530] text-white shadow-md shadow-[#B01E33]/30",
+  "副将": "bg-[#B01E33]/10 text-[#B01E33] border border-[#B01E33]/40",
   "主務": "bg-[#002B5C] text-white shadow-md shadow-[#002B5C]/25",
   "副務": "bg-[#002B5C]/10 text-[#002B5C] border border-[#002B5C]/40",
   "マネージャー": "bg-[#6B7A99]/10 text-[#6B7A99] border border-[#6B7A99]/30",
@@ -97,7 +97,7 @@ export default function MemberCard({ member }: MemberCardProps) {
     <>
       {/* ─── カード（写真＋名前のみ） ─── */}
       <div
-        className="bg-[#FAF7F0] rounded-xl overflow-hidden card-lift cursor-pointer"
+        className="bg-[#EBE0C6] rounded-xl overflow-hidden card-lift cursor-pointer"
         style={{ boxShadow: "0 2px 8px rgba(27,42,74,0.06), 0 0 0 1px rgba(27,42,74,0.04)" }}
         onClick={() => setOpen(true)}
       >
@@ -148,7 +148,7 @@ export default function MemberCard({ member }: MemberCardProps) {
 
               {/* モーダル本体 — overflow-hidden を外し overflowY:auto のみで制御 */}
               <motion.div
-                className="relative w-full max-w-sm bg-[#FAF7F0]"
+                className="relative w-full max-w-sm bg-[#EBE0C6]"
                 style={{
                   borderRadius: 20,
                   boxShadow: "0 40px 100px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.07)",
@@ -264,7 +264,7 @@ export default function MemberCard({ member }: MemberCardProps) {
                             style={{
                               fontFamily: key === "rank" ? "var(--font-cormorant)" : "var(--font-noto-sans-jp)",
                               fontSize: key === "rank" ? "0.95rem" : "0.82rem",
-                              color: key === "skill" ? "#C41E3A" : "#2D3748",
+                              color: key === "skill" ? "#B01E33" : "#2D3748",
                               lineHeight: 1.6,
                               fontWeight: key === "skill" ? 600 : 400,
                               minHeight: "1.2em",

@@ -66,7 +66,7 @@ export default function HomePage() {
       <HeroSection />
 
       {/* ── 部の雰囲気（ヒーロー直後） ── */}
-      {showClubAtmosphere && <section className="bg-[#EFE7D3] py-24 lg:py-32 relative overflow-hidden">
+      {showClubAtmosphere && <section className="bg-[#EBE0C6] py-24 lg:py-32 relative overflow-hidden">
         {/* 巨大bg watermark */}
         <div
           className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
@@ -87,7 +87,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection className="mb-14">
             <p
-              className="text-[#C41E3A] text-xs tracking-[0.55em] uppercase mb-4 font-light"
+              className="text-[#B01E33] text-xs tracking-[0.55em] uppercase mb-4 font-light"
               style={{ fontFamily: "var(--font-cormorant)" }}
             >
               Club Atmosphere
@@ -112,7 +112,7 @@ export default function HomePage() {
             {ATMOSPHERE.map((item, i) => (
               <AnimatedSection key={item.num} delay={i * 0.1}>
                 <div
-                  className="group bg-[#EFE7D3] rounded-2xl overflow-hidden card-lift"
+                  className="group bg-[#EBE0C6] rounded-2xl overflow-hidden card-lift"
                   style={{
                     boxShadow:
                       "0 2px 12px rgba(27,42,74,0.08), 0 0 0 1px rgba(27,42,74,0.05)",
@@ -167,7 +167,7 @@ export default function HomePage() {
                   {/* テキスト */}
                   <div className="p-5">
                     <p
-                      className="text-[#C41E3A] text-[0.6rem] tracking-[0.45em] uppercase mb-2 font-light"
+                      className="text-[#B01E33] text-[0.6rem] tracking-[0.45em] uppercase mb-2 font-light"
                       style={{ fontFamily: "var(--font-cormorant)" }}
                     >
                       {item.label}
@@ -202,36 +202,58 @@ export default function HomePage() {
       </section>}
 
       {/* ── STATS ── */}
-      <AnimatedSection className="bg-[#E8DEC6] py-24 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-[#D4C9B8]">
-            {STATS.map((s, i) => (
-              <AnimatedSection key={s.label} delay={i * 0.1} className="text-center py-10 px-4">
-                <p
-                  className="number-glow font-black leading-none mb-3"
-                  style={{
-                    fontFamily: "var(--font-cormorant)",
-                    fontSize: "clamp(4rem, 7.5vw, 8rem)",
-                  }}
+      <section className="bg-[#E2D4B4] relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="flex items-stretch">
+            {/* 縦書き Facts ラベル（デスクトップのみ） */}
+            <div className="hidden lg:flex flex-col items-center justify-center py-24 pr-7 border-r border-[#D4C9B8] shrink-0">
+              <span className="section-label-vert">Facts &amp; Figures</span>
+            </div>
+            {/* 4つの統計 */}
+            <div className="flex-1 grid grid-cols-2 lg:grid-cols-4">
+              {STATS.map((s, i) => (
+                <AnimatedSection
+                  key={s.label}
+                  delay={i * 0.1}
+                  className={`relative border-r border-[#D4C9B8] last:border-r-0 flex flex-col items-center justify-center text-center ${
+                    i === 0
+                      ? "py-20 lg:py-28 px-4"
+                      : i === 1
+                      ? "py-14 lg:py-22 px-4"
+                      : i === 3
+                      ? "py-10 lg:py-16 px-4"
+                      : "py-12 lg:py-20 px-4"
+                  }`}
                 >
-                  {s.prefix && (
-                    <span className="text-[#6B7A99]" style={{ fontSize: "clamp(1.2rem, 2vw, 1.8rem)" }}>
-                      {s.prefix}
-                    </span>
-                  )}
-                  <CountUp end={s.end} suffix={s.suffix} />
-                </p>
-                <p
-                  className="text-[#6B7A99] text-xs tracking-[0.2em]"
-                  style={{ fontFamily: "var(--font-noto-sans-jp)" }}
-                >
-                  {s.label}
-                </p>
-              </AnimatedSection>
-            ))}
+                  <p
+                    className="number-glow font-black leading-none mb-3"
+                    style={{
+                      fontFamily: "var(--font-cormorant)",
+                      fontSize:
+                        i === 0
+                          ? "clamp(4.5rem, 9vw, 10rem)"
+                          : "clamp(3.5rem, 7vw, 8rem)",
+                    }}
+                  >
+                    {s.prefix && (
+                      <span className="text-[#6B7A99]" style={{ fontSize: "clamp(1rem, 1.8vw, 1.5rem)" }}>
+                        {s.prefix}
+                      </span>
+                    )}
+                    <CountUp end={s.end} suffix={s.suffix} />
+                  </p>
+                  <p
+                    className="text-[#6B7A99] text-xs tracking-[0.2em]"
+                    style={{ fontFamily: "var(--font-noto-sans-jp)" }}
+                  >
+                    {s.label}
+                  </p>
+                </AnimatedSection>
+              ))}
+            </div>
           </div>
         </div>
-      </AnimatedSection>
+      </section>
 
       {/* ── パララックス帯 #1 ── */}
       <ParallaxBand
@@ -268,31 +290,85 @@ export default function HomePage() {
       </ParallaxBand>
 
       {/* ── NEWS ── */}
-      <section className="bg-[#EFE7D3] py-24 lg:py-32">
+      <section className="bg-[#EBE0C6] py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="flex items-end justify-between gap-4 mb-12">
-            <SectionHeading en="News" jp="最新情報" />
+          <AnimatedSection className="flex items-end justify-between gap-4 mb-14">
+            <div className="flex items-center gap-5">
+              {/* 落款アクセント */}
+              <div className="hanko shrink-0" aria-hidden="true" />
+              <SectionHeading en="News" jp="最新情報" />
+            </div>
             <Link
               href="/news"
-              className="text-[#6B7A99] hover:text-[#C41E3A] text-xs tracking-[0.35em] transition-colors duration-300 pb-1 shrink-0"
+              className="text-[#6B7A99] hover:text-[#B01E33] text-xs tracking-[0.35em] transition-colors duration-300 pb-1 shrink-0"
               style={{ fontFamily: "var(--font-cormorant)" }}
             >
               ALL NEWS →
             </Link>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {news.map((post, i) => (
-              <AnimatedSection key={post.slug} delay={i * 0.12}>
-                <NewsCard post={post} />
+          {/* 1件目: フィーチャー広幅 + 2〜3件目: 縦スタック */}
+          {news.length > 0 && (
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+              {/* Featured: 左2/3 */}
+              <AnimatedSection className="lg:col-span-2">
+                <Link
+                  href={`/news/${news[0].slug}`}
+                  className="group flex flex-col h-full min-h-[240px] lg:min-h-[300px] bg-[#EBE0C6] rounded-xl card-lift p-8 lg:p-10 relative overflow-hidden"
+                  style={{ boxShadow: "0 4px 20px rgba(27,42,74,0.10), 0 0 0 1px rgba(27,42,74,0.05)" }}
+                >
+                  {/* カテゴリ + 日付 */}
+                  <div className="flex items-center gap-3 mb-6 relative z-10">
+                    <span className="inline-block px-3 py-1 bg-[#B01E33]/10 text-[#B01E33] text-xs border border-[#B01E33]/30 rounded-full">
+                      {news[0].category}
+                    </span>
+                    <time className="text-[#A0AAB8] text-xs" style={{ fontFamily: "var(--font-cormorant)" }}>
+                      {news[0].date}
+                    </time>
+                  </div>
+                  {/* タイトル（大きく） */}
+                  <h2
+                    className="relative z-10 text-2xl sm:text-3xl lg:text-[2rem] font-black text-[#002B5C] leading-snug mb-4 group-hover:text-[#B01E33] transition-colors duration-300 flex-1"
+                    style={{ fontFamily: "var(--font-noto-serif-jp)" }}
+                  >
+                    {news[0].title}
+                  </h2>
+                  {news[0].excerpt && (
+                    <p
+                      className="relative z-10 text-[#6B7A99] text-sm leading-relaxed line-clamp-2 mb-6"
+                      style={{ fontFamily: "var(--font-noto-sans-jp)" }}
+                    >
+                      {news[0].excerpt}
+                    </p>
+                  )}
+                  {/* Read more */}
+                  <div
+                    className="relative z-10 flex items-center gap-2 text-[#B01E33] text-xs tracking-[0.3em]"
+                    style={{ fontFamily: "var(--font-cormorant)" }}
+                  >
+                    <span>READ MORE</span>
+                    <svg className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </Link>
               </AnimatedSection>
-            ))}
-          </div>
+
+              {/* 2〜3件目: 右1/3 縦スタック */}
+              <div className="lg:col-span-1 flex flex-col gap-5">
+                {news.slice(1).map((post, i) => (
+                  <AnimatedSection key={post.slug} delay={(i + 1) * 0.12} className="flex-1">
+                    <NewsCard post={post} />
+                  </AnimatedSection>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
       {/* ── 日本拳法とは（非対称レイアウト） ── */}
-      <section className="bg-[#E8DEC6] py-24 lg:py-40 relative overflow-hidden">
+      <section className="bg-[#E2D4B4] py-24 lg:py-40 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch">
 
@@ -320,7 +396,7 @@ export default function HomePage() {
                   className="absolute left-0 top-0 bottom-0 w-[5px]"
                   style={{
                     background:
-                      "linear-gradient(to bottom, #C41E3A 0%, #C41E3A 55%, rgba(196,30,58,0.3) 85%, transparent 100%)",
+                      "linear-gradient(to bottom, #B01E33 0%, #B01E33 55%, rgba(176,30,51,0.3) 85%, transparent 100%)",
                   }}
                 />
               </div>
@@ -330,7 +406,7 @@ export default function HomePage() {
             <AnimatedSection delay={0.15} className="lg:col-span-8 lg:pl-12 xl:pl-20 flex flex-col justify-center">
               <div className="max-w-xl">
                 <p
-                  className="text-[#C41E3A] text-xs tracking-[0.45em] uppercase mb-5 font-light"
+                  className="text-[#B01E33] text-xs tracking-[0.45em] uppercase mb-5 font-light"
                   style={{ fontFamily: "var(--font-cormorant)" }}
                 >
                   What is Nippon Kempo?
@@ -364,7 +440,7 @@ export default function HomePage() {
                   {["打撃技（突き・蹴り）", "組み技・投げ技", "関節技・絞め技", "全身防具スタイル"].map(
                     (item) => (
                       <div key={item} className="flex items-center gap-2">
-                        <div className="w-1.5 h-4 bg-[#C41E3A] rounded-full shrink-0" />
+                        <div className="w-1.5 h-4 bg-[#B01E33] rounded-full shrink-0" />
                         <span
                           className="text-[#2D3748] text-xs"
                           style={{ fontFamily: "var(--font-noto-sans-jp)" }}
@@ -396,23 +472,6 @@ export default function HomePage() {
       {/* ── インパクト数字（1932 · 30名 · 80%） ── */}
       <section className="bg-[#002B5C] relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#001220] via-[#002B5C] to-[#001A3A]" />
-        {/* 装飾 */}
-        <div
-          className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
-          aria-hidden="true"
-        >
-          <p
-            className="font-black text-white leading-none"
-            style={{
-              fontFamily: "var(--font-cormorant)",
-              fontSize: "clamp(10rem, 35vw, 38rem)",
-              opacity: 0.03,
-              letterSpacing: "-0.05em",
-            }}
-          >
-            拳
-          </p>
-        </div>
 
         <div className="relative max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
@@ -432,7 +491,7 @@ export default function HomePage() {
                 >
                   {item.display}
                   <span
-                    className="text-[#C41E3A]"
+                    className="text-[#B01E33]"
                     style={{ fontSize: "clamp(2rem, 5vw, 4rem)" }}
                   >
                     {item.unit}
@@ -451,11 +510,11 @@ export default function HomePage() {
       </section>
 
       {/* ── NEXT MATCH ── */}
-      <AnimatedSection className="bg-[#E8DEC6] py-20 lg:py-24">
+      <AnimatedSection className="bg-[#E2D4B4] py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading en="Next Match" jp="次戦情報" className="mb-10" />
           <div
-            className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-6 sm:p-8 lg:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+            className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-6 sm:p-8 lg:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
             style={{ boxShadow: "0 2px 12px rgba(27,42,74,0.07)" }}
           >
             <div>
@@ -467,14 +526,14 @@ export default function HomePage() {
               </h3>
               <div className="flex flex-col sm:flex-row gap-4 text-sm text-[#6B7A99]">
                 <div className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-[#C41E3A] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-[#B01E33] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                   <span style={{ fontFamily: "var(--font-noto-sans-jp)" }}>{NEXT_MATCH.date}{NEXT_MATCH.time ? ` ${NEXT_MATCH.time}〜` : ""}</span>
                 </div>
                 {NEXT_MATCH.venue && (
                   <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[#C41E3A] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-[#B01E33] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
@@ -501,7 +560,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* ── GALLERY ── */}
-      <section className="bg-[#E8DEC6] py-24 lg:py-32">
+      <section className="bg-[#E2D4B4] py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="mb-12">
             <SectionHeading en="Gallery" jp="活動写真" />
@@ -525,7 +584,7 @@ export default function HomePage() {
           className="absolute inset-0 bg-gradient-to-b from-[#002B5C]/30 via-transparent to-[#001830]/55"
           aria-hidden="true"
         />
-        <div className="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-transparent via-[#C41E3A] to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-transparent via-[#B01E33] to-transparent" />
 
         <div className="relative h-full flex flex-col items-center justify-center text-center px-4">
           <p
@@ -551,7 +610,7 @@ export default function HomePage() {
           </p>
           <Link
             href="/join"
-            className="group relative inline-flex items-center gap-3 px-10 py-5 bg-[#C41E3A] text-white font-black text-sm tracking-[0.22em] overflow-hidden rounded-md"
+            className="group relative inline-flex items-center gap-3 px-10 py-5 bg-[#B01E33] text-white font-black text-sm tracking-[0.22em] overflow-hidden rounded-md"
             style={{ fontFamily: "var(--font-noto-sans-jp)" }}
           >
             <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-500 ease-out" aria-hidden="true" />
@@ -567,7 +626,7 @@ export default function HomePage() {
       <section className="bg-[#002B5C] relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#001220] via-[#002B5C] to-[#001A3A]" />
         {/* 上辺ライン */}
-        <div className="absolute top-0 left-0 right-0 h-[5px] bg-gradient-to-r from-[#002B5C] via-[#C41E3A] to-[#002B5C]" />
+        <div className="absolute top-0 left-0 right-0 h-[5px] bg-gradient-to-r from-[#002B5C] via-[#B01E33] to-[#002B5C]" />
         {/* 装飾watermark */}
         <div
           className="absolute right-[-6%] top-0 bottom-0 w-[55%] pointer-events-none select-none overflow-hidden"
@@ -613,7 +672,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
             <Link
               href="/join"
-              className="group relative inline-flex items-center gap-3 px-12 py-6 bg-[#C41E3A] text-white font-black text-sm tracking-[0.22em] overflow-hidden rounded-md"
+              className="group relative inline-flex items-center gap-3 px-12 py-6 bg-[#B01E33] text-white font-black text-sm tracking-[0.22em] overflow-hidden rounded-md"
               style={{ fontFamily: "var(--font-noto-sans-jp)" }}
             >
               <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-500 ease-out" aria-hidden="true" />

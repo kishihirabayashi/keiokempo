@@ -23,10 +23,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const categoryColors: Record<string, string> = {
-  "試合結果": "bg-[#C41E3A]/10 text-[#C41E3A] border-[#C41E3A]/30",
+  "試合結果": "bg-[#B01E33]/10 text-[#B01E33] border-[#B01E33]/30",
   "お知らせ": "bg-[#002B5C]/10 text-[#002B5C] border-[#002B5C]/25",
-  "イベント": "bg-[#C41E3A]/10 text-[#C41E3A] border-[#C41E3A]/30",
-  "ブログ": "bg-[#E8DEC6] text-[#6B7A99] border-[#D4C9B8]",
+  "イベント": "bg-[#B01E33]/10 text-[#B01E33] border-[#B01E33]/30",
+  "ブログ": "bg-[#E2D4B4] text-[#6B7A99] border-[#D4C9B8]",
 };
 
 // Markdownのシンプルなレンダリング（実際のプロジェクトではreact-markdownを推奨）
@@ -56,14 +56,21 @@ export default async function NewsDetailPage({ params }: Props) {
   const colorClass = categoryColors[post.category] ?? categoryColors["ブログ"];
 
   return (
-    <div className="min-h-screen bg-[#E8DEC6]">
+    <div className="min-h-screen bg-[#E2D4B4]">
+      {/* グラデーション上部ライン */}
+      <div
+        className="fixed top-0 left-0 right-0 z-40 h-[10px]"
+        style={{
+          background: 'linear-gradient(to right, #002B5C 0%, #002B5C 18%, #B01E33 35%, #B01E33 65%, #002B5C 82%, #002B5C 100%)',
+        }}
+      />
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-24">
         {/* パンくずリスト */}
         <nav className="flex items-center gap-2 text-[#A0AAB8] text-xs mb-8"
           style={{ fontFamily: "var(--font-cormorant)" }}>
-          <Link href="/" className="hover:text-[#C41E3A] transition-colors">HOME</Link>
+          <Link href="/" className="hover:text-[#B01E33] transition-colors">HOME</Link>
           <span>›</span>
-          <Link href="/news" className="hover:text-[#C41E3A] transition-colors">NEWS</Link>
+          <Link href="/news" className="hover:text-[#B01E33] transition-colors">NEWS</Link>
           <span>›</span>
           <span className="text-[#6B7A99]">{post.title.slice(0, 30)}...</span>
         </nav>
@@ -89,7 +96,7 @@ export default async function NewsDetailPage({ params }: Props) {
 
         {/* 区切り線 */}
         <div className="flex gap-2 mb-10">
-          <div className="h-[4px] flex-1" style={{ background: 'linear-gradient(to right, #C41E3A 0%, #C41E3A 30%, rgba(196,30,58,0.15) 70%, transparent 100%)' }} />
+          <div className="h-[4px] flex-1" style={{ background: 'linear-gradient(to right, #B01E33 0%, #B01E33 30%, rgba(176,30,51,0.15) 70%, transparent 100%)' }} />
         </div>
 
         {/* 本文 */}
@@ -107,14 +114,14 @@ export default async function NewsDetailPage({ params }: Props) {
 
         {/* 区切り線 */}
         <div className="flex gap-2 my-12">
-          <div className="h-[3px] flex-1" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.4), rgba(196,30,58,0.1), transparent)' }} />
+          <div className="h-[3px] flex-1" style={{ background: 'linear-gradient(to right, rgba(176,30,51,0.4), rgba(176,30,51,0.1), transparent)' }} />
         </div>
 
         {/* ナビゲーション */}
         <div className="flex justify-between">
           <Link
             href="/news"
-            className="inline-flex items-center gap-2 text-[#C41E3A] text-sm hover:gap-4 transition-all duration-300"
+            className="inline-flex items-center gap-2 text-[#B01E33] text-sm hover:gap-4 transition-all duration-300"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

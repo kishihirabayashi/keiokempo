@@ -26,7 +26,7 @@ export default function FloatingCTA() {
         >
           <Link
             href="/join"
-            className="flex items-center gap-2 px-5 py-3 bg-[#C41E3A] text-white text-sm font-bold tracking-widest shadow-2xl hover:bg-[#A01530] transition-colors duration-200"
+            className="flex items-center gap-2 px-5 py-3 bg-[#B01E33] text-white text-sm font-bold tracking-widest shadow-2xl hover:bg-[#A01530] transition-colors duration-200"
           >
             <span>入部案内</span>
           </Link>

@@ -43,7 +43,7 @@ export default function PrivacyPage() {
             </h2>
             <p>
               個人情報の取り扱いに関するお問い合わせは、
-              <a href="mailto:keio.kempo@example.com" className="text-[#C41E3A] hover:underline">
+              <a href="mailto:keio.kempo@example.com" className="text-[#B01E33] hover:underline">
                 keio.kempo@example.com
               </a>
               までご連絡ください。

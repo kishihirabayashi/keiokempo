@@ -41,11 +41,11 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 ${isScrolled ? "shadow-sm" : ""}`}
         style={{
-          background: isScrolled ? "rgba(232,222,198,0.96)" : "rgba(0,15,40,0.12)",
+          background: isScrolled ? "rgba(226,212,180,0.96)" : "rgba(0,15,40,0.12)",
           backdropFilter: "blur(12px)",
           WebkitBackdropFilter: "blur(12px)",
           borderBottom: "10px solid transparent",
-          borderImage: "linear-gradient(to right, #002B5C 0%, #002B5C 18%, #C41E3A 35%, #C41E3A 65%, #002B5C 82%, #002B5C 100%) 1",
+          borderImage: "linear-gradient(to right, #002B5C 0%, #002B5C 18%, #B01E33 35%, #B01E33 65%, #002B5C 82%, #002B5C 100%) 1",
           boxShadow: isScrolled ? "0 2px 14px rgba(27,42,74,0.10)" : "none",
           transition: "background 0.45s ease, box-shadow 0.45s ease",
         }}
@@ -56,7 +56,7 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-3 group">
               <div
                 className="w-[5px] h-12 shrink-0"
-                style={{ background: "linear-gradient(to bottom, #C41E3A 0%, #C41E3A 60%, #7A1020 100%)" }}
+                style={{ background: "linear-gradient(to bottom, #B01E33 0%, #B01E33 60%, #7A1020 100%)" }}
               />
               <div className="flex flex-col leading-tight">
                 <span
@@ -91,7 +91,7 @@ export default function Header() {
                   href={link.href}
                   className={`text-sm tracking-wider transition-colors duration-300 keio-underline ${
                     isScrolled
-                      ? "text-[#1B2A4A] hover:text-[#C41E3A]"
+                      ? "text-[#1B2A4A] hover:text-[#B01E33]"
                       : "text-white/75 hover:text-white"
                   }`}
                   style={{ fontFamily: "var(--font-noto-sans-jp)" }}
@@ -101,7 +101,7 @@ export default function Header() {
               ))}
               <Link
                 href="/join"
-                className="group relative ml-4 px-6 py-2.5 bg-[#C41E3A] text-white text-sm font-bold tracking-wider overflow-hidden rounded-lg transition-colors duration-300"
+                className="group relative ml-4 px-6 py-2.5 bg-[#B01E33] text-white text-sm font-bold tracking-wider overflow-hidden rounded-lg transition-colors duration-300"
                 style={{ fontFamily: "var(--font-noto-sans-jp)" }}
               >
                 <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-400 ease-out" />
@@ -141,11 +141,11 @@ export default function Header() {
             exit={{ x: "-100%" }}
             transition={{ type: "spring", damping: 28, stiffness: 100 }}
             className="fixed inset-0 z-40 flex flex-col"
-            style={{ background: "#E8DEC6" }}
+            style={{ background: "#E2D4B4" }}
           >
             <div
               className="absolute left-0 top-0 bottom-0 w-[6px]"
-              style={{ background: "linear-gradient(to bottom, #C41E3A 0%, #C41E3A 50%, rgba(196,30,58,0.2) 85%, transparent 100%)" }}
+              style={{ background: "linear-gradient(to bottom, #B01E33 0%, #B01E33 50%, rgba(176,30,51,0.2) 85%, transparent 100%)" }}
             />
 
             <div className="flex-1 flex flex-col justify-center px-10 pt-20">
@@ -160,7 +160,7 @@ export default function Header() {
                     <Link
                       href={link.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className="block text-2xl font-bold text-[#002B5C] hover:text-[#C41E3A] transition-colors duration-300"
+                      className="block text-2xl font-bold text-[#002B5C] hover:text-[#B01E33] transition-colors duration-300"
                       style={{ fontFamily: "var(--font-noto-serif-jp)", letterSpacing: "0.04em" }}
                     >
                       {link.label}
@@ -177,14 +177,14 @@ export default function Header() {
                 <Link
                   href="/join"
                   onClick={() => setIsMenuOpen(false)}
-                  className="group relative inline-flex items-center gap-3 px-8 py-4 bg-[#C41E3A] text-white text-lg font-bold tracking-widest overflow-hidden rounded-lg"
+                  className="group relative inline-flex items-center gap-3 px-8 py-4 bg-[#B01E33] text-white text-lg font-bold tracking-widest overflow-hidden rounded-lg"
                 >
                   <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-400 ease-out" />
                   <span className="relative z-10">入部希望はこちら</span>
                 </Link>
               </motion.div>
             </div>
-            <div className="p-8 border-t-[2px] border-[#C41E3A]/15">
+            <div className="p-8 border-t-[2px] border-[#B01E33]/15">
               <p className="text-[#6B7A99] text-xs tracking-wider">
                 © 慶應義塾大学體育會拳法部
               </p>

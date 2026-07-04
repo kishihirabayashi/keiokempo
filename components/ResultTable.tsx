@@ -1,11 +1,11 @@
 import type { TournamentResult } from "@/lib/getResults";
 
 const resultBadgeColors: Record<string, string> = {
-  "優勝": "bg-[#C41E3A]/10 text-[#C41E3A] border-[#C41E3A]/30",
+  "優勝": "bg-[#B01E33]/10 text-[#B01E33] border-[#B01E33]/30",
   "準優勝": "bg-[#002B5C]/10 text-[#002B5C] border-[#002B5C]/25",
   "3位": "bg-[#DDD4C2] text-[#6B7A99] border-[#C9BEAC]",
-  "ベスト8": "bg-[#E8DEC6] text-[#6B7A99] border-[#D4C9B8]",
-  "ベスト16": "bg-[#E8DEC6] text-[#A0AAB8] border-[#D4C9B8]",
+  "ベスト8": "bg-[#E2D4B4] text-[#6B7A99] border-[#D4C9B8]",
+  "ベスト16": "bg-[#E2D4B4] text-[#A0AAB8] border-[#D4C9B8]",
 };
 
 function getResultBadge(result: string) {
@@ -14,7 +14,7 @@ function getResultBadge(result: string) {
       return resultBadgeColors[key];
     }
   }
-  return "bg-[#E8DEC6] text-[#6B7A99] border-[#D4C9B8]";
+  return "bg-[#E2D4B4] text-[#6B7A99] border-[#D4C9B8]";
 }
 
 interface ResultTableProps {
@@ -29,27 +29,27 @@ export default function ResultTable({ results, year }: ResultTableProps) {
     <div className="overflow-x-auto">
       <table className="w-full text-sm">
         <thead>
-          <tr className="border-b-[3px]" style={{ borderColor: "rgba(196,30,58,0.15)" }}>
+          <tr className="border-b-[3px]" style={{ borderColor: "rgba(176,30,51,0.15)" }}>
             <th
-              className="text-left py-3 px-4 text-[#C41E3A] font-medium text-xs tracking-widest"
+              className="text-left py-3 px-4 text-[#B01E33] font-medium text-xs tracking-widest"
               style={{ fontFamily: "var(--font-cormorant)" }}
             >
               YEAR
             </th>
             <th
-              className="text-left py-3 px-4 text-[#C41E3A] font-medium text-xs tracking-widest"
+              className="text-left py-3 px-4 text-[#B01E33] font-medium text-xs tracking-widest"
               style={{ fontFamily: "var(--font-cormorant)" }}
             >
               TOURNAMENT
             </th>
             <th
-              className="text-left py-3 px-4 text-[#C41E3A] font-medium text-xs tracking-widest"
+              className="text-left py-3 px-4 text-[#B01E33] font-medium text-xs tracking-widest"
               style={{ fontFamily: "var(--font-cormorant)" }}
             >
               CATEGORY
             </th>
             <th
-              className="text-left py-3 px-4 text-[#C41E3A] font-medium text-xs tracking-widest"
+              className="text-left py-3 px-4 text-[#B01E33] font-medium text-xs tracking-widest"
               style={{ fontFamily: "var(--font-cormorant)" }}
             >
               RESULT
@@ -60,7 +60,7 @@ export default function ResultTable({ results, year }: ResultTableProps) {
           {filtered.map((r, i) => (
             <tr
               key={i}
-              className="border-b border-[#D4C9B8] hover:bg-[#E8DEC6] transition-colors duration-300"
+              className="border-b border-[#D4C9B8] hover:bg-[#E2D4B4] transition-colors duration-300"
             >
               <td
                 className="py-4 px-4 text-[#6B7A99] tabular-nums"

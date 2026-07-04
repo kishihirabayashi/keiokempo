@@ -97,6 +97,15 @@ export const metadata: Metadata = {
   verification: {
     google: "Nc1cNsacrjSOCueJebWS0emIKv3japFt5djYu0jEIcU",
   },
+  icons: {
+    icon: [
+      { url: '/kenpo-favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
+      { url: '/favicon-32.png', type: 'image/png', sizes: '32x32' },
+    ],
+    apple: '/favicon-180.png',
+  },
+  manifest: '/site.webmanifest',
   robots: {
     index: true,
     follow: true,
@@ -117,7 +126,7 @@ export default function RootLayout({
       lang="ja"
       className={`${notoSerifJP.variable} ${notoSansJP.variable} ${cormorantGaramond.variable} ${zenMaruGothic.variable}`}
     >
-      <body className="min-h-screen flex flex-col bg-[#E8DEC6] text-[#1B2A4A] antialiased">
+      <body className="min-h-screen flex flex-col bg-[#E2D4B4] text-[#1B2A4A] antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

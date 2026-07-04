@@ -15,77 +15,33 @@ export const metadata: Metadata = {
 };
 
 const comparisons = [
-  {
-    sport: "空手",
-    similarity: "突き・蹴りの技術",
-    difference: "日本拳法は防具を着用し、フルコンタクトで投げ・関節技も許可",
-  },
-  {
-    sport: "柔道",
-    similarity: "投げ技・関節技の要素",
-    difference: "日本拳法は打撃（突き・蹴り）も組み合わせた総合武道",
-  },
-  {
-    sport: "ボクシング",
-    similarity: "グローブを使用した打撃",
-    difference: "日本拳法は全身への蹴り・投げ・関節技も技術の一部",
-  },
-  {
-    sport: "MMA（総合格闘技）",
-    similarity: "打・投・関節の総合性",
-    difference: "日本拳法は防具着用で安全性を確保しつつ総合技術を鍛錬",
-  },
+  { sport: "空手", similarity: "突き・蹴りの技術", difference: "日本拳法は防具を着用し、フルコンタクトで投げ・関節技も許可" },
+  { sport: "柔道", similarity: "投げ技・関節技の要素", difference: "日本拳法は打撃（突き・蹴り）も組み合わせた総合武道" },
+  { sport: "ボクシング", similarity: "グローブを使用した打撃", difference: "日本拳法は全身への蹴り・投げ・関節技も技術の一部" },
+  { sport: "MMA（総合格闘技）", similarity: "打・投・関節の総合性", difference: "日本拳法は防具着用で安全性を確保しつつ総合技術を鍛錬" },
 ];
 
 const rules = [
-  {
-    title: "試合形式",
-    Icon: Swords,
-    content: "3本勝負制。先に2本先取した側が勝者。試合時間は通常3〜5分で、時間内に決着がつかない場合は延長戦へ。",
-  },
-  {
-    title: "有効技",
-    Icon: Target,
-    content: "突き・蹴り・投げ・関節技のすべてが有効。面（頭部）・胴（胴体）への突き蹴りが主な攻撃ポイント。投げや関節技でも「一本」が取れる。",
-  },
-  {
-    title: "防具",
-    Icon: Shield,
-    content: "面（剣道の面に類似）、胴（ボクシング用グローブ付き）、その他の防具を着用。フルコンタクトでも安全に競技できる設計。",
-  },
-  {
-    title: "勝敗の決め方",
-    Icon: Trophy,
-    content: "「一本」（有効な打撃・投げ・関節技）で1本ずつ加算。2本先取か、時間終了時点での本数差で勝敗を決定。",
-  },
-  {
-    title: "団体戦",
-    Icon: Users,
-    content: "複数名が出場する団体戦形式。大学対抗戦では通常5〜7名で構成。チーム全体の本数で勝敗を決める。",
-  },
-  {
-    title: "礼節",
-    Icon: Heart,
-    content: "試合前後の礼を重んじる武道精神が基本。技術だけでなく、人格の陶冶も日本拳法の重要な柱。",
-  },
+  { title: "試合形式", Icon: Swords, content: "3本勝負制。先に2本先取した側が勝者。試合時間は通常3〜5分で、時間内に決着がつかない場合は延長戦へ。" },
+  { title: "有効技", Icon: Target, content: "突き・蹴り・投げ・関節技のすべてが有効。面（頭部）・胴（胴体）への突き蹴りが主な攻撃ポイント。投げや関節技でも「一本」が取れる。" },
+  { title: "防具", Icon: Shield, content: "面（剣道の面に類似）、胴（ボクシング用グローブ付き）、その他の防具を着用。フルコンタクトでも安全に競技できる設計。" },
+  { title: "勝敗の決め方", Icon: Trophy, content: "「一本」（有効な打撃・投げ・関節技）で1本ずつ加算。2本先取か、時間終了時点での本数差で勝敗を決定。" },
+  { title: "団体戦", Icon: Users, content: "複数名が出場する団体戦形式。大学対抗戦では通常5〜7名で構成。チーム全体の本数で勝敗を決める。" },
+  { title: "礼節", Icon: Heart, content: "試合前後の礼を重んじる武道精神が基本。技術だけでなく、人格の陶冶も日本拳法の重要な柱。" },
 ];
 
 export default function AboutKempoPage() {
   return (
-    <div className="min-h-screen bg-[#E8DEC6]">
-      {/* ヘッダービジュアル */}
-      <div className="relative bg-[#E8DEC6] pt-36 pb-24 overflow-hidden">
+    <div className="min-h-screen bg-[#E2D4B4]">
+      {/* ─── ヘッダービジュアル ─── */}
+      <div className="relative bg-[#E2D4B4] pt-36 pb-24 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
-            background: 'linear-gradient(to right, #002B5C 0%, #002B5C 18%, #C41E3A 35%, #C41E3A 65%, #002B5C 82%, #002B5C 100%)',
-            boxShadow: '0 2px 14px rgba(196,30,58,0.45)',
+            background: 'linear-gradient(to right, #002B5C 0%, #002B5C 18%, #B01E33 35%, #B01E33 65%, #002B5C 82%, #002B5C 100%)',
+            boxShadow: '0 2px 14px rgba(176,30,51,0.45)',
           }}
         />
-        <div className="absolute right-8 top-1/2 -translate-y-1/2 vertical-text text-[#002B5C]/[0.06] text-8xl font-black select-none"
-          style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
-          拳法
-        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <p className="section-title-en mb-4">What is Nippon Kempo?</p>
           <h1
@@ -94,8 +50,7 @@ export default function AboutKempoPage() {
           >
             日本拳法とは
           </h1>
-          <p className="text-[#6B7A99] text-lg max-w-2xl leading-relaxed"
-            style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+          <p className="text-[#6B7A99] text-lg max-w-2xl leading-relaxed" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
             突き、蹴り、投げ、関節技。すべてを許された武道がある。
             防具を纏い、拳ひとつで相手と向き合う——それが日本拳法。
           </p>
@@ -103,144 +58,172 @@ export default function AboutKempoPage() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-        {/* 歴史 */}
-        <section className="mb-24">
-          <div className="flex items-center gap-4 mb-8">
-            <p className="section-title-en">History</p>
-            <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-            <div>
-              <h2
-                className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-6"
-                style={{ fontFamily: "var(--font-noto-serif-jp)" }}
-              >
-                1932年、澤山宗海が創始
-              </h2>
-              <div className="space-y-4 text-[#2D3748] leading-relaxed"
-                style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
-                <p>
-                  日本拳法は1932年（昭和7年）、澤山宗海（さわやまむねとし）によって大阪で創始された日本発祥の総合武道です。
-                  空手・柔道・ボクシングなど様々な格闘技の長所を融合させ、
-                  「真の実戦性を持つ総合武道」として体系化されました。
-                </p>
-                <p>
-                  防具（面・胴・グローブ）を着用してフルコンタクトで戦うスタイルは、
-                  安全性を担保しながら実戦に近い技術を磨くことを可能にしました。
-                  この革新的なアプローチが、日本拳法を他の武道と一線を画するものにしています。
-                </p>
-                <p>
-                  戦後は全国に普及し、現在では自衛隊・警察・海上保安庁などの
-                  実務機関でも採用されています。大学スポーツとしても盛んで、
-                  全国の主要大学に部が存在しています。
-                </p>
-              </div>
+
+        {/* ─── 歴史（非対称 + 縦書きラベル） ─── */}
+        <section className="mb-28">
+          <div className="flex items-stretch gap-6 mb-12">
+            {/* 縦書きラベル (デスクトップ) */}
+            <div className="hidden lg:flex flex-col items-center shrink-0">
+              <div className="flex-1 w-px bg-gradient-to-b from-[#B01E33] via-[#B01E33]/40 to-transparent" />
+              <span className="section-label-vert my-4" style={{ letterSpacing: "0.5em" }}>History</span>
+              <div className="flex-1 w-px bg-gradient-to-b from-transparent to-[#D4C9B8]" />
             </div>
-            <div className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-6"
-              style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
-              <h3 className="text-[#C41E3A] text-sm tracking-widest mb-6"
-                style={{ fontFamily: "var(--font-cormorant)" }}>TIMELINE</h3>
-              <div className="space-y-5">
-                {[
-                  { year: "1932", event: "澤山宗海が大阪で日本拳法を創始" },
-                  { year: "1947", event: "全日本拳法連盟（現：日本拳法全国連盟）設立" },
-                  { year: "1950年代", event: "大学への普及開始。各地に大学拳法部が誕生" },
-                  { year: "1960年代", event: "自衛隊・警察での採用が本格化" },
-                  { year: "現在", event: "全国で約3万人の競技者が活動" },
-                ].map((item) => (
-                  <div key={item.year} className="flex gap-4">
-                    <div className="shrink-0 w-20 text-[#C41E3A] text-sm font-bold"
-                      style={{ fontFamily: "var(--font-cormorant)" }}>
-                      {item.year}
-                    </div>
-                    <div className="flex-1">
-                      <div className="w-2 h-2 bg-[#C41E3A] rounded-full mt-1.5 -ml-1 float-left mr-3" />
-                      <p className="text-[#2D3748] text-sm">{item.event}</p>
-                    </div>
+            <div className="flex-1">
+              {/* モバイルラベル */}
+              <div className="flex items-center gap-4 mb-6 lg:hidden">
+                <p className="section-title-en">History</p>
+                <div className="red-bar" />
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                {/* テキスト */}
+                <div className="relative">
+                  <h2
+                    className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-6 relative z-10"
+                    style={{ fontFamily: "var(--font-noto-serif-jp)" }}
+                  >
+                    1932年、澤山宗海が創始
+                  </h2>
+                  <div className="space-y-4 text-[#2D3748] leading-relaxed relative z-10" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+                    <p>
+                      日本拳法は1932年（昭和7年）、澤山宗海（さわやまむねとし）によって大阪で創始された日本発祥の総合武道です。
+                      空手・柔道・ボクシングなど様々な格闘技の長所を融合させ、
+                      「真の実戦性を持つ総合武道」として体系化されました。
+                    </p>
+                    <p>
+                      防具（面・胴・グローブ）を着用してフルコンタクトで戦うスタイルは、
+                      安全性を担保しながら実戦に近い技術を磨くことを可能にしました。
+                      この革新的なアプローチが、日本拳法を他の武道と一線を画するものにしています。
+                    </p>
+                    <p>
+                      戦後は全国に普及し、現在では自衛隊・警察・海上保安庁などの
+                      実務機関でも採用されています。大学スポーツとしても盛んで、
+                      全国の主要大学に部が存在しています。
+                    </p>
                   </div>
-                ))}
+                </div>
+                {/* タイムライン */}
+                <div
+                  className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-6"
+                  style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
+                >
+                  <h3 className="text-[#B01E33] text-sm tracking-widest mb-6" style={{ fontFamily: "var(--font-cormorant)" }}>TIMELINE</h3>
+                  <div className="space-y-5">
+                    {[
+                      { year: "1932", event: "澤山宗海が大阪で日本拳法を創始" },
+                      { year: "1947", event: "全日本拳法連盟（現：日本拳法全国連盟）設立" },
+                      { year: "1950年代", event: "大学への普及開始。各地に大学拳法部が誕生" },
+                      { year: "1960年代", event: "自衛隊・警察での採用が本格化" },
+                      { year: "現在", event: "全国で約3万人の競技者が活動" },
+                    ].map((item) => (
+                      <div key={item.year} className="flex gap-4">
+                        <div className="shrink-0 w-20 text-[#B01E33] text-sm font-bold" style={{ fontFamily: "var(--font-cormorant)" }}>
+                          {item.year}
+                        </div>
+                        <div className="flex-1">
+                          <div className="w-2 h-2 bg-[#B01E33] rounded-full mt-1.5 -ml-1 float-left mr-3" />
+                          <p className="text-[#2D3748] text-sm">{item.event}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ルール */}
-        <section className="mb-24">
-          <div className="flex items-center gap-4 mb-8">
+        {/* ─── ルール（非対称グリッド） ─── */}
+        <section className="mb-28">
+          <div className="flex items-center gap-4 mb-10">
             <p className="section-title-en">Rules</p>
-            <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
+            <div className="red-bar" />
           </div>
-          <h2
-            className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-8"
-            style={{ fontFamily: "var(--font-noto-serif-jp)" }}
-          >
+          <h2 className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-8" style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
             競技ルールの概要
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {rules.map(({ title, Icon, content }) => (
-              <div key={title} className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-6 hover:border-[#C41E3A]/30 transition-colors duration-300"
-                style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
-                <div className="w-12 h-12 rounded-full bg-[#C41E3A]/8 flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6" color="#002B5C" strokeWidth={1.5} />
-                </div>
-                <h3
-                  className="text-[#002B5C] font-bold text-lg mb-3"
-                  style={{ fontFamily: "var(--font-noto-serif-jp)" }}
+          {/* 1件目: 全幅 / 残り: 2+3カラム */}
+          <div className="space-y-4">
+            {/* 1件目: ワイド */}
+            {(() => {
+              const { title: t0, Icon: Icon0, content: c0 } = rules[0];
+              return (
+                <div
+                  className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-6 hover:border-[#B01E33]/30 transition-colors duration-300 grid grid-cols-1 lg:grid-cols-3 gap-6 items-center"
+                  style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
                 >
-                  {title}
-                </h3>
-                <p className="text-[#6B7A99] text-sm leading-relaxed"
-                  style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
-                  {content}
-                </p>
-              </div>
-            ))}
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 rounded-full bg-[#002B5C]/5 flex items-center justify-center shrink-0">
+                      <Icon0 className="w-7 h-7" color="#002B5C" strokeWidth={1.5} />
+                    </div>
+                    <h3 className="text-[#002B5C] font-bold text-xl" style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
+                      {t0}
+                    </h3>
+                  </div>
+                  <p className="lg:col-span-2 text-[#6B7A99] text-sm leading-relaxed" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+                    {c0}
+                  </p>
+                </div>
+              );
+            })()}
+            {/* 残り5件: 2+3カラム */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {rules.slice(1).map(({ title, Icon, content }) => (
+                <div
+                  key={title}
+                  className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-6 hover:border-[#B01E33]/30 transition-colors duration-300"
+                  style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
+                >
+                  <div className="w-12 h-12 rounded-full bg-[#B01E33]/8 flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6" color="#002B5C" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-[#002B5C] font-bold text-lg mb-3" style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
+                    {title}
+                  </h3>
+                  <p className="text-[#6B7A99] text-sm leading-relaxed" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+                    {content}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* 防具説明 */}
-        <section className="mb-24">
-          <div className="flex items-center gap-4 mb-8">
+        {/* ─── 防具 ─── */}
+        <section className="mb-28">
+          <div className="flex items-center gap-4 mb-10">
             <p className="section-title-en">Equipment</p>
-            <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
+            <div className="red-bar" />
           </div>
-          <h2
-            className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-8"
-            style={{ fontFamily: "var(--font-noto-serif-jp)" }}
-          >
+          <h2 className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-8" style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
             防具について
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
               {
                 name: "面",
-                description:
-                  "剣道の面に類似した頭部保護具。格子状の鉄格子で顔面を保護しながら視界を確保。突き・蹴りを受けても安全。",
+                description: "剣道の面に類似した頭部保護具。格子状の鉄格子で顔面を保護しながら視界を確保。突き・蹴りを受けても安全。",
               },
               {
                 name: "胴",
-                description:
-                  "胴体を保護するプロテクター。ボクシング用グローブが一体化しており、打撃の攻守両方を担う独特の構造。",
+                description: "胴体を保護するプロテクター。ボクシング用グローブが一体化しており、打撃の攻守両方を担う独特の構造。",
               },
               {
                 name: "その他",
-                description:
-                  "拳サポーター・脛サポーター・マウスピースなど。初心者は部の備品を借用できるため、入部直後の費用負担は少ない。",
+                description: "拳サポーター・脛サポーター・マウスピースなど。初心者は部の備品を借用できるため、入部直後の費用負担は少ない。",
               },
             ].map((item) => (
-              <div key={item.name} className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-6"
-                style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
-                <div className="w-full aspect-video bg-[#E8DEC6] rounded-lg border border-[#D4C9B8] mb-4 flex items-center justify-center">
+              <div
+                key={item.name}
+                className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-6"
+                style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
+              >
+                <div className="w-full aspect-video bg-[#E2D4B4] rounded-lg border border-[#D4C9B8] mb-4 flex items-center justify-center">
                   <Shirt className="w-10 h-10 text-[#C8D0DC]" strokeWidth={1.2} />
                 </div>
-                <h3
-                  className="text-[#002B5C] font-bold text-xl mb-3"
-                  style={{ fontFamily: "var(--font-noto-serif-jp)" }}
-                >
+                <h3 className="text-[#002B5C] font-bold text-xl mb-3" style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
                   {item.name}
                 </h3>
-                <p className="text-[#6B7A99] text-sm leading-relaxed"
-                  style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+                <p className="text-[#6B7A99] text-sm leading-relaxed" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
                   {item.description}
                 </p>
               </div>
@@ -248,44 +231,37 @@ export default function AboutKempoPage() {
           </div>
         </section>
 
-        {/* 他武道との比較 */}
-        <section className="mb-24">
-          <div className="flex items-center gap-4 mb-8">
+        {/* ─── 他武道との比較 ─── */}
+        <section className="mb-28">
+          <div className="flex items-center gap-4 mb-10">
             <p className="section-title-en">Comparison</p>
-            <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
+            <div className="red-bar" />
           </div>
-          <h2
-            className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-8"
-            style={{ fontFamily: "var(--font-noto-serif-jp)" }}
-          >
+          <h2 className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-8" style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
             他格闘技との違い
           </h2>
-          <div className="overflow-x-auto bg-[#EFE7D3] rounded-xl border border-[#D4C9B8]"
-            style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
+          <div
+            className="overflow-x-auto bg-[#EBE0C6] rounded-xl border border-[#D4C9B8]"
+            style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
+          >
             <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="border-b-[3px]" style={{ borderColor: 'rgba(196,30,58,0.15)' }}>
-                  <th className="text-left py-4 px-5 text-[#C41E3A] font-normal text-xs tracking-widest"
-                    style={{ fontFamily: "var(--font-cormorant)" }}>格闘技</th>
-                  <th className="text-left py-4 px-5 text-[#C41E3A] font-normal text-xs tracking-widest"
-                    style={{ fontFamily: "var(--font-cormorant)" }}>共通点</th>
-                  <th className="text-left py-4 px-5 text-[#C41E3A] font-normal text-xs tracking-widest"
-                    style={{ fontFamily: "var(--font-cormorant)" }}>日本拳法との違い</th>
+                <tr className="border-b-[3px]" style={{ borderColor: 'rgba(176,30,51,0.15)' }}>
+                  <th className="text-left py-4 px-5 text-[#B01E33] font-normal text-xs tracking-widest" style={{ fontFamily: "var(--font-cormorant)" }}>格闘技</th>
+                  <th className="text-left py-4 px-5 text-[#B01E33] font-normal text-xs tracking-widest" style={{ fontFamily: "var(--font-cormorant)" }}>共通点</th>
+                  <th className="text-left py-4 px-5 text-[#B01E33] font-normal text-xs tracking-widest" style={{ fontFamily: "var(--font-cormorant)" }}>日本拳法との違い</th>
                 </tr>
               </thead>
               <tbody>
                 {comparisons.map((c, i) => (
                   <tr key={i} className="border-b border-[#D4C9B8] hover:bg-[#DDD4C2] transition-colors duration-150">
-                    <td className="py-4 px-5 font-bold text-[#002B5C]"
-                      style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
+                    <td className="py-4 px-5 font-bold text-[#002B5C]" style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
                       {c.sport}
                     </td>
-                    <td className="py-4 px-5 text-[#6B7A99]"
-                      style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+                    <td className="py-4 px-5 text-[#6B7A99]" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
                       {c.similarity}
                     </td>
-                    <td className="py-4 px-5 text-[#2D3748]"
-                      style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+                    <td className="py-4 px-5 text-[#2D3748]" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
                       {c.difference}
                     </td>
                   </tr>
@@ -295,50 +271,44 @@ export default function AboutKempoPage() {
           </div>
         </section>
 
-        {/* 実用性 */}
-        <section className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12"
-          style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        {/* ─── 実用性（非対称 + 縦書き） ─── */}
+        <section
+          className="bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12"
+          style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
+        >
+          <div>
             <div>
               <p className="section-title-en mb-4">Practical Use</p>
-              <h2
-                className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-4"
-                style={{ fontFamily: "var(--font-noto-serif-jp)" }}
-              >
+              <h2 className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-4" style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
                 実用武道として
               </h2>
-              <p className="text-[#2D3748] leading-relaxed mb-4"
-                style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+              <p className="text-[#2D3748] leading-relaxed mb-4" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
                 日本拳法は自衛隊・警察・海上保安庁など、実際の護身・逮捕術として採用されている実用武道です。
                 そのフルコンタクトの実戦的な技術体系が、各機関から高い評価を受けています。
               </p>
               <div className="flex flex-wrap gap-3">
                 {["自衛隊", "警察", "海上保安庁", "大学スポーツ"].map((org) => (
-                  <span key={org} className="px-3 py-1 border border-[#C41E3A]/40 text-[#C41E3A] text-xs rounded-full"
-                    style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+                  <span
+                    key={org}
+                    className="px-3 py-1 border border-[#B01E33]/40 text-[#B01E33] text-xs rounded-full"
+                    style={{ fontFamily: "var(--font-noto-sans-jp)" }}
+                  >
                     {org}
                   </span>
                 ))}
               </div>
             </div>
-            <div className="text-center select-none">
-              <span className="vertical-text text-[#002B5C]/[0.06] text-8xl font-black block"
-                style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
-                武
-              </span>
-            </div>
           </div>
         </section>
 
-        {/* CTA */}
+        {/* ─── CTA ─── */}
         <div className="text-center">
-          <p className="text-[#6B7A99] text-sm mb-6"
-            style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+          <p className="text-[#6B7A99] text-sm mb-6" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
             日本拳法に興味が湧いたら、まずは体験してみてください。
           </p>
           <Link
             href="/join"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-[#C41E3A] text-white font-black text-sm tracking-widest hover:bg-[#a01530] transition-colors duration-300 rounded-md"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-[#B01E33] text-white font-black text-sm tracking-widest hover:bg-[#a01530] transition-colors duration-300 rounded-md"
           >
             入部案内・体験申し込み
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -71,23 +71,17 @@ const faqs: FAQItem[] = [
 
 export default function JoinPage() {
   return (
-    <div className="min-h-screen bg-[#E8DEC6]">
-      {/* ヒーロービジュアル */}
-      <div className="relative bg-[#E8DEC6] pt-36 pb-24 overflow-hidden">
+    <div className="min-h-screen bg-[#E2D4B4]">
+      {/* ─── ヒーロービジュアル ─── */}
+      <div className="relative bg-[#E2D4B4] pt-36 pb-24 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
-            background: 'linear-gradient(to right, #002B5C 0%, #002B5C 18%, #C41E3A 35%, #C41E3A 65%, #002B5C 82%, #002B5C 100%)',
-            boxShadow: '0 2px 14px rgba(196,30,58,0.45)',
+            background: 'linear-gradient(to right, #002B5C 0%, #002B5C 18%, #B01E33 35%, #B01E33 65%, #002B5C 82%, #002B5C 100%)',
+            boxShadow: '0 2px 14px rgba(176,30,51,0.45)',
           }}
         />
-        <div className="absolute right-0 bottom-0 w-1/3 opacity-[0.04] select-none">
-          <svg viewBox="0 0 300 400" className="w-full">
-            <text x="50%" y="50%" textAnchor="middle" dominantBaseline="middle"
-              fontSize="200" fill="#002B5C">門</text>
-          </svg>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <p className="section-title-en mb-4">Join Us</p>
           <h1
             className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#002B5C] mb-6"
@@ -95,69 +89,86 @@ export default function JoinPage() {
           >
             入部案内
           </h1>
-          <p className="text-[#2D3748] text-xl font-bold mb-3"
-            style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
-            大学から始めても、大丈夫。
-          </p>
-          <p className="text-[#6B7A99] text-base max-w-lg leading-relaxed"
-            style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
-            部員の9割以上が大学から日本拳法を始めました。
-            未経験者でも、基礎からしっかり指導します。
-          </p>
+          <div className="flex items-end gap-6 flex-wrap">
+            <div>
+              <p className="text-[#2D3748] text-xl font-bold mb-2" style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
+                大学から始めても、大丈夫。
+              </p>
+              <p className="text-[#6B7A99] text-base max-w-lg leading-relaxed" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+                部員の9割以上が大学から日本拳法を始めました。
+                未経験者でも、基礎からしっかり指導します。
+              </p>
+            </div>
+            {/* 数字アクセント */}
+            <div className="flex items-end gap-1 pb-1">
+              <span className="font-black text-[#B01E33] leading-none" style={{ fontFamily: "var(--font-cormorant)", fontSize: "4rem" }}>9</span>
+              <span className="text-[#B01E33] font-bold text-lg mb-1">割以上</span>
+              <span className="text-[#6B7A99] text-sm mb-1 ml-2" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>が未経験入部</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
 
-        {/* 入部の流れ */}
-        <section className="mb-24">
-          <div className="flex items-center gap-4 mb-8">
+        {/* ─── 入部の流れ（縦書き番号スタイル） ─── */}
+        <section className="mb-28">
+          <div className="flex items-center gap-4 mb-12">
             <p className="section-title-en">How to Join</p>
-            <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
+            <div className="red-bar" />
           </div>
           <h2
-            className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-10"
+            className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-12"
             style={{ fontFamily: "var(--font-noto-serif-jp)" }}
           >
             入部までの流れ
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {/* ステップ: 大きな番号が視覚を引く縦型 */}
+          <div className="space-y-8">
             {steps.map((step, i) => (
-              <div key={step.step} className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-8 relative"
-                style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
-                {i < steps.length - 1 && (
-                  <div className="hidden md:block absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 bg-[#C41E3A] rotate-45 rounded-sm" />
-                )}
-                <div
-                  className="text-[#C41E3A]/20 text-7xl font-black mb-4 leading-none"
-                  style={{ fontFamily: "var(--font-cormorant)" }}
-                >
-                  {step.step}
+              <div key={step.step} className="flex gap-6 items-start">
+                {/* ステップ番号 */}
+                <div className="shrink-0 flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#B01E33]/40 bg-[#EBE0C6]">
+                  <span
+                    className="font-black text-[#B01E33]"
+                    style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(1.4rem, 3vw, 2rem)" }}
+                  >
+                    {step.step}
+                  </span>
                 </div>
-                <h3
-                  className="text-[#002B5C] font-black text-2xl mb-4"
-                  style={{ fontFamily: "var(--font-noto-serif-jp)" }}
+                {/* コンテンツ */}
+                <div
+                  className="flex-1 bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-6 lg:p-8"
+                  style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
                 >
-                  {step.title}
-                </h3>
-                <p className="text-[#6B7A99] text-sm leading-relaxed"
-                  style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
-                  {step.description}
-                </p>
+                  <h3
+                    className="text-[#002B5C] font-black text-2xl mb-3"
+                    style={{ fontFamily: "var(--font-noto-serif-jp)" }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p className="text-[#6B7A99] text-sm leading-relaxed" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+                    {step.description}
+                  </p>
+                </div>
+                {/* ステップ間コネクター（最後以外） */}
+                {i < steps.length - 1 && (
+                  <div className="hidden" aria-hidden="true" />
+                )}
               </div>
             ))}
           </div>
         </section>
 
-        {/* 練習日程 */}
-        <section className="mb-20 bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-8 lg:p-10" style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}>
+        {/* ─── 練習日程 ─── */}
+        <section
+          className="mb-20 bg-[#EBE0C6] rounded-xl border border-[#D4C9B8] p-8 lg:p-10"
+          style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
+        >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             <div>
               <p className="section-title-en mb-4">Practice Schedule</p>
-              <h2
-                className="text-2xl font-black text-[#002B5C] mb-6"
-                style={{ fontFamily: "var(--font-noto-serif-jp)" }}
-              >
+              <h2 className="text-2xl font-black text-[#002B5C] mb-6" style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
                 練習スケジュール
               </h2>
               <div className="space-y-4">
@@ -166,7 +177,7 @@ export default function JoinPage() {
                   { place: "蝮谷拳法道場（日曜）", days: "日曜日 ※参加必須", time: "10:30〜13:00" },
                 ].map((s) => (
                   <div key={s.place} className="flex gap-4 items-start">
-                    <div className="w-2 h-2 bg-[#C41E3A] mt-2 shrink-0 rounded-full" />
+                    <div className="w-2 h-2 bg-[#B01E33] mt-2 shrink-0 rounded-full" />
                     <div>
                       <p className="text-[#002B5C] font-bold text-sm">{s.place}</p>
                       <p className="text-[#6B7A99] text-xs mt-0.5">{s.days}　{s.time}</p>
@@ -177,10 +188,7 @@ export default function JoinPage() {
             </div>
             <div>
               <p className="section-title-en mb-4">Cost Guide</p>
-              <h2
-                className="text-2xl font-black text-[#002B5C] mb-6"
-                style={{ fontFamily: "var(--font-noto-serif-jp)" }}
-              >
+              <h2 className="text-2xl font-black text-[#002B5C] mb-6" style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
                 費用の目安
               </h2>
               <div className="space-y-3">
@@ -199,11 +207,11 @@ export default function JoinPage() {
           </div>
         </section>
 
-        {/* FAQ */}
-        <section className="mb-24">
-          <div className="flex items-center gap-4 mb-8">
+        {/* ─── FAQ ─── */}
+        <section className="mb-28">
+          <div className="flex items-center gap-4 mb-10">
             <p className="section-title-en">FAQ</p>
-            <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
+            <div className="red-bar" />
           </div>
           <h2
             className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-8"
@@ -214,11 +222,11 @@ export default function JoinPage() {
           <FAQAccordion items={faqs} />
         </section>
 
-        {/* お問い合わせフォーム */}
+        {/* ─── お問い合わせフォーム ─── */}
         <section className="mb-12">
-          <div className="flex items-center gap-4 mb-8">
+          <div className="flex items-center gap-4 mb-10">
             <p className="section-title-en">Contact</p>
-            <div className="flex-1 h-[4px]" style={{ background: 'linear-gradient(to right, rgba(196,30,58,0.65), rgba(196,30,58,0.15), transparent)' }} />
+            <div className="red-bar" />
           </div>
           <h2
             className="text-2xl sm:text-3xl font-black text-[#002B5C] mb-4"
@@ -226,8 +234,7 @@ export default function JoinPage() {
           >
             体験入部・お問い合わせ
           </h2>
-          <p className="text-[#6B7A99] text-sm mb-8"
-            style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+          <p className="text-[#6B7A99] text-sm mb-8" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
             気軽にお問い合わせください。見学・体験入部の希望でも構いません。
           </p>
           <ContactForm />
