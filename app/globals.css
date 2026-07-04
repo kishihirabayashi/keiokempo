@@ -9,9 +9,9 @@
   --color-keio-red-dark: #A01530;
   --color-keio-navy: #002B5C;
   --color-keio-navy-light: #6B7A99;
-  --color-off-white: #E8DEC6;
-  --color-off-white-dim: #E8DEC6;
-  --color-surface: #EFE7D3;
+  --color-off-white: #DACBA3;
+  --color-off-white-dim: #DACBA3;
+  --color-surface: #E3D7B5;
   --color-border: #D4C9B8;
 
   --font-serif-jp: var(--font-noto-serif-jp);
@@ -27,7 +27,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: #E8DEC6;
+  background: #DACBA3;
   /* 和紙風: 極薄の斜線テクスチャ */
   background-image: repeating-linear-gradient(
     -45deg,
@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
    Card styles (cream theme)
 ───────────────────────────────────── */
 .card-cream {
-  background: #EFE7D3;
+  background: #E3D7B5;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(27, 42, 74, 0.06), 0 0 0 1px rgba(27, 42, 74, 0.04);
 }
@@ -335,7 +335,7 @@ h1, h2, h3, h4, h5, h6 {
 .news-featured {
   position: relative;
   overflow: hidden;
-  background: #EFE7D3;
+  background: #E3D7B5;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
