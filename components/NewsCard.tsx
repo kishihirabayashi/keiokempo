@@ -19,7 +19,7 @@ export default function NewsCard({ post, featured }: NewsCardProps) {
   return (
     <Link
       href={`/news/${post.slug}`}
-      className="group relative flex flex-col overflow-hidden bg-[#DEDABC] rounded-xl card-lift"
+      className="group relative flex flex-col overflow-hidden bg-[#E9E3CC] rounded-xl card-lift"
       style={{ boxShadow: "0 2px 8px rgba(27,42,74,0.06), 0 0 0 1px rgba(27,42,74,0.04)" }}
     >
       {/* ── 画像エリア ── */}
@@ -53,7 +53,7 @@ export default function NewsCard({ post, featured }: NewsCardProps) {
         </div>
         <div className="absolute top-3 right-3">
           <time
-            className="text-[#6B7A99] text-xs bg-[#DEDABC]/80 backdrop-blur-sm px-2 py-0.5 rounded-full"
+            className="text-[#6B7A99] text-xs bg-[#E9E3CC]/80 backdrop-blur-sm px-2 py-0.5 rounded-full"
             dateTime={post.date}
             style={{ fontFamily: "var(--font-cormorant)" }}
           >
@@ -63,7 +63,7 @@ export default function NewsCard({ post, featured }: NewsCardProps) {
       </div>
 
       {/* ── テキストエリア ── */}
-      <div className="flex-1 p-5 bg-[#DEDABC] rounded-b-xl">
+      <div className="flex-1 p-5 bg-[#E9E3CC] rounded-b-xl">
         <h3
           className={`text-[#002B5C] font-bold leading-snug group-hover:text-[#B01E33] transition-colors duration-250 ${
             featured ? "text-xl" : "text-base"

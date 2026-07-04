@@ -30,9 +30,9 @@ export default function MembersPage() {
   }, {} as Record<string, ReturnType<typeof getAllMembers>>);
 
   return (
-    <div className="min-h-screen bg-[#D3CEA9]">
+    <div className="min-h-screen bg-[#E0D8B9]">
       {/* ─── ヘッダービジュアル ─── */}
-      <div className="relative bg-[#D3CEA9] pt-40 pb-28 overflow-hidden">
+      <div className="relative bg-[#E0D8B9] pt-40 pb-28 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{

@@ -30,9 +30,9 @@ const schedule = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#D3CEA9]">
+    <div className="min-h-screen bg-[#E0D8B9]">
       {/* ─── ヘッダービジュアル ─── */}
-      <div className="relative bg-[#D3CEA9] pt-36 pb-24 overflow-hidden">
+      <div className="relative bg-[#E0D8B9] pt-36 pb-24 overflow-hidden">
         <div
           className="absolute top-0 left-0 right-0 h-[10px]"
           style={{
@@ -110,7 +110,7 @@ export default function AboutPage() {
                 {/* 右5: データカード */}
                 <div className="lg:col-span-5">
                   <div
-                    className="bg-[#DEDABC] rounded-xl border border-[#D4C9B8] p-6 h-full"
+                    className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-6 h-full"
                     style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
                   >
                     <div className="flex items-center justify-between mb-6">
@@ -180,7 +180,7 @@ export default function AboutPage() {
             ].map((place) => (
               <div
                 key={place.name}
-                className="bg-[#DEDABC] rounded-xl border border-[#D4C9B8] p-6"
+                className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-6"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
               >
                 <h3 className="text-[#002B5C] font-bold text-xl mb-1" style={{ fontFamily: "var(--font-noto-serif-jp)" }}>
@@ -219,7 +219,7 @@ export default function AboutPage() {
             {schedule.map(({ month, events }) => (
               <div
                 key={month}
-                className="bg-[#DEDABC] rounded-xl border border-[#D4C9B8] p-4 relative overflow-hidden"
+                className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-4 relative overflow-hidden"
                 style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.04)' }}
               >
                 <div
@@ -260,7 +260,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-5">
             {/* 部長: 大きめカード */}
             <div
-              className="lg:col-span-2 bg-[#DEDABC] rounded-xl border border-[#D4C9B8] p-8 flex flex-col justify-between"
+              className="lg:col-span-2 bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-8 flex flex-col justify-between"
               style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
             >
               <div>
@@ -281,7 +281,7 @@ export default function AboutPage() {
               ].map((staff) => (
                 <div
                   key={staff.role}
-                  className="bg-[#DEDABC] rounded-xl border border-[#D4C9B8] p-6"
+                  className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-6"
                   style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
                 >
                   <span className="inline-block px-2 py-0.5 border border-[#B01E33]/40 text-[#B01E33] text-xs rounded-full mb-3">
@@ -298,7 +298,7 @@ export default function AboutPage() {
 
         {/* ─── OB会 ─── */}
         <section
-          className="bg-[#DEDABC] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-8"
+          className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-8"
           style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
         >
           <p className="section-title-en mb-4">Alumni</p>
@@ -315,7 +315,7 @@ export default function AboutPage() {
 
         {/* ─── SNS・連絡先 ─── */}
         <section
-          className="bg-[#DEDABC] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12"
+          className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-8 lg:p-12 mb-12"
           style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.06)' }}
         >
           <p className="section-title-en mb-4">Contact &amp; SNS</p>
@@ -331,7 +331,7 @@ export default function AboutPage() {
               href="https://www.instagram.com/keio_kempo/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#DEDABC] rounded-xl border border-[#D4C9B8] px-5 py-3 transition-all duration-200 hover:scale-[1.03] hover:shadow-md hover:border-[#B01E33]/30"
+              className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] px-5 py-3 transition-all duration-200 hover:scale-[1.03] hover:shadow-md hover:border-[#B01E33]/30"
               style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.04)' }}
             >
               <p className="text-[#A0AAB8] text-xs mb-0.5" style={{ fontFamily: "var(--font-cormorant)" }}>Instagram</p>
@@ -341,7 +341,7 @@ export default function AboutPage() {
               href="https://x.com/KeioNikken"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#DEDABC] rounded-xl border border-[#D4C9B8] px-5 py-3 transition-all duration-200 hover:scale-[1.03] hover:shadow-md hover:border-[#002B5C]/30"
+              className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] px-5 py-3 transition-all duration-200 hover:scale-[1.03] hover:shadow-md hover:border-[#002B5C]/30"
               style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.04)' }}
             >
               <p className="text-[#A0AAB8] text-xs mb-0.5" style={{ fontFamily: "var(--font-cormorant)" }}>X (Twitter)</p>
