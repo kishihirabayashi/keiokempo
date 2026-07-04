@@ -69,7 +69,7 @@ export default function ContactForm() {
   };
 
   const inputClass =
-    "w-full bg-[#EFE7D3] border border-[#D4C9B8] text-[#2D3748] px-4 py-3 text-sm focus:outline-none focus:border-[#002B5C] focus:ring-2 focus:ring-[#002B5C]/10 transition-all duration-300 rounded-lg placeholder-[#B0A090]";
+    "w-full bg-[#E9E3CC] border border-[#D4C9B8] text-[#2D3748] px-4 py-3 text-sm focus:outline-none focus:border-[#002B5C] focus:ring-2 focus:ring-[#002B5C]/10 transition-all duration-300 rounded-lg placeholder-[#B0A090]";
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -85,7 +85,7 @@ export default function ContactForm() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-8 text-center"
+              className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-8 text-center"
               style={{ boxShadow: "0 2px 8px rgba(27,42,74,0.05)" }}
             >
               <div className="w-14 h-14 rounded-full bg-[#B01E33]/10 flex items-center justify-center mx-auto mb-4">
@@ -125,10 +125,10 @@ export default function ContactForm() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-8"
+              className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-8"
               style={{ boxShadow: "0 2px 8px rgba(27,42,74,0.05)" }}
             >
-              <div className="w-14 h-14 rounded-full bg-[#E8DEC6] flex items-center justify-center mx-auto mb-4">
+              <div className="w-14 h-14 rounded-full bg-[#E0D8B9] flex items-center justify-center mx-auto mb-4">
                 <svg className="w-7 h-7 text-[#6B7A99]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01M12 3a9 9 0 100 18A9 9 0 0012 3z" />
                 </svg>
@@ -302,7 +302,7 @@ export default function ContactForm() {
       {/* ── 右側：直接連絡先 ── */}
       <div className="space-y-4">
         <div
-          className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-6"
+          className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-6"
           style={{ boxShadow: "0 2px 8px rgba(27,42,74,0.05)" }}
         >
           <h3
@@ -334,7 +334,7 @@ export default function ContactForm() {
             </div>
           </div>
         </div>
-        <div className="bg-[#EFE7D3] rounded-xl border border-[#D4C9B8] p-6" style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.05)' }}>
+        <div className="bg-[#E9E3CC] rounded-xl border border-[#D4C9B8] p-6" style={{ boxShadow: '0 2px 8px rgba(27,42,74,0.05)' }}>
           <h3
             className="text-[#002B5C] text-xs tracking-widest mb-3 uppercase font-semibold"
             style={{ fontFamily: "var(--font-cormorant)" }}
