@@ -354,12 +354,16 @@ export default function AboutPage() {
         <div className="text-center">
           <Link
             href="/join"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-[#B01E33] text-white font-black text-sm tracking-widest hover:bg-[#a01530] transition-colors duration-300 rounded-md"
+            className="group inline-flex flex-col items-start px-10 py-5 bg-[#B01E33] text-white hover:bg-[#a01530] transition-colors duration-300"
+            style={{ minWidth: "240px" }}
           >
-            入部案内・体験申し込み
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+            <span className="text-white/60 leading-none mb-1.5" style={{ fontFamily: "var(--font-cormorant)", fontSize: "0.55rem", letterSpacing: "0.4em", textTransform: "uppercase" }}>ENTRY</span>
+            <span className="flex items-center justify-between w-full">
+              <span className="text-sm font-medium tracking-widest" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>入部案内・体験申し込み</span>
+              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300 ml-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
           </Link>
         </div>
       </div>

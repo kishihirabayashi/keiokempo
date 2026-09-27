@@ -26,9 +26,11 @@ export default function FloatingCTA() {
         >
           <Link
             href="/join"
-            className="flex items-center gap-2 px-5 py-3 bg-[#B01E33] text-white text-sm font-bold tracking-widest shadow-2xl hover:bg-[#A01530] transition-colors duration-200"
+            className="flex items-center gap-2.5 px-5 py-3 bg-[#B01E33] text-white hover:bg-[#A01530] transition-colors duration-200"
+            style={{ minHeight: "44px", minWidth: "44px" }}
           >
-            <span>入部案内</span>
+            <span className="hidden sm:inline text-white/60" style={{ fontFamily: "var(--font-cormorant)", fontSize: "0.55rem", letterSpacing: "0.4em", textTransform: "uppercase" }}>RECRUIT</span>
+            <span className="text-sm font-medium tracking-wider" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>入部案内</span>
           </Link>
         </motion.div>
       )}

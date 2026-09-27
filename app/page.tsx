@@ -189,12 +189,11 @@ export default function HomePage() {
           <AnimatedSection delay={0.4} className="mt-10 text-center">
             <Link
               href="/join"
-              className="group relative inline-flex items-center gap-3 px-8 py-4 border-2 border-[#002B5C] text-[#002B5C] text-sm tracking-[0.18em] overflow-hidden rounded-md"
+              className="group inline-flex items-center gap-2 text-[#002B5C] hover:text-[#B01E33] transition-colors duration-300 border-b border-[#002B5C]/25 pb-1 hover:border-[#B01E33]/40 text-sm tracking-[0.18em]"
               style={{ fontFamily: "var(--font-noto-sans-jp)" }}
             >
-              <span className="absolute inset-0 bg-[#002B5C] -translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out" aria-hidden="true" />
-              <span className="relative z-10 group-hover:text-white transition-colors duration-300">まずは雰囲気を見に来てください</span>
-              <svg className="relative z-10 w-4 h-4 group-hover:text-white group-hover:translate-x-1.5 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <span>まずは雰囲気を見に来てください</span>
+              <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
@@ -455,12 +454,11 @@ export default function HomePage() {
 
                 <Link
                   href="/about-kempo"
-                  className="group relative inline-flex items-center gap-3 px-8 py-4 border-2 border-[#002B5C] text-[#002B5C] text-sm tracking-[0.2em] overflow-hidden rounded-md"
+                  className="group inline-flex items-center gap-2 text-[#002B5C] hover:text-[#B01E33] transition-colors duration-300 border-b border-[#002B5C]/25 pb-1 hover:border-[#B01E33]/40 text-sm tracking-[0.2em]"
                   style={{ fontFamily: "var(--font-noto-sans-jp)" }}
                 >
-                  <span className="absolute inset-0 bg-[#002B5C] -translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out" aria-hidden="true" />
-                  <span className="relative z-10 group-hover:text-white transition-colors duration-300">日本拳法をもっと知る</span>
-                  <svg className="relative z-10 w-4 h-4 group-hover:text-white group-hover:translate-x-1.5 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <span>日本拳法をもっと知る</span>
+                  <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
@@ -551,12 +549,11 @@ export default function HomePage() {
             <div className="lg:text-right">
               <Link
                 href="/results"
-                className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-[#002B5C]/30 text-[#002B5C] text-sm tracking-[0.2em] overflow-hidden rounded-md"
+                className="group inline-flex items-center gap-2 text-[#002B5C] hover:text-[#B01E33] transition-colors duration-300 border-b border-[#002B5C]/25 pb-1 hover:border-[#B01E33]/40 text-sm tracking-[0.2em]"
                 style={{ fontFamily: "var(--font-noto-sans-jp)" }}
               >
-                <span className="absolute inset-0 bg-[#002B5C]/5 -translate-x-full group-hover:translate-x-0 transition-transform duration-400 ease-out" aria-hidden="true" />
-                <span className="relative z-10">過去の戦績を見る</span>
-                <svg className="relative z-10 w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span>過去の戦績を見る</span>
+                <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
@@ -616,14 +613,17 @@ export default function HomePage() {
           </p>
           <Link
             href="/join"
-            className="group relative inline-flex items-center gap-3 px-10 py-5 bg-[#B01E33] text-white font-black text-sm tracking-[0.22em] overflow-hidden rounded-md"
-            style={{ fontFamily: "var(--font-noto-sans-jp)" }}
+            className="group relative inline-flex flex-col items-start px-8 py-5 bg-[#B01E33] text-white overflow-hidden"
+            style={{ fontFamily: "var(--font-noto-sans-jp)", minWidth: "220px" }}
           >
             <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-500 ease-out" aria-hidden="true" />
-            <span className="relative z-10">まずは道場へ。</span>
-            <svg className="relative z-10 w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+            <span className="relative z-10 text-white/60 leading-none mb-1.5" style={{ fontFamily: "var(--font-cormorant)", fontSize: "0.55rem", letterSpacing: "0.4em", textTransform: "uppercase" }}>VISIT THE DOJO</span>
+            <span className="relative z-10 flex items-center justify-between w-full">
+              <span className="text-sm font-medium tracking-[0.18em]">まずは道場へ。</span>
+              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300 ml-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
           </Link>
         </div>
       </ParallaxBand>
@@ -678,22 +678,27 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
             <Link
               href="/join"
-              className="group relative inline-flex items-center gap-3 px-12 py-6 bg-[#B01E33] text-white font-black text-sm tracking-[0.22em] overflow-hidden rounded-md"
-              style={{ fontFamily: "var(--font-noto-sans-jp)" }}
+              className="group relative inline-flex flex-col items-start px-10 py-5 bg-[#B01E33] text-white overflow-hidden"
+              style={{ fontFamily: "var(--font-noto-sans-jp)", minWidth: "240px" }}
             >
               <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-500 ease-out" aria-hidden="true" />
-              <span className="relative z-10">入部案内を見る</span>
-              <svg className="relative z-10 w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+              <span className="relative z-10 text-white/60 leading-none mb-1.5" style={{ fontFamily: "var(--font-cormorant)", fontSize: "0.55rem", letterSpacing: "0.4em", textTransform: "uppercase" }}>ENTRY</span>
+              <span className="relative z-10 flex items-center justify-between w-full">
+                <span className="text-sm font-medium tracking-[0.22em]">入部案内を見る</span>
+                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300 ml-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
             </Link>
             <Link
               href="/about"
-              className="group relative inline-flex items-center gap-2 px-10 py-6 overflow-hidden text-white font-bold text-sm tracking-[0.18em] rounded-md border border-white/25"
+              className="group inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors duration-300 border-b border-white/20 pb-1 hover:border-white/50 text-sm tracking-[0.18em]"
               style={{ fontFamily: "var(--font-noto-sans-jp)" }}
             >
-              <span className="absolute inset-0 bg-white/10 -translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out" aria-hidden="true" />
-              <span className="relative z-10">部の紹介を見る</span>
+              <span>部の紹介を見る</span>
+              <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </Link>
           </div>
         </AnimatedSection>

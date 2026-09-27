@@ -140,22 +140,30 @@ export default function HeroSection() {
         >
           <Link
             href="/join"
-            className="group relative inline-flex items-center gap-3 px-8 py-4 bg-[#B01E33] text-white font-bold text-sm tracking-[0.18em] overflow-hidden rounded-lg"
-            style={{ fontFamily: "var(--font-noto-sans-jp)" }}
+            className="group relative inline-flex flex-col items-start px-7 py-4 bg-[#B01E33] text-white overflow-hidden"
+            style={{ fontFamily: "var(--font-noto-sans-jp)", minWidth: "220px" }}
           >
             <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-500 ease-out" aria-hidden="true" />
-            <span className="relative z-10">まずは道場へ。</span>
-            <svg className="relative z-10 w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+            <span className="relative z-10 text-white/60 leading-none mb-1.5" style={{ fontFamily: "var(--font-cormorant)", fontSize: "0.55rem", letterSpacing: "0.4em", textTransform: "uppercase" }}>VISIT THE DOJO</span>
+            <span className="relative z-10 flex items-center justify-between w-full">
+              <span className="text-sm font-medium tracking-[0.18em]">まずは道場へ。</span>
+              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300 ml-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
           </Link>
           <Link
             href="/about-kempo"
-            className="group relative inline-flex items-center gap-2 px-8 py-4 overflow-hidden text-white font-medium text-sm tracking-[0.18em] rounded-lg border border-white/30"
+            className="group inline-flex flex-col items-start text-white/75 hover:text-white transition-colors duration-300"
             style={{ fontFamily: "var(--font-noto-sans-jp)" }}
           >
-            <span className="absolute inset-0 bg-white/12 -translate-y-full group-hover:translate-y-0 transition-transform duration-400 ease-out" aria-hidden="true" />
-            <span className="relative z-10">日本拳法とは</span>
+            <span className="text-white/40 leading-none mb-2 hidden sm:block" style={{ fontFamily: "var(--font-cormorant)", fontSize: "0.55rem", letterSpacing: "0.4em", textTransform: "uppercase" }}>ABOUT NIPPON KEMPO</span>
+            <span className="flex items-center gap-2 text-sm tracking-[0.15em] pb-1 border-b border-white/20 group-hover:border-white/50 transition-colors duration-300">
+              日本拳法とは
+              <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
           </Link>
         </motion.div>
       </motion.div>

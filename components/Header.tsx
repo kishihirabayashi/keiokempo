@@ -101,11 +101,14 @@ export default function Header() {
               ))}
               <Link
                 href="/join"
-                className="group relative ml-4 px-6 py-2.5 bg-[#B01E33] text-white text-sm font-bold tracking-wider overflow-hidden rounded-lg transition-colors duration-300"
-                style={{ fontFamily: "var(--font-noto-sans-jp)" }}
+                className="group relative ml-4 inline-flex flex-col justify-center px-5 py-2 bg-[#B01E33] text-white overflow-hidden"
+                style={{ minHeight: "38px" }}
               >
-                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-400 ease-out" />
-                <span className="relative z-10">入部希望</span>
+                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-400 ease-out" aria-hidden="true" />
+                <span className="relative z-10 flex items-center gap-2">
+                  <span style={{ fontFamily: "var(--font-cormorant)", fontSize: "0.55rem", letterSpacing: "0.4em", textTransform: "uppercase" }} className="text-white/65">ENTRY</span>
+                  <span className="text-sm font-medium tracking-wider" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>入部希望</span>
+                </span>
               </Link>
             </nav>
 
@@ -177,10 +180,12 @@ export default function Header() {
                 <Link
                   href="/join"
                   onClick={() => setIsMenuOpen(false)}
-                  className="group relative inline-flex items-center gap-3 px-8 py-4 bg-[#B01E33] text-white text-lg font-bold tracking-widest overflow-hidden rounded-lg"
+                  className="group relative inline-flex items-center gap-3 px-7 py-4 bg-[#B01E33] text-white overflow-hidden"
+                  style={{ minHeight: "52px" }}
                 >
-                  <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-400 ease-out" />
-                  <span className="relative z-10">入部希望はこちら</span>
+                  <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-400 ease-out" aria-hidden="true" />
+                  <span className="relative z-10 text-white/60" style={{ fontFamily: "var(--font-cormorant)", fontSize: "0.6rem", letterSpacing: "0.4em", textTransform: "uppercase" }}>ENTRY</span>
+                  <span className="relative z-10 text-lg font-medium tracking-widest" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>入部希望はこちら</span>
                 </Link>
               </motion.div>
             </div>

@@ -286,7 +286,7 @@ export default function ContactForm() {
               <button
                 type="submit"
                 disabled={status === "submitting"}
-                className="group relative w-full sm:w-auto px-8 py-4 bg-[#B01E33] text-white font-bold text-sm tracking-widest overflow-hidden rounded-lg disabled:opacity-60"
+                className="group relative w-full sm:w-auto px-8 py-4 bg-[#B01E33] text-white font-medium text-sm tracking-widest overflow-hidden disabled:opacity-60"
               >
                 <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-500 ease-out" />
                 <span className="relative z-10">

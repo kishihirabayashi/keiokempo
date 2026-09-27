@@ -252,12 +252,9 @@ h1, h2, h3, h4, h5, h6 {
 ───────────────────────────────────── */
 .floating-cta {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 0;
+  right: 0;
   z-index: 50;
-}
-@media (max-width: 640px) {
-  .floating-cta { bottom: 1rem; right: 1rem; }
 }
 
 /* ─────────────────────────────────────
