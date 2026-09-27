@@ -13,7 +13,7 @@ const showClubAtmosphere = false;
 
 const STATS = [
   { end: 72,  suffix: "年", label: "創部からの歴史",   prefix: "" },
-  { end: 41,  suffix: "名", label: "現役部員数",       prefix: "" },
+  { end: 37,  suffix: "名", label: "現役部員数",       prefix: "" },
   { end: 90,  suffix: "%",  label: "大学から始めた部員", prefix: "" },
   { end: 3,   suffix: "冠", label: "直近の主要タイトル", prefix: "" },
 ];
@@ -51,10 +51,11 @@ const ATMOSPHERE = [
 
 const NEXT_MATCH = {
   opponent: "",
-  date: "2026年6月28日(日)",
+  date: "2026年10月4日(日)",
   time: "",
-  venue: "",
-  event: "第2回 本部昇段級審査会",
+  venue: "慶應記念館",
+  event: "第37回東日本大学選手権大会",
+  nextEvent: "10月18日(日) 第41回全日本学生拳法個人選手権大会（名古屋）",
 };
 
 export default function HomePage() {
@@ -477,7 +478,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
             {[
               { display: "1953", unit: "年", label: "慶應義塾体育会拳法部 創部" },
-              { display: "41",  unit: "名", label: "現役部員（男女）" },
+              { display: "37",  unit: "名", label: "現役部員（男女）" },
               { display: "90",  unit: "%",  label: "大学から始めた部員" },
             ].map((item, i) => (
               <AnimatedSection key={item.label} delay={i * 0.12} className="text-center py-20 lg:py-24 px-8">
@@ -541,6 +542,11 @@ export default function HomePage() {
                   </div>
                 )}
               </div>
+              {NEXT_MATCH.nextEvent && (
+                <p className="mt-3 text-xs text-[#A0AAB8]" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>
+                  次の予定: {NEXT_MATCH.nextEvent}
+                </p>
+              )}
             </div>
             <div className="lg:text-right">
               <Link

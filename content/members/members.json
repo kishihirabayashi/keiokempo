@@ -14,7 +14,7 @@
   {"name":"金石勇助","grade":"3年","faculty":"法学部","role":"","origin":"私立武南高等学校","skill":"全バリ","rank":"初段","photo":"kanaishi.jpg"},
   {"name":"岡田眞宙","grade":"3年","faculty":"経済学部","role":"","origin":"徳島県立城東高等学校","skill":"カウンター","rank":"初段","photo":"okadam.jpg"},
   {"name":"平林希梓","grade":"3年","faculty":"法学部","role":"","origin":"私立聖光学院高等学校","skill":"前蹴り","rank":"","photo":"hirabayashi.jpg"},
-  {"name":"Holle Kaja Annabelle","grade":"3年","faculty":"別科・日本語研修課程","role":"","origin":"ライプニッツ モンテッソーリ ギムナジウム デュッセルドルフ","skill":"右ストレート","rank":"1級","photo":"kaya.jpg"},
+  {"name":"","grade":"3年","faculty":"","role":"","origin":"","skill":"","rank":"","photo":""},
   {"name":"川村凌誠","grade":"2年","faculty":"法学部","role":"","origin":"三重県立桑名高等学校","skill":"","rank":"","photo":""},
   {"name":"的場昂","grade":"2年","faculty":"経済学部","role":"","origin":"栃木県立宇都宮高等学校","skill":"胴突き","rank":"2級","photo":"matoba.jpg"},
   {"name":"渡邊たける","grade":"2年","faculty":"経済学部","role":"","origin":"私立武蔵高等学校","skill":"","rank":"","photo":""},
@@ -24,5 +24,16 @@
   {"name":"齊藤一輝","grade":"2年","faculty":"文学部","role":"","origin":"私立國學院久我山高等学校","skill":"ジャブ、左フック","rank":"","photo":"kazuki.jpg"},
   {"name":"佐藤勘亮","grade":"2年","faculty":"法学部","role":"","origin":"大阪府立生野高等学校","skill":"面突き","rank":"2級","photo":"kansuke.jpg"},
   {"name":"八木一磨","grade":"2年","faculty":"経済学部","role":"","origin":"私立國學院久我山高等学校","skill":"胴突き","rank":"2級","photo":"yagi.jpg"},
-  {"name":"内田智也","grade":"2年","faculty":"文学部","role":"","origin":"私立國學院大學久我山高等学校","skill":"ストレート","rank":"1級","photo":"uchida.jpg"}
+  {"name":"内田智也","grade":"2年","faculty":"文学部","role":"","origin":"私立國學院大學久我山高等学校","skill":"ストレート","rank":"1級","photo":"uchida.jpg"},
+  {"name":"","grade":"1年","faculty":"","role":"","origin":"","skill":"","rank":"","photo":""},
+  {"name":"","grade":"1年","faculty":"","role":"","origin":"","skill":"","rank":"","photo":""},
+  {"name":"","grade":"1年","faculty":"","role":"","origin":"","skill":"","rank":"","photo":""},
+  {"name":"","grade":"1年","faculty":"","role":"","origin":"","skill":"","rank":"","photo":""},
+  {"name":"","grade":"1年","faculty":"","role":"","origin":"","skill":"","rank":"","photo":""},
+  {"name":"","grade":"1年","faculty":"","role":"","origin":"","skill":"","rank":"","photo":""},
+  {"name":"","grade":"1年","faculty":"","role":"","origin":"","skill":"","rank":"","photo":""},
+  {"name":"","grade":"1年","faculty":"","role":"","origin":"","skill":"","rank":"","photo":""},
+  {"name":"","grade":"1年","faculty":"","role":"","origin":"","skill":"","rank":"","photo":""},
+  {"name":"","grade":"1年","faculty":"","role":"","origin":"","skill":"","rank":"","photo":""},
+  {"name":"","grade":"1年","faculty":"","role":"","origin":"","skill":"","rank":"","photo":""}
 ]

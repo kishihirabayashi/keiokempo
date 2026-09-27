@@ -8,6 +8,9 @@ const results: TournamentResult[] = [
   // 2026年度 団体戦
   { year: 2026, tournament: "第39回 全国大学選抜選手権大会", category: "団体戦", result: "男子の部 第3位（部史上初）", details: "Cブロックを勝ち進み準決勝進出 → 準決勝敗退 → 3位決定戦 勝利。近畿大○・同志社大○・龍谷大○・関西大×・関西学院大○" },
   { year: 2026, tournament: "第39回 東日本大学リーグ戦", category: "団体戦", result: "男子の部 第3位", details: "予選1位通過 → 決勝リーグ進出 → 3位決定戦 勝利" },
+  // 2026年度 個人戦
+  { year: 2026, tournament: "日本拳法東日本総合個人選手権大会", category: "個人戦", result: "ベスト8" },
+  { year: 2026, tournament: "第13回日本拳法横浜市民スポーツ大会", category: "個人戦", result: "級の部 準優勝／女子の部 3位" },
   // 2025年度 団体戦
   { year: 2025, tournament: "早慶定期戦", category: "団体戦", result: "優勝", details: "2連覇達成" },
   { year: 2025, tournament: "東日本大学新人戦", category: "団体戦", result: "準優勝" },

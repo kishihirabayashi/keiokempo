@@ -5,20 +5,21 @@ import { getAllMembers } from "@/lib/getMembers";
 export const metadata: Metadata = {
   title: "部員紹介",
   description:
-    "慶應義塾大学體育會拳法部の現役部員紹介。26名（男女）が蝮谷拳法道場を拠点に活動中。9割が大学から日本拳法を始めた初心者出身。",
+    "慶應義塾大学體育會拳法部の現役部員紹介。37名（男女）が蝮谷拳法道場を拠点に活動中。9割が大学から日本拳法を始めた初心者出身。",
   alternates: { canonical: "https://keiokempo.com/members" },
   openGraph: {
     title: "部員紹介 | 慶應義塾大学體育會拳法部",
-    description: "慶應拳法部の現役部員26名を紹介。9割が大学から日本拳法を始めた初心者出身。",
+    description: "慶應拳法部の現役部員37名を紹介。9割が大学から日本拳法を始めた初心者出身。",
     url: "https://keiokempo.com/members",
   },
 };
 
-const GRADE_ORDER = ["4年", "3年", "2年"];
+const GRADE_ORDER = ["4年", "3年", "2年", "1年"];
 const GRADE_EN: Record<string, string> = {
   "4年": "4th Year",
   "3年": "3rd Year",
   "2年": "2nd Year",
+  "1年": "1st Year",
 };
 
 export default function MembersPage() {
@@ -101,8 +102,8 @@ export default function MembersPage() {
 
               {/* カードグリッド */}
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                {gradeMembers.map((member) => (
-                  <MemberCard key={member.name} member={member} />
+                {gradeMembers.map((member, i) => (
+                  <MemberCard key={`${grade}-${i}`} member={member} />
                 ))}
               </div>
             </section>
