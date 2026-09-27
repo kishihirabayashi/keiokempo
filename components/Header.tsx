@@ -106,8 +106,8 @@ export default function Header() {
               >
                 <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-400 ease-out" aria-hidden="true" />
                 <span className="relative z-10 flex items-center gap-2">
-                  <span style={{ fontFamily: "var(--font-cormorant)", fontSize: "0.55rem", letterSpacing: "0.4em", textTransform: "uppercase" }} className="text-white/65">ENTRY</span>
-                  <span className="text-sm font-medium tracking-wider" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>入部希望</span>
+                  <span style={{ fontFamily: "var(--font-cormorant)", fontSize: "0.55rem", letterSpacing: "0.4em", textTransform: "uppercase", lineHeight: 1 }} className="text-white/65">ENTRY</span>
+                  <span className="text-sm font-medium tracking-wider leading-none" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>入部希望</span>
                 </span>
               </Link>
             </nav>
@@ -184,8 +184,8 @@ export default function Header() {
                   style={{ minHeight: "52px" }}
                 >
                   <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-400 ease-out" aria-hidden="true" />
-                  <span className="relative z-10 text-white/60" style={{ fontFamily: "var(--font-cormorant)", fontSize: "0.6rem", letterSpacing: "0.4em", textTransform: "uppercase" }}>ENTRY</span>
-                  <span className="relative z-10 text-lg font-medium tracking-widest" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>入部希望はこちら</span>
+                  <span className="relative z-10 text-white/60" style={{ fontFamily: "var(--font-cormorant)", fontSize: "0.6rem", letterSpacing: "0.4em", textTransform: "uppercase", lineHeight: 1 }}>ENTRY</span>
+                  <span className="relative z-10 text-lg font-medium tracking-widest leading-none" style={{ fontFamily: "var(--font-noto-sans-jp)" }}>入部希望はこちら</span>
                 </Link>
               </motion.div>
             </div>

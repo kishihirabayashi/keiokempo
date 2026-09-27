@@ -144,7 +144,7 @@ export default function HeroSection() {
             style={{ fontFamily: "var(--font-noto-sans-jp)", minWidth: "220px" }}
           >
             <span className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-[#A01530] transition-transform duration-500 ease-out" aria-hidden="true" />
-            <span className="relative z-10 text-white/60 leading-none mb-1.5" style={{ fontFamily: "var(--font-cormorant)", fontSize: "0.55rem", letterSpacing: "0.4em", textTransform: "uppercase" }}>VISIT THE DOJO</span>
+            <span className="relative z-10 text-white/60 leading-none mb-2" style={{ fontFamily: "var(--font-cormorant)", fontSize: "0.55rem", letterSpacing: "0.4em", textTransform: "uppercase" }}>VISIT THE DOJO</span>
             <span className="relative z-10 flex items-center justify-between w-full">
               <span className="text-sm font-medium tracking-[0.18em]">まずは道場へ。</span>
               <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300 ml-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -154,7 +154,7 @@ export default function HeroSection() {
           </Link>
           <Link
             href="/about-kempo"
-            className="group inline-flex flex-col items-start text-white/75 hover:text-white transition-colors duration-300"
+            className="group inline-flex flex-col items-start py-4 text-white/75 hover:text-white transition-colors duration-300"
             style={{ fontFamily: "var(--font-noto-sans-jp)" }}
           >
             <span className="text-white/40 leading-none mb-2 hidden sm:block" style={{ fontFamily: "var(--font-cormorant)", fontSize: "0.55rem", letterSpacing: "0.4em", textTransform: "uppercase" }}>ABOUT NIPPON KEMPO</span>
